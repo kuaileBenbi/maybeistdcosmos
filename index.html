@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红外小目标检测论文索引</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./assets/istd.css">
+</head>
+<body class="home-page">
+    <div class="site-bg-orbs">
+        <div class="site-bg-orb site-bg-orb--left"></div>
+        <div class="site-bg-orb site-bg-orb--right"></div>
+        <div class="site-bg-orb site-bg-orb--bottom"></div>
+    </div>
+
+    <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 lg:py-10">
+        <header class="home-hero hero-panel glass-panel rounded-[2.2rem] p-8 sm:p-10 lg:p-12">
+            <div class="home-hero__grid flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+                <div class="home-hero__copy">
+                    <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">
+                        <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+                        Infrared Survey
+                    </div>
+                    <h1 class="mt-5 max-w-4xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">红外小目标检测论文索引</h1>
+                    <p class="mt-5 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+                        收录传统方法、优化方法、深度学习方法、深度展开方法及相关资源。
+                    </p>
+                    <p class="home-hero__sub mt-6 text-sm leading-7 text-slate-400">论文、综述、数据集与开源资源。</p>
+                </div>
+                <a href="https://github.com/kuaileBenbi/awesome-infrared-small-targets" target="_blank" rel="noreferrer" class="home-hero__action inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </header>
+
+        <section id="modulesSection" class="mt-10">
+            <div class="home-section-shell glass-panel rounded-[2rem] p-6 sm:p-7 lg:p-8">
+                <div class="home-section-head flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+                    <div>
+                        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">研究方向</div>
+                        <h2 class="mt-2 text-3xl font-semibold sm:text-4xl">按研究方向浏览论文与资源</h2>
+                    </div>
+                    <p class="max-w-2xl text-sm leading-7 text-slate-400">传统方法、优化方法、深度学习方法、深度展开方法与资源。</p>
+                </div>
+                <div id="moduleCards" class="home-module-grid mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4"></div>
+            </div>
+        </section>
+
+        <section class="home-dual-section mt-10 grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
+            <section id="searchSection" class="home-search-panel glass-panel rounded-[2rem] p-6 sm:p-7">
+                <div class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">关键词检索</div>
+                <div class="relative mt-4">
+                    <i class="fa-solid fa-magnifying-glass pointer-events-none absolute left-4 top-4 text-sm text-slate-500"></i>
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="论文 / 年份 / 期刊 / 方向"
+                        class="w-full rounded-2xl border border-white/10 bg-slate-900/90 px-4 py-3 pl-11 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/10"
+                        oninput="handleSearchInput(event)">
+                </div>
+                <p id="searchMeta" class="mt-3 text-xs leading-6 text-slate-500">输入标题、年份、期刊或方向关键词</p>
+                <div id="searchResults" class="search-scroll mt-5 max-h-[30rem] space-y-2 overflow-y-auto pr-1"></div>
+            </section>
+
+            <section class="home-latest-panel glass-panel rounded-[2rem] p-6 sm:p-7">
+                <div class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">最新论文</div>
+                <h2 class="mt-3 text-2xl font-semibold">按年份浏览</h2>
+                <div id="latestPapers" class="home-latest-grid mt-6 grid gap-3"></div>
+            </section>
+        </section>
+    </main>
+
+    <button onclick="scrollToSection('top')" class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full border border-white/10 bg-[rgba(8,15,26,0.88)] px-4 py-3 text-sm font-medium text-slate-100 shadow-[0_18px_36px_rgba(2,8,20,0.28)] backdrop-blur-xl transition hover:border-cyan-400/40 hover:text-white">
+        <i class="fa-solid fa-arrow-up"></i>
+        回到顶部
+    </button>
+
+    <div id="toast" class="toast hidden rounded-3xl px-4 py-3 text-sm leading-6"></div>
+
+    <script src="./assets/fallback-data.js"></script>
+    <script src="./assets/home-page.js"></script>
+</body>
+</html>

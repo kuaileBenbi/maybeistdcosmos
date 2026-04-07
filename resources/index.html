@@ -1,0 +1,183 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>红外小目标检测论文索引</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/istd.css">
+</head>
+<body data-section-slug="resources" data-root-path="..">
+    <div class="site-bg-orbs">
+        <div class="site-bg-orb site-bg-orb--left"></div>
+        <div class="site-bg-orb site-bg-orb--right"></div>
+        <div class="site-bg-orb site-bg-orb--bottom"></div>
+    </div>
+
+    <div id="sidebarOverlay" class="hidden fixed inset-0 z-40 bg-slate-950/70 lg:hidden" onclick="toggleSidebar(false)"></div>
+
+    <div class="min-h-screen lg:grid lg:grid-cols-[22rem_minmax(0,1fr)]">
+        <aside id="sidebar" class="app-sidebar fixed inset-y-0 left-0 z-50 w-full max-w-sm -translate-x-full transition-transform duration-300 lg:sticky lg:top-0 lg:h-screen lg:max-w-none lg:translate-x-0">
+            <div class="app-sidebar-panel">
+                <div class="flex h-full flex-col">
+                    <div class="border-b border-white/10 px-6 py-6">
+                        <div class="flex items-start justify-between gap-4">
+                            <div>
+                                <div class="inline-flex items-center gap-2 rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-xs uppercase tracking-[0.18em] text-cyan-200">
+                                    <span class="h-2 w-2 rounded-full bg-cyan-300"></span>
+                                    Infrared Survey
+                                </div>
+                                <h1 class="mt-4 text-3xl font-semibold leading-tight">Infrared Small Target</h1>
+                                <p class="mt-2 text-sm text-slate-300">红外小目标检测论文索引</p>
+                            </div>
+                            <button onclick="toggleSidebar(false)" class="rounded-2xl border border-white/10 px-3 py-2 text-slate-300 transition hover:border-cyan-400/40 hover:text-white lg:hidden">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div id="sidebarTopicLinks" class="mt-5 flex flex-wrap items-center gap-1 text-sm leading-7 text-slate-400"></div>
+                        <div id="sidebarStats" class="mt-5 grid grid-cols-2 gap-3"></div>
+                    </div>
+
+                    <div class="border-b border-white/10 px-6 py-5">
+                        <label for="searchInput" class="mb-3 block text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">关键词</label>
+                        <div class="relative">
+                            <i class="fa-solid fa-magnifying-glass pointer-events-none absolute left-4 top-4 text-sm text-slate-500"></i>
+                            <input
+                                id="searchInput"
+                                type="text"
+                                placeholder="论文 / 年份 / 期刊 / 方向"
+                                class="w-full rounded-2xl border border-white/10 bg-slate-900/90 px-4 py-3 pl-11 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-400/50 focus:ring-2 focus:ring-cyan-400/10"
+                                oninput="handleSearchInput(event)">
+                        </div>
+                        <p id="searchMeta" class="mt-3 text-xs leading-6 text-slate-500">DNANet / TGRS / Multi-Frame / 传统方法</p>
+                        <div class="mt-5 flex items-center justify-between">
+                            <h2 class="text-sm font-semibold uppercase tracking-[0.14em] text-slate-300">检索结果</h2>
+                            <button id="clearSearchButton" onclick="clearSearch()" class="hidden text-xs text-slate-400 transition hover:text-cyan-300">清空</button>
+                        </div>
+                        <div id="searchResults" class="search-scroll mt-4 max-h-[20rem] space-y-2 overflow-y-auto pr-1 lg:max-h-[24rem]"></div>
+                    </div>
+
+                    <div class="sidebar-scroll flex-1 overflow-y-auto px-6 py-5">
+
+                        <section class="soft-panel rounded-[1.6rem] p-4">
+                            <div class="text-xs font-semibold uppercase tracking-[0.16em] text-amber-200/80">收录范围</div>
+                            <p class="mt-3 text-sm leading-7 text-slate-300">
+                                1993-2026 · 传统方法、低秩/张量建模、深度学习、深度展开与数据资源。
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="relative lg:min-h-screen">
+            <div class="sticky top-0 z-30 border-b border-white/10 bg-[rgba(7,14,24,0.82)] backdrop-blur-xl lg:hidden">
+                <div class="flex items-center px-4 py-3">
+                    <button onclick="toggleSidebar(true)" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 px-4 py-2 text-sm text-slate-100 transition hover:border-cyan-400/40">
+                        <i class="fa-solid fa-bars"></i>
+                        导航与检索
+                    </button>
+                </div>
+            </div>
+
+            <div class="px-4 py-6 sm:px-6 lg:px-10 lg:py-10">
+                <section id="heroSection" class="hero-panel glass-panel section-anchor overflow-hidden rounded-[2rem] p-7 sm:p-8 lg:p-10">
+                    <div class="grid gap-10 xl:grid-cols-[1.1fr_0.9fr]">
+                        <div>
+                            <div id="heroEyebrow" class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs uppercase tracking-[0.18em] text-slate-300">
+                                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
+                                Infrared Small Target Detection
+                            </div>
+                            <h2 id="heroTitle" class="mt-5 text-4xl font-semibold leading-tight sm:text-5xl">
+                                红外小目标检测
+                            </h2>
+                            <p id="heroDescription" class="mt-6 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
+                                红外小目标检测研究条目。
+                            </p>
+                            <div class="mt-8 flex flex-wrap gap-3">
+                                <a href="../index.html" class="inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">
+                                    <i class="fa-solid fa-house"></i>
+                                    返回首页
+                                </a>
+                                <button onclick="scrollToFirstSection()" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                                    <i class="fa-solid fa-arrow-down"></i>
+                                    查看条目
+                                </button>
+                                <button onclick="exportData()" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                                    <i class="fa-solid fa-download"></i>
+                                    导出数据
+                                </button>
+                                <a href="https://github.com/kuaileBenbi/awesome-infrared-small-targets" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                                    <i class="fa-brands fa-github"></i>
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+
+                        <div id="heroStats" class="grid gap-4 sm:grid-cols-3 xl:grid-cols-1"></div>
+                    </div>
+
+                </section>
+
+                <div id="sectionsContainer" class="mt-10 space-y-8"></div>
+            </div>
+        </main>
+    </div>
+
+    <button onclick="scrollToSection('heroSection')" class="fixed bottom-5 right-5 z-30 inline-flex items-center gap-2 rounded-full border border-white/10 bg-[rgba(8,15,26,0.88)] px-4 py-3 text-sm font-medium text-slate-100 shadow-[0_18px_36px_rgba(2,8,20,0.28)] backdrop-blur-xl transition hover:border-cyan-400/40 hover:text-white">
+        <i class="fa-solid fa-arrow-up"></i>
+        回到顶部
+    </button>
+
+    <div id="paperModal" class="paper-modal hidden fixed inset-0 z-50 items-end justify-center bg-slate-950/80 p-4 sm:items-center">
+        <div class="absolute inset-0" onclick="closePaperModal()"></div>
+        <div class="paper-modal-panel relative max-h-[88vh] w-full max-w-3xl overflow-y-auto rounded-[2rem] border border-white/10 p-6 shadow-2xl sm:p-8">
+            <button onclick="closePaperModal()" class="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-slate-400 transition hover:border-cyan-400/40 hover:text-white">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div id="modalTags" class="flex flex-wrap gap-2"></div>
+            <h3 id="modalTitle" class="mt-5 max-w-3xl pr-10 text-3xl font-semibold leading-tight"></h3>
+            <p id="modalPath" class="mt-4 text-sm leading-7 text-slate-400"></p>
+
+            <div id="modalMeta" class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+            <p id="modalDescription" class="mt-6 text-sm leading-7 text-slate-300"></p>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+                <a id="modalPaperLink" target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 rounded-2xl bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-200">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    论文链接
+                </a>
+                <a id="modalCodeLink" target="_blank" rel="noreferrer" class="hidden inline-flex items-center gap-2 rounded-2xl border border-amber-300/20 bg-amber-300/10 px-5 py-3 text-sm font-semibold text-amber-100 transition hover:border-amber-200/40 hover:bg-amber-300/15">
+                    <i class="fa-solid fa-code"></i>
+                    代码仓库
+                </a>
+                <button onclick="copyCurrentPaper()" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                    <i class="fa-solid fa-copy"></i>
+                    复制条目信息
+                </button>
+                <button onclick="locateCurrentPaper()" class="inline-flex items-center gap-2 rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-400/40 hover:text-white">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    定位正文
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden rounded-3xl px-4 py-3 text-sm leading-6"></div>
+
+    <script src="../assets/fallback-data.js"></script>
+    <script src="../assets/module-page.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
