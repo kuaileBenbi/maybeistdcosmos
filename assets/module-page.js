@@ -1,4 +1,4 @@
-﻿const fallbackMindMapData = window.fallbackMindMapData || null;
+const fallbackMindMapData = window.fallbackMindMapData || null;
 
         const sectionMeta = {
             "传统方法": {
@@ -165,6 +165,18 @@
             return papers;
         }
 
+        function getNodeStats(node) {
+            const paperCount = countByType(node, "paper");
+            const infoCount = countByType(node, "info");
+            const total = paperCount + infoCount;
+
+            return {
+                paperCount,
+                infoCount,
+                total,
+                label: paperCount && !infoCount ? "论文" : infoCount && !paperCount ? "资源" : "条目"
+            };
+        }
         function formatTrail(trail) {
             return trail.join(" / ");
         }
@@ -180,13 +192,12 @@
             ];
 
             document.getElementById("sidebarStats").innerHTML = stats.map((item) => `
-                <div class="stat-card rounded-[1.4rem] border border-white/10 bg-white/5 px-4 py-4">
-                    <div class="text-xs uppercase tracking-[0.18em] text-slate-500">${escapeHtml(item.label)}</div>
-                    <div class="mt-2 text-2xl font-semibold text-white">${escapeHtml(item.value)}</div>
+                <div class="stat-card rounded-[1.15rem] border border-white/10 bg-white/5 px-3 py-3">
+                    <div class="text-[11px] uppercase tracking-[0.18em] text-slate-500">${escapeHtml(item.label)}</div>
+                    <div class="mt-1.5 text-lg font-semibold text-white">${escapeHtml(item.value)}</div>
                 </div>
             `).join("");
         }
-
         function renderHeroCopy() {
             const activeSection = state.activeSection;
             if (!activeSection) {
@@ -194,48 +205,25 @@
             }
 
             document.title = `${activeSection.name} - 红外小目标检测论文索引`;
-            document.getElementById("heroEyebrow").innerHTML = `
-                <span class="h-2 w-2 rounded-full bg-emerald-300"></span>
-                ${escapeHtml(activeSection.meta.eyebrow)}
-            `;
+
+            const eyebrow = document.getElementById("heroEyebrow");
+            if (eyebrow) {
+                eyebrow.classList.add("hidden");
+                eyebrow.innerHTML = "";
+            }
+
             document.getElementById("heroTitle").textContent = activeSection.name;
             document.getElementById("heroDescription").textContent = activeSection.meta.summary;
         }
-
         function renderHeroStats() {
-            const activeSection = state.activeSection;
-            const totalPapers = state.papers.length;
-            const latestYear = state.papers.length
-                ? Math.max(...state.papers.map((paper) => extractYearNumber(paper.year)))
-                : "-";
-            const totalTopics = activeSection ? activeSection.children.length : 0;
-            const stats = [
-                {
-                    title: "条目总数",
-                    value: totalPapers,
-                    text: "已收录论文"
-                },
-                {
-                    title: "主题分支",
-                    value: totalTopics,
-                    text: "主题分类"
-                },
-                {
-                    title: "最新年份",
-                    value: latestYear || "-",
-                    text: "最新收录年份"
-                }
-            ];
+            const container = document.getElementById("heroStats");
+            if (!container) {
+                return;
+            }
 
-            document.getElementById("heroStats").innerHTML = stats.map((item) => `
-                <div class="glass-panel rounded-[1.6rem] p-5">
-                    <div class="text-xs uppercase tracking-[0.16em] text-slate-500">${escapeHtml(item.title)}</div>
-                    <div class="mt-3 text-4xl font-semibold text-white">${escapeHtml(item.value)}</div>
-                    <p class="mt-4 text-sm leading-7 text-slate-400">${escapeHtml(item.text)}</p>
-                </div>
-            `).join("");
+            container.innerHTML = "";
+            container.classList.add("hidden");
         }
-
         function renderOverviewCards() {
             const container = document.getElementById("overviewCards");
             if (!container) {
@@ -382,39 +370,55 @@
 
             const directLeaves = (node.children || []).filter((child) => child.type === "paper" || child.type === "info");
             const nestedGroups = (node.children || []).filter((child) => !child.type);
-            const count = countByType(node, "paper") || countByType(node, "info");
-            const label = countByType(node, "paper") ? "篇论文" : "项资源";
+            const stats = getNodeStats(node);
+            const countLabel = stats.label === "论文" ? "篇论文" : stats.label === "资源" ? "项资源" : "条目";
+            const headingLabel = depth === 0 ? "主题" : "分支";
+            const titleClass = depth === 0 ? "text-2xl sm:text-[1.7rem]" : "text-xl";
+            const wrapperClass = depth === 0
+                ? "soft-panel rounded-[1.7rem] p-5 sm:p-6"
+                : "rounded-[1.35rem] border border-white/10 bg-slate-950/30 p-4 sm:p-5";
+            const gridClass = directLeaves.length > 1 ? "lg:grid-cols-2" : "";
+            const anchorId = depth === 0 ? `id="${escapeHtml(node.id)}"` : "";
+            const iconMarkup = node.icon ? `
+                <span class="inline-flex h-11 w-11 items-center justify-center rounded-[1rem] border border-white/10 bg-white/5 text-xl">
+                    ${escapeHtml(node.icon)}
+                </span>
+            ` : "";
 
             return `
-                <div class="${depth > 0 ? "group-block mt-5" : ""}">
-                    <div class="soft-panel rounded-[1.7rem] p-5 sm:p-6">
+                <section ${anchorId} class="${depth > 0 ? "mt-4" : ""}">
+                    <div class="${wrapperClass}">
                         <div class="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                            <div>
-                                <div class="text-xs uppercase tracking-[0.16em] text-slate-500">${depth === 0 ? "主题" : "子主题"}</div>
-                                <h3 class="mt-2 text-2xl font-semibold text-white">${escapeHtml(node.name)}</h3>
+                            <div class="min-w-0">
+                                <div class="text-[11px] uppercase tracking-[0.18em] text-slate-500">${escapeHtml(headingLabel)}</div>
+                                <div class="mt-3 flex items-start gap-3">
+                                    ${iconMarkup}
+                                    <div class="min-w-0">
+                                        <h3 class="${titleClass} font-semibold leading-tight text-white">${escapeHtml(node.name)}</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="tag inline-flex w-fit items-center gap-2 rounded-full px-3 py-1 text-xs">
-                                <i class="fa-solid fa-layer-group"></i>
-                                ${escapeHtml(count)} ${label}
+                            <div class="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-slate-300">
+                                <span class="h-1.5 w-1.5 rounded-full bg-cyan-300"></span>
+                                ${escapeHtml(stats.total)} ${countLabel}
                             </div>
                         </div>
 
                         ${directLeaves.length ? `
-                            <div class="mt-6 grid gap-4 lg:grid-cols-2">
+                            <div class="mt-5 grid gap-4 ${gridClass}">
                                 ${directLeaves.map((child) => renderNodeBlock(child, depth + 1)).join("")}
                             </div>
                         ` : ""}
 
                         ${nestedGroups.length ? `
-                            <div class="${directLeaves.length ? "mt-6" : "mt-5"} space-y-5">
+                            <div class="${directLeaves.length ? "mt-5" : "mt-4"} space-y-4">
                                 ${nestedGroups.map((child) => renderNodeBlock(child, depth + 1)).join("")}
                             </div>
                         ` : ""}
                     </div>
-                </div>
+                </section>
             `;
         }
-
         function renderSections() {
             const section = state.activeSection;
             if (!section) {
@@ -422,39 +426,43 @@
                 return;
             }
 
+            const latestYear = state.papers.length
+                ? Math.max(...state.papers.map((paper) => extractYearNumber(paper.year)))
+                : "-";
+
+            const themeButtons = section.children.map((child) => {
+                const stats = getNodeStats(child);
+                return `
+                    <button
+                        type="button"
+                        onclick="scrollToSection('${child.id}')"
+                        class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs text-slate-200 transition hover:border-cyan-400/35 hover:text-white">
+                        <span class="truncate max-w-[16rem]">${escapeHtml(child.name)}</span>
+                        <span class="rounded-full bg-black/20 px-2 py-0.5 text-[10px] text-slate-400">${escapeHtml(stats.total)}</span>
+                    </button>
+                `;
+            }).join("");
+
             document.getElementById("sectionsContainer").innerHTML = `
                 <section id="${escapeHtml(section.id)}" data-section-id="${escapeHtml(section.id)}" class="section-anchor">
-                    <div class="glass-panel overflow-hidden rounded-[2rem] p-7 sm:p-8" style="background:${escapeHtml(section.meta.surface)};">
-                        <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                            <div class="max-w-3xl">
-                                <div class="text-xs uppercase tracking-[0.18em] text-slate-400">${escapeHtml(section.meta.eyebrow)}</div>
-                                <div class="mt-4 flex items-start gap-4">
-                                    <div class="text-4xl">${escapeHtml(section.icon || "•")}</div>
-                                    <div>
-                                        <h2 class="text-3xl font-semibold text-white sm:text-4xl">${escapeHtml(section.name)}</h2>
-                                        <p class="mt-4 text-sm leading-7 text-slate-300 sm:text-base">${escapeHtml(section.meta.summary)}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-3">
-                                <div class="rounded-[1.4rem] border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-300">
-                                    <div class="text-xs uppercase tracking-[0.16em] text-slate-500">条目数</div>
-                                    <div class="mt-2 text-2xl font-semibold text-white">${escapeHtml(section.entryCount)}</div>
-                                </div>
-                                ${section.meta.chips.map((chip) => `
-                                    <span class="tag inline-flex items-center rounded-full px-3 py-2 text-xs">${escapeHtml(chip)}</span>
-                                `).join("")}
-                            </div>
+                    <div class="flex flex-col gap-3 py-1 xl:flex-row xl:items-center xl:justify-between">
+                        <div class="inline-flex flex-wrap items-center gap-2 text-xs sm:text-sm">
+                            <span class="inline-flex items-center gap-2 rounded-full bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.14em] text-slate-400">
+                                <i class="fa-regular fa-calendar"></i>
+                                最新年份 ${escapeHtml(latestYear)}
+                            </span>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            ${themeButtons}
                         </div>
                     </div>
 
-                    <div class="mt-5 space-y-5">
+                    <div class="mt-4 grid gap-5 ${section.children.length > 1 ? "xl:grid-cols-2" : ""}">
                         ${section.children.map((child) => renderNodeBlock(child, 0)).join("")}
                     </div>
                 </section>
             `;
         }
-
         function renderSearchResultItem(paper) {
             const trail = paper.trail.slice(1).join(" / ") || paper.sectionName;
             return `
@@ -544,11 +552,14 @@
         }
 
         function scrollToFirstSection() {
+            if (state.activeSection && state.activeSection.children && state.activeSection.children.length) {
+                scrollToSection(state.activeSection.children[0].id);
+                return;
+            }
             if (state.activeSection) {
                 scrollToSection(state.activeSection.id);
             }
         }
-
         function jumpToPaper(paperId, shouldOpenModal = true) {
             const paperElement = document.getElementById(paperId);
             if (!paperElement) {
