@@ -1,4 +1,4 @@
-window.fallbackMindMapData = {
+{
   "name": "Awesome Infrared Small Targets",
   "icon": "📡",
   "source": {
@@ -1098,4 +1098,3 @@ window.fallbackMindMapData = {
     }
   ]
 }
-;

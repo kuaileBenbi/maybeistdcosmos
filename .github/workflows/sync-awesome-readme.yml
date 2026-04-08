@@ -1,0 +1,39 @@
+﻿name: Sync Awesome README
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync README data
+        run: python scripts/sync_awesome_readme.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- infrared-mindmap-data.json assets/fallback-data.js; then
+            echo "No data changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add infrared-mindmap-data.json assets/fallback-data.js
+          git commit -m "chore: sync awesome infrared README"
+          git push
