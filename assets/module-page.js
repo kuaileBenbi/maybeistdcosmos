@@ -350,11 +350,31 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
         }
 
         function renderInfoCard(item) {
+            const body = `
+                <div class="text-xs uppercase tracking-[0.16em] text-slate-500">\u8d44\u6e90</div>
+                <div class="mt-3 text-base font-medium leading-7 text-white">${escapeHtml(item.name)}</div>
+                <div class="mt-3 text-sm leading-7 text-slate-400">${escapeHtml(item.trail.slice(1).join(" / ") || item.sectionName)}</div>
+                <div class="mt-4 flex items-center gap-2 text-sm ${item.link ? "text-cyan-200" : "text-slate-500"}">
+                    <i class="fa-solid ${item.link ? "fa-arrow-up-right-from-square" : "fa-link-slash"} text-xs"></i>
+                    ${item.link ? "\u8d44\u6e90\u94fe\u63a5" : "\u672a\u9644\u5916\u94fe"}
+                </div>
+            `;
+
+            if (item.link) {
+                return `
+                    <a
+                        href="${escapeHtml(item.link)}"
+                        target="_blank"
+                        rel="noreferrer"
+                        class="soft-panel block rounded-[1.4rem] p-5 transition duration-200 hover:border-cyan-300/30 hover:bg-white/[0.07]">
+                        ${body}
+                    </a>
+                `;
+            }
+
             return `
                 <div class="soft-panel rounded-[1.4rem] p-5">
-                    <div class="text-xs uppercase tracking-[0.16em] text-slate-500">资源</div>
-                    <div class="mt-3 text-base font-medium leading-7 text-white">${escapeHtml(item.name)}</div>
-                    <div class="mt-3 text-sm leading-7 text-slate-400">${escapeHtml(item.trail.slice(1).join(" / ") || item.sectionName)}</div>
+                    ${body}
                 </div>
             `;
         }
