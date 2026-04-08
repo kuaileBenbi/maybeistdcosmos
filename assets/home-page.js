@@ -37,13 +37,12 @@
 };
 
 const friendlyLinks = [
-    { name: "GrokCV", href: "https://yimian.grokcv.ai/", note: "南开戴一冕课题组" },
-    { name: "WeiweiDuan", href: "https://mrdec.github.io/", note: "成电纪禄平课题组" },
-    { name: "北航视觉实验室", href: "https://levir.buaa.edu.cn/", note: "北航史振威课题组" },
-    { name: "IPIC-Lab", href: "https://github.com/IPIC-Lab", note: "GitHub" },
-    { name: "zhanglw882", href: "https://github.com/zhanglw882", note: "GitHub" }
+    { name: "GrokCV", href: "https://yimian.grokcv.ai/", note: "南开戴一冕课题组", icon: "fa-solid fa-satellite-dish" },
+    { name: "WeiweiDuan", href: "https://mrdec.github.io/", note: "成电纪禄平课题组", icon: "fa-solid fa-wave-square" },
+    { name: "北航视觉实验室", href: "https://levir.buaa.edu.cn/", note: "北航史振威课题组", icon: "fa-solid fa-building-columns" },
+    { name: "IPIC-Lab", href: "https://github.com/IPIC-Lab", note: "GitHub", icon: "fa-brands fa-github" },
+    { name: "zhanglw882", href: "https://github.com/zhanglw882", note: "GitHub", icon: "fa-brands fa-github" }
 ];
-
 const state = {
     data: null,
     sections: [],
@@ -134,8 +133,8 @@ function normalizeSections(data) {
         const meta = sectionMeta[section.name] || {
             slug: `section-${index + 1}`,
             title: section.name,
-            eyebrow: "研究方向",
-            summary: "研究条目。",
+            eyebrow: "Research Section",
+            summary: "Research entries.",
             branchRgb: "144, 195, 255"
         };
 
@@ -227,6 +226,20 @@ function buildBranchGroups(section) {
             leaves: buildLeafPreview(child, nested ? 4 : 3)
         };
     });
+}
+
+function getResourceGroupIcon(title) {
+    const value = String(title || "");
+    if (value.includes("Datasets")) {
+        return "fa-solid fa-database";
+    }
+    if (value.includes("Surveys")) {
+        return "fa-solid fa-book-open";
+    }
+    if (value.includes("Benchmarks")) {
+        return "fa-solid fa-chart-line";
+    }
+    return "fa-solid fa-link";
 }
 
 function buildResourceGroups(section) {
@@ -325,7 +338,10 @@ function renderResourcePanel() {
             ${groups.map((group) => `
                 <a href="${buildSectionUrl("resources")}" class="resource-group">
                     <div class="resource-group__row">
-                        <h3 class="resource-group__title">${escapeHtml(group.title)}</h3>
+                        <div class="resource-group__title-wrap">
+                            <span class="resource-group__icon"><i class="${getResourceGroupIcon(group.title)}"></i></span>
+                            <h3 class="resource-group__title">${escapeHtml(group.title)}</h3>
+                        </div>
                         <span class="resource-group__count">${escapeHtml(group.count)} 项</span>
                     </div>
                     <div class="resource-group__leaves">
@@ -344,8 +360,14 @@ function renderResourcePanel() {
             <div class="resource-links">
                 ${friendlyLinks.map((item) => `
                     <a href="${escapeHtml(item.href)}" target="_blank" rel="noreferrer" class="resource-link-card">
-                        <span class="resource-link-card__name">${escapeHtml(item.name)}</span>
-                        <span class="resource-link-card__note">${escapeHtml(item.note)}</span>
+                        <div class="resource-link-card__main">
+                            <span class="resource-link-card__icon"><i class="${escapeHtml(item.icon || "fa-solid fa-link")}"></i></span>
+                            <div>
+                                <span class="resource-link-card__name">${escapeHtml(item.name)}</span>
+                                <span class="resource-link-card__note">${escapeHtml(item.note)}</span>
+                            </div>
+                        </div>
+                        <span class="resource-link-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
                     </a>
                 `).join("")}
             </div>
