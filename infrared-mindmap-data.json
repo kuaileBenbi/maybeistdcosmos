@@ -565,6 +565,14 @@
               "link": "https://openaccess.thecvf.com/content/CVPR2022/papers/Zhang_ISNet_Shape_Matters_for_Infrared_Small_Target_Detection_CVPR_2022_paper.pdf"
             },
             {
+              "name": "ISTDU-Net (GRSL 2022)",
+              "type": "paper",
+              "year": "2022",
+              "venue": "GRSL",
+              "link": "https://ieeexplore.ieee.org/document/9674870",
+              "code": "https://github.com/zhanglw882/ISTDU-Net?tab=readme-ov-file"
+            },
+            {
               "name": "UIUNet (TIP 2023)",
               "type": "paper",
               "year": "2023",
@@ -722,6 +730,22 @@
               "venue": "KBS",
               "link": "https://www.sciencedirect.com/science/article/pii/S0950705125017083",
               "code": "https://github.com/liboeryuan/PGNet"
+            },
+            {
+              "name": "SDS-Net (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://arxiv.org/abs/2506.06042",
+              "code": "https://github.com/PhysiLearn/SDS-Net"
+            },
+            {
+              "name": "SPIRE (arXiv 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "arXiv",
+              "link": "https://arxiv.org/abs/2604.05363",
+              "code": "https://github.com/NIRIXIANG/SPIRE-IRSTD"
             }
           ]
         },
