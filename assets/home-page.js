@@ -67,12 +67,34 @@ function normalizeText(value) {
     return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
 }
 
+function flattenSearchValues(values) {
+    return values.reduce((items, value) => {
+        if (Array.isArray(value)) {
+            value.filter(Boolean).forEach((entry) => items.push(String(entry)));
+            return items;
+        }
+        if (value) {
+            items.push(String(value));
+        }
+        return items;
+    }, []);
+}
+
 function extractYearNumber(value) {
     const matches = String(value || "").match(/\d{4}/g);
     if (!matches) {
         return 0;
     }
     return Math.max(...matches.map(Number));
+}
+
+function extractSortNumber(node) {
+    const preciseDate = node && (node.updated || node.published);
+    const timestamp = Date.parse(String(preciseDate || ""));
+    if (!Number.isNaN(timestamp)) {
+        return timestamp;
+    }
+    return extractYearNumber(node && node.year) * 1000;
 }
 
 function countByType(node, targetType) {
@@ -105,13 +127,20 @@ function enrichNode(node, trail, sectionName, sectionSlug, sectionLabel) {
     }
 
     if (node.type === "paper" || node.type === "info") {
-        enriched.searchText = normalizeText([
+        enriched.searchText = normalizeText(flattenSearchValues([
             node.name,
             node.year,
             node.venue,
+            node.authors,
+            node.abstract,
+            node.comment,
+            node.journal_ref,
+            node.source_label,
+            node.classification_group,
+            node.classification_tags,
             sectionLabel,
             ...trail
-        ].filter(Boolean).join(" "));
+        ]).join(" "));
     }
 
     return enriched;
@@ -161,7 +190,7 @@ function normalizeSections(data) {
 function buildPaperIndex(sections) {
     const papers = [];
     sections.forEach((section) => section.children.forEach((child) => collectPapers(child, papers)));
-    papers.sort((a, b) => extractYearNumber(b.year) - extractYearNumber(a.year));
+    papers.sort((a, b) => extractSortNumber(b) - extractSortNumber(a));
     return papers;
 }
 

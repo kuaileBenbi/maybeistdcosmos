@@ -12,6 +12,7 @@ The project originally started as a compact summary for slides, then gradually e
 - Search, year-based browsing, paper/resource links, and lightweight static deployment.
 - Data-first rendering through `infrared-mindmap-data.json`, with `assets/fallback-data.js` as a built-in fallback.
 - Automatic synchronization from the upstream awesome list through GitHub Actions.
+- Automatic arXiv watch for recent `cs.CV` papers, with keyword filtering, venue hints, and heuristic grouping.
 
 ## Repository Layout
 
@@ -22,29 +23,42 @@ The project originally started as a compact summary for slides, then gradually e
 - `infrared-mindmap-data.json`: primary structured data source used by the site.
 - `assets/fallback-data.js`: embedded fallback data used when JSON loading fails.
 - `scripts/sync_awesome_readme.py`: parser that converts the upstream README into the local site data format.
+- `scripts/sync_arxiv_watch.py`: arXiv `cs.CV` watcher that filters infrared small-target candidates and merges them into `资源 Resources / 自动追踪 Auto Watch`.
+- `scripts/fixtures/arxiv_cs_cv_sample.xml`: local sample feed for offline validation of the arXiv watcher.
 - `.github/workflows/sync-awesome-readme.yml`: scheduled and manual sync workflow.
 
 ## How This Repository Works
 
-At a high level, the repository acts as a static visualization layer on top of the upstream awesome list:
+At a high level, the repository acts as a static visualization layer on top of two upstream signals:
 
 1. `scripts/sync_awesome_readme.py` fetches the upstream `README.md`.
-2. The script parses predefined sections such as methods, datasets, surveys, and benchmarks.
-3. Parsed entries are normalized into the local JSON schema used by this site.
-4. The outputs are written to `infrared-mindmap-data.json` and `assets/fallback-data.js`.
-5. Frontend pages load the JSON first and fall back to embedded data if necessary.
-6. GitHub Actions runs the sync job on schedule or on demand, and commits updated data when changes are detected.
+2. The README parser normalizes curated sections such as methods, datasets, surveys, and benchmarks.
+3. `scripts/sync_arxiv_watch.py` queries recent `cs.CV` submissions, filters by infrared small-target keywords, detects possible venue signals, and places matched papers under `资源 Resources / 自动追踪 Auto Watch`.
+4. Both sources are merged into the local JSON schema used by this site.
+5. The outputs are written to `infrared-mindmap-data.json` and `assets/fallback-data.js`.
+6. Frontend pages load the JSON first and fall back to embedded data if necessary.
+7. GitHub Actions runs the sync job on schedule or on demand, and commits updated data when changes are detected.
 
-In short: upstream README -> local structured data -> static web presentation.
+In short: curated awesome list + arXiv watch -> local structured data -> static web presentation.
 
 ## Auto Sync
 
 - Upstream source: `awesome-infrared-small-targets/README.md`
 - Sync entry: `python scripts/sync_awesome_readme.py`
+- arXiv watch entry: `python scripts/sync_arxiv_watch.py`
 - Workflow: `.github/workflows/sync-awesome-readme.yml`
 - Trigger mode: scheduled run plus manual dispatch
+- The README sync preserves the `自动追踪 Auto Watch` subtree, so a failed arXiv fetch does not wipe the previous watch results.
 
 This setup is stable for routine upstream updates. If the upstream README changes its section structure significantly, the parser rules may need to be adjusted.
+
+The arXiv watcher uses heuristic rules inside `scripts/sync_arxiv_watch.py`:
+
+- `STRONG_PHRASES`, `DOMAIN_PATTERNS`, `TARGET_PATTERNS`, `TASK_PATTERNS`: relevance filtering.
+- `VENUE_RULES`: top conference / journal alias detection.
+- `RESOURCE_`, `MULTI_FRAME_`, `OPTIMIZATION_`, `TRADITIONAL_`, `DEEP_` keyword groups: routing into candidate branches.
+
+Those constants are the main place to continue refining keywords and venue coverage.
 
 ## Local Usage
 
@@ -58,6 +72,18 @@ Validate parsing without writing files:
 
 ```bash
 python scripts/sync_awesome_readme.py --check
+```
+
+Validate the arXiv classifier offline with the bundled sample feed:
+
+```bash
+python scripts/sync_arxiv_watch.py --feed-path scripts/fixtures/arxiv_cs_cv_sample.xml --check
+```
+
+Run the live arXiv watcher and merge candidates into the site data:
+
+```bash
+python scripts/sync_arxiv_watch.py
 ```
 
 The site is static, so after data generation it can be previewed or deployed directly as ordinary static files.

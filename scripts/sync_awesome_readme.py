@@ -15,6 +15,7 @@ README_URL = "https://raw.githubusercontent.com/Tianfang-Zhang/awesome-infrared-
 REPO_URL = "https://github.com/Tianfang-Zhang/awesome-infrared-small-targets"
 DEFAULT_JSON_PATH = Path("infrared-mindmap-data.json")
 DEFAULT_FALLBACK_PATH = Path("assets/fallback-data.js")
+PRESERVED_RESOURCE_GROUPS = {"自动追踪 Auto Watch"}
 
 SECTION_LAYOUT = {
     "传统方法": {"icon": "📡"},
@@ -338,6 +339,62 @@ def add_items(root: Dict[str, object], path: List[str], items: List[Dict[str, st
             existing.add(key)
 
 
+def find_named_child(parent: Dict[str, object], name: str) -> Optional[Dict[str, object]]:
+    children = parent.get("children", [])
+    if not isinstance(children, list):
+        return None
+    for child in children:
+        if isinstance(child, dict) and child.get("name") == name:
+            return child
+    return None
+
+
+def load_existing_data(json_path: Path) -> Optional[Dict[str, object]]:
+    if not json_path.exists():
+        return None
+    try:
+        return json.loads(json_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return None
+
+
+def preserve_source_metadata(data: Dict[str, object], existing: Optional[Dict[str, object]]) -> None:
+    if not existing:
+        return
+    existing_source = existing.get("source")
+    if not isinstance(existing_source, dict):
+        return
+    source = data.setdefault("source", {})
+    for key in ("arxivWatch",):
+        if key in existing_source:
+            source[key] = existing_source[key]
+
+
+def preserve_resource_groups(data: Dict[str, object], existing: Optional[Dict[str, object]]) -> None:
+    if not existing:
+        return
+    existing_resource = find_named_child(existing, "资源 Resources")
+    current_resource = find_named_child(data, "资源 Resources")
+    if not existing_resource or not current_resource:
+        return
+
+    current_children = current_resource.setdefault("children", [])
+    current_names = {child.get("name") for child in current_children if isinstance(child, dict)}
+    for child in existing_resource.get("children", []):
+        if not isinstance(child, dict):
+            continue
+        name = child.get("name")
+        if name in PRESERVED_RESOURCE_GROUPS and name not in current_names:
+            current_children.append(child)
+            current_names.add(name)
+
+
+def preserve_existing_nodes(data: Dict[str, object], json_path: Path) -> None:
+    existing = load_existing_data(json_path)
+    preserve_source_metadata(data, existing)
+    preserve_resource_groups(data, existing)
+
+
 def build_data(readme_text: str) -> Dict[str, object]:
     normalized = normalize_source(readme_text)
     sections = split_sections(normalized)
@@ -399,6 +456,7 @@ def main() -> int:
             print(body)
             return 0
         data = build_data(readme_text)
+        preserve_existing_nodes(data, args.json_path)
     except Exception as exc:  # noqa: BLE001
         print(f"sync failed: {exc}", file=sys.stderr)
         return 1

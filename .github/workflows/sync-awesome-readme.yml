@@ -1,4 +1,4 @@
-﻿name: Sync Awesome README
+name: Sync Infrared Research Data
 
 on:
   workflow_dispatch:
@@ -25,6 +25,10 @@ jobs:
       - name: Sync README data
         run: python scripts/sync_awesome_readme.py
 
+      - name: Sync arXiv watch
+        continue-on-error: true
+        run: python scripts/sync_arxiv_watch.py
+
       - name: Commit changes
         run: |
           if git diff --quiet -- infrared-mindmap-data.json assets/fallback-data.js; then
@@ -35,5 +39,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add infrared-mindmap-data.json assets/fallback-data.js
-          git commit -m "chore: sync awesome infrared README"
+          git commit -m "chore: sync infrared research data"
           git push

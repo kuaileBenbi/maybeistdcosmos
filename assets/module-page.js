@@ -70,12 +70,34 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
             return String(value || "").toLowerCase().replace(/\s+/g, " ").trim();
         }
 
+        function flattenSearchValues(values) {
+            return values.reduce((items, value) => {
+                if (Array.isArray(value)) {
+                    value.filter(Boolean).forEach((entry) => items.push(String(entry)));
+                    return items;
+                }
+                if (value) {
+                    items.push(String(value));
+                }
+                return items;
+            }, []);
+        }
+
         function extractYearNumber(value) {
             const matches = String(value || "").match(/\d{4}/g);
             if (!matches) {
                 return 0;
             }
             return Math.max(...matches.map(Number));
+        }
+
+        function extractSortNumber(node) {
+            const preciseDate = node && (node.updated || node.published);
+            const timestamp = Date.parse(String(preciseDate || ""));
+            if (!Number.isNaN(timestamp)) {
+                return timestamp;
+            }
+            return extractYearNumber(node && node.year) * 1000;
         }
 
         function countByType(node, targetType) {
@@ -110,12 +132,19 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
             }
 
             if (node.type === "paper" || node.type === "info") {
-                enriched.searchText = normalizeText([
+                enriched.searchText = normalizeText(flattenSearchValues([
                     node.name,
                     node.year,
                     node.venue,
+                    node.authors,
+                    node.abstract,
+                    node.comment,
+                    node.journal_ref,
+                    node.source_label,
+                    node.classification_group,
+                    node.classification_tags,
                     ...trail
-                ].filter(Boolean).join(" "));
+                ]).join(" "));
             }
 
             return enriched;
@@ -161,7 +190,7 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
         function buildPaperIndex(sections) {
             const papers = [];
             sections.forEach((section) => section.children.forEach((child) => collectPapers(child, papers)));
-            papers.sort((a, b) => extractYearNumber(b.year) - extractYearNumber(a.year));
+            papers.sort((a, b) => extractSortNumber(b) - extractSortNumber(a));
             return papers;
         }
 
@@ -310,6 +339,12 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
             }
             if (paper.venue) {
                 badges.push(`<span class="tag rounded-full px-3 py-1 text-xs">${escapeHtml(paper.venue)}</span>`);
+            }
+            if (paper.source_kind === "arxiv-watch") {
+                badges.push(`<span class="tag rounded-full px-3 py-1 text-xs">Auto Watch</span>`);
+            }
+            if (paper.venue_status === "accepted") {
+                badges.push(`<span class="tag rounded-full px-3 py-1 text-xs">Accepted</span>`);
             }
             return `
                 <article
@@ -613,6 +648,22 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
                 { label: "期刊 / 会议", value: paper.venue || "未标注" }
             ];
 
+            if (paper.source_label) {
+                metaItems.push({ label: "来源", value: paper.source_label });
+            }
+            if (paper.venue_status) {
+                metaItems.push({ label: "状态", value: paper.venue_status });
+            }
+            if (paper.published) {
+                metaItems.push({ label: "发布时间", value: paper.published.slice(0, 10) });
+            }
+            if (paper.updated) {
+                metaItems.push({ label: "更新时间", value: paper.updated.slice(0, 10) });
+            }
+            if (paper.authors) {
+                metaItems.push({ label: "作者", value: paper.authors });
+            }
+
             document.getElementById("modalMeta").innerHTML = metaItems.map((item) => `
                 <div class="rounded-[1.4rem] border border-white/10 bg-white/5 px-4 py-4">
                     <div class="text-xs uppercase tracking-[0.16em] text-slate-500">${escapeHtml(item.label)}</div>
@@ -644,8 +695,20 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
             if (paper.code) {
                 linkState.push("代码链接");
             }
-            document.getElementById("modalDescription").textContent =
-                linkState.length ? `已附${linkState.join("、")}` : "未附链接信息";
+            const descriptionParts = [];
+            if (paper.abstract) {
+                descriptionParts.push(`<strong class="text-slate-100">摘要</strong><br>${escapeHtml(paper.abstract)}`);
+            }
+            if (paper.comment) {
+                descriptionParts.push(`<strong class="text-slate-100">备注</strong><br>${escapeHtml(paper.comment)}`);
+            }
+            if (paper.journal_ref) {
+                descriptionParts.push(`<strong class="text-slate-100">Journal Ref</strong><br>${escapeHtml(paper.journal_ref)}`);
+            }
+            if (!descriptionParts.length) {
+                descriptionParts.push(linkState.length ? `已附${escapeHtml(linkState.join("、"))}` : "未附链接信息");
+            }
+            document.getElementById("modalDescription").innerHTML = descriptionParts.join("<br><br>");
 
             const paperLink = document.getElementById("modalPaperLink");
             if (paper.link) {
@@ -694,7 +757,10 @@ const fallbackMindMapData = window.fallbackMindMapData || null;
                 paper.name,
                 paper.year ? `Year: ${paper.year}` : "",
                 paper.venue ? `Venue: ${paper.venue}` : "",
+                paper.source_label ? `Source: ${paper.source_label}` : "",
+                paper.authors ? `Authors: ${paper.authors}` : "",
                 `Path: ${formatTrail(paper.trail)}`,
+                paper.abstract ? `Abstract: ${paper.abstract}` : "",
                 paper.link || "",
                 paper.code ? `Code: ${paper.code}` : ""
             ].filter(Boolean).join("\n");
