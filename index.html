@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
     <link rel="stylesheet" href="./assets/istd.css">
 </head>
 <body class="home-mindmap-page">
@@ -58,6 +59,31 @@
                 <div id="latestPapers" class="mt-6 grid gap-4 lg:grid-cols-2"></div>
             </section>
         </section>
+
+        <section id="benchmarkSection" class="mt-10 grid gap-6 xl:grid-cols-[minmax(0,1.08fr)_22rem]">
+            <section class="glass-panel benchmark-panel rounded-[2rem] p-6 sm:p-7">
+                <div class="benchmark-panel__head">
+                    <div>
+                        <div class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400">Benchmark Spotlight</div>
+                        <h2 class="mt-3 text-2xl font-semibold">统一评测曲线与指标</h2>
+                    </div>
+                    <a id="benchmarkSourceLink" href="https://github.com/kuaileBenbi/BasicIRSTD" target="_blank" rel="noreferrer" class="resource-panel__entry-link">
+                        BasicIRSTD
+                    </a>
+                </div>
+
+                <div id="benchmarkSummaryChips" class="benchmark-summary-chips mt-5"></div>
+                <div id="benchmarkControls" class="benchmark-controls mt-5"></div>
+                <div id="benchmarkChartState" class="benchmark-empty hidden mt-5"></div>
+                <div id="benchmarkChart" class="benchmark-chart mt-5"></div>
+            </section>
+
+            <aside class="glass-panel benchmark-side rounded-[2rem] p-5 sm:p-6">
+                <div class="resource-panel__eyebrow">Leaderboard</div>
+                <h3 class="mt-3 text-2xl font-semibold">Top Methods</h3>
+                <div id="benchmarkLeaderboard" class="benchmark-rank-list mt-5"></div>
+            </aside>
+        </section>
     </main>
 
     <footer class="site-watermark">
@@ -81,6 +107,7 @@
     </button>
 
     <script src="./assets/fallback-data.js"></script>
+    <script src="./assets/fallback-benchmark-data.js"></script>
     <script src="./assets/home-page.js"></script>
 </body>
 </html>

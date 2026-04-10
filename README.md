@@ -13,6 +13,7 @@ The project originally started as a compact summary for slides, then gradually e
 - Data-first rendering through `infrared-mindmap-data.json`, with `assets/fallback-data.js` as a built-in fallback.
 - Automatic synchronization from the upstream awesome list through GitHub Actions.
 - Automatic arXiv watch for recent `cs.CV` papers, with keyword filtering, venue hints, and heuristic grouping.
+- Homepage benchmark spotlight powered by `benchmark-data.json`, with weekly sync from `BasicIRSTD`.
 
 ## Repository Layout
 
@@ -22,24 +23,29 @@ The project originally started as a compact summary for slides, then gradually e
 - `assets/module-page.js`: submodule rendering, search, navigation, and detail behavior.
 - `infrared-mindmap-data.json`: primary structured data source used by the site.
 - `assets/fallback-data.js`: embedded fallback data used when JSON loading fails.
+- `benchmark-data.json`: benchmark data consumed by the homepage chart section.
+- `assets/fallback-benchmark-data.js`: embedded benchmark fallback used when live benchmark loading fails.
 - `scripts/sync_awesome_readme.py`: parser that converts the upstream README into the local site data format.
 - `scripts/sync_arxiv_watch.py`: arXiv `cs.CV` watcher that filters infrared small-target candidates and merges them into `资源 Resources / 自动追踪 Auto Watch`.
+- `scripts/sync_benchmark_data.py`: benchmark-data synchronizer for pulling structured benchmark results from `BasicIRSTD`.
 - `scripts/fixtures/arxiv_cs_cv_sample.xml`: local sample feed for offline validation of the arXiv watcher.
 - `.github/workflows/sync-awesome-readme.yml`: scheduled and manual sync workflow.
+- `.github/workflows/sync-benchmark-data.yml`: weekly benchmark sync workflow.
 
 ## How This Repository Works
 
-At a high level, the repository acts as a static visualization layer on top of two upstream signals:
+At a high level, the repository acts as a static visualization layer on top of three upstream signals:
 
 1. `scripts/sync_awesome_readme.py` fetches the upstream `README.md`.
 2. The README parser normalizes curated sections such as methods, datasets, surveys, and benchmarks.
 3. `scripts/sync_arxiv_watch.py` queries recent `cs.CV` submissions, filters by infrared small-target keywords, detects possible venue signals, and places matched papers under `资源 Resources / 自动追踪 Auto Watch`.
-4. Both sources are merged into the local JSON schema used by this site.
-5. The outputs are written to `infrared-mindmap-data.json` and `assets/fallback-data.js`.
-6. Frontend pages load the JSON first and fall back to embedded data if necessary.
-7. GitHub Actions runs the sync job on schedule or on demand, and commits updated data when changes are detected.
+4. `scripts/sync_benchmark_data.py` pulls `benchmark-data.json` from `BasicIRSTD` and writes both a local JSON copy and an embedded benchmark fallback.
+5. These sources are merged into the local JSON assets used by this site.
+6. The outputs are written to `infrared-mindmap-data.json`, `assets/fallback-data.js`, `benchmark-data.json`, and `assets/fallback-benchmark-data.js`.
+7. Frontend pages load JSON first and fall back to embedded data if necessary.
+8. GitHub Actions runs the sync jobs on schedule or on demand, and commits updated data when changes are detected.
 
-In short: curated awesome list + arXiv watch -> local structured data -> static web presentation.
+In short: curated awesome list + arXiv watch + benchmark repo -> local structured data -> static web presentation.
 
 ## Auto Sync
 
@@ -48,6 +54,10 @@ In short: curated awesome list + arXiv watch -> local structured data -> static 
 - arXiv watch entry: `python scripts/sync_arxiv_watch.py`
 - Workflow: `.github/workflows/sync-awesome-readme.yml`
 - Trigger mode: scheduled run plus manual dispatch
+- Benchmark source: `kuaileBenbi/BasicIRSTD/benchmark-data.json`
+- Benchmark sync entry: `python scripts/sync_benchmark_data.py`
+- Benchmark workflow: `.github/workflows/sync-benchmark-data.yml`
+- Benchmark trigger mode: weekly schedule plus manual dispatch
 - The README sync preserves the `自动追踪 Auto Watch` subtree, so a failed arXiv fetch does not wipe the previous watch results.
 
 This setup is stable for routine upstream updates. If the upstream README changes its section structure significantly, the parser rules may need to be adjusted.
@@ -84,6 +94,12 @@ Run the live arXiv watcher and merge candidates into the site data:
 
 ```bash
 python scripts/sync_arxiv_watch.py
+```
+
+Sync the benchmark payload consumed by the homepage:
+
+```bash
+python scripts/sync_benchmark_data.py
 ```
 
 The site is static, so after data generation it can be previewed or deployed directly as ordinary static files.

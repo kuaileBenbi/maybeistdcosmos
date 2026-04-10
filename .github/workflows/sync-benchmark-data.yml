@@ -1,0 +1,39 @@
+name: Sync Benchmark Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * 1'
+
+permissions:
+  contents: write
+
+jobs:
+  sync-benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Sync benchmark data
+        run: python scripts/sync_benchmark_data.py
+
+      - name: Commit changes
+        run: |
+          if git diff --quiet -- benchmark-data.json assets/fallback-benchmark-data.js; then
+            echo "No benchmark changes detected."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add benchmark-data.json assets/fallback-benchmark-data.js
+          git commit -m "chore: sync benchmark data"
+          git push
