@@ -1,4 +1,4 @@
-# 红外小目标检测研究追踪
+# [红外小目标检测研究追踪](https://kuailebenbi.github.io/maybeistdcosmos/index.html)
 
 A lightweight static website for tracking infrared small target detection research.
 
