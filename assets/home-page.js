@@ -1,4 +1,4 @@
-const sectionMeta = {
+﻿const sectionMeta = {
     "传统方法": {
         slug: "traditional",
         title: "传统方法",
@@ -41,7 +41,9 @@ const friendlyLinks = [
     { name: "WeiweiDuan", href: "https://mrdec.github.io/", note: "成电纪禄平课题组", icon: "fa-solid fa-wave-square" },
     { name: "北航视觉实验室", href: "https://levir.buaa.edu.cn/", note: "北航史振威课题组", icon: "fa-solid fa-building-columns" },
     { name: "IPIC-Lab", href: "https://github.com/IPIC-Lab", note: "GitHub", icon: "fa-brands fa-github" },
-    { name: "zhanglw882", href: "https://github.com/zhanglw882", note: "GitHub", icon: "fa-brands fa-github" }
+    { name: "zhanglw882", href: "https://github.com/zhanglw882", note: "GitHub", icon: "fa-brands fa-github" },
+    {name: "shuaiyuan", href: "https://github.com/xdFai", note: "合肥工业大学", icon: "fa-brands fa-github" },
+    {name: "YuChuang1205", href: "https://github.com/YuChuang1205", note: "中科院沈阳自动化所", icon: "fa-brands fa-github" }
 ];
 
 const BENCHMARK_SOURCES = [
