@@ -722,21 +722,6 @@
               "venue": "KBS",
               "link": "https://www.sciencedirect.com/science/article/pii/S0950705125017083",
               "code": "https://github.com/liboeryuan/PGNet"
-            },
-            {"name":"SPIRE:Rethinking IRSTD: Single-Point Supervision Guided Encoder-only Framework is Enough for Infrared Small Target Detection",
-              "type":"paper",
-              "year":"2026",
-              "venue":"arXiv",
-              "link":"https://arxiv.org/abs/2604.05363",
-              "code":"https://github.com/NIRIXIANG/SPIRE-IRSTD"
-            },
-            {
-              "name": "Revisiting the Scale Loss Function and  Gaussian-Shape Convolution for Infrared Small  Target Detection",
-              "type": "paper",
-              "year": "2026",
-              "venue": "arXiv",
-              "link": "https://arxiv.org/abs/2604.09991",
-              "code": "https://anonymous.4open.science/r/Revisiting_the_Scale_Loss_Function_ and_Gaussian_Shape_Convolution-7572"
             }
           ]
         },

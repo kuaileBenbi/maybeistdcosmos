@@ -971,7 +971,7 @@ window.fallbackMindMapData = {
                   "name": "WideIRSTD-Full",
                   "type": "info",
                   "link": "https://arxiv.org/pdf/2505.15184",
-                  "code": "https://github.com/GrokCV/AuxDet"
+                  "code": "https://arxiv.org/pdf/2505.15184"
                 }
               ]
             },
