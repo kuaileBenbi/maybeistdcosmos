@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import sys
+from copy import deepcopy
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 from urllib.request import Request, urlopen
@@ -15,7 +16,9 @@ README_URL = "https://raw.githubusercontent.com/Tianfang-Zhang/awesome-infrared-
 REPO_URL = "https://github.com/Tianfang-Zhang/awesome-infrared-small-targets"
 DEFAULT_JSON_PATH = Path("infrared-mindmap-data.json")
 DEFAULT_FALLBACK_PATH = Path("assets/fallback-data.js")
-PRESERVED_RESOURCE_GROUPS = {"自动追踪 Auto Watch"}
+MANUAL_NODE_FLAG = "manual"
+MANUAL_SOURCE_KIND = "manual"
+MANUAL_SOURCE_LABEL = "Manual addition"
 
 SECTION_LAYOUT = {
     "传统方法": {"icon": "📡"},
@@ -370,29 +373,66 @@ def preserve_source_metadata(data: Dict[str, object], existing: Optional[Dict[st
             source[key] = existing_source[key]
 
 
-def preserve_resource_groups(data: Dict[str, object], existing: Optional[Dict[str, object]]) -> None:
+def has_children(node: Dict[str, object]) -> bool:
+    return isinstance(node.get("children"), list)
+
+
+def node_match_key(node: Dict[str, object]) -> Tuple[object, ...]:
+    if has_children(node):
+        return ("group", node.get("name"))
+    return (
+        "leaf",
+        node.get("type"),
+        node.get("name"),
+        node.get("year"),
+        node.get("link"),
+    )
+
+
+def mark_manual_subtree(node: Dict[str, object]) -> None:
+    node[MANUAL_NODE_FLAG] = True
+    if not has_children(node) and not node.get("source_kind"):
+        node["source_kind"] = MANUAL_SOURCE_KIND
+        node.setdefault("source_label", MANUAL_SOURCE_LABEL)
+    children = node.get("children", [])
+    if not isinstance(children, list):
+        return
+    for child in children:
+        if isinstance(child, dict):
+            mark_manual_subtree(child)
+
+
+def preserve_missing_nodes(current: Dict[str, object], existing: Optional[Dict[str, object]]) -> None:
     if not existing:
         return
-    existing_resource = find_named_child(existing, "资源 Resources")
-    current_resource = find_named_child(data, "资源 Resources")
-    if not existing_resource or not current_resource:
+    current_children = current.get("children")
+    existing_children = existing.get("children")
+    if not isinstance(current_children, list) or not isinstance(existing_children, list):
         return
 
-    current_children = current_resource.setdefault("children", [])
-    current_names = {child.get("name") for child in current_children if isinstance(child, dict)}
-    for child in existing_resource.get("children", []):
-        if not isinstance(child, dict):
+    indexed_current = {
+        node_match_key(child): child
+        for child in current_children
+        if isinstance(child, dict)
+    }
+    for existing_child in existing_children:
+        if not isinstance(existing_child, dict):
             continue
-        name = child.get("name")
-        if name in PRESERVED_RESOURCE_GROUPS and name not in current_names:
-            current_children.append(child)
-            current_names.add(name)
+        key = node_match_key(existing_child)
+        current_child = indexed_current.get(key)
+        if current_child is None:
+            preserved_child = deepcopy(existing_child)
+            mark_manual_subtree(preserved_child)
+            current_children.append(preserved_child)
+            indexed_current[key] = preserved_child
+            continue
+        preserve_missing_nodes(current_child, existing_child)
 
 
 def preserve_existing_nodes(data: Dict[str, object], json_path: Path) -> None:
     existing = load_existing_data(json_path)
     preserve_source_metadata(data, existing)
-    preserve_resource_groups(data, existing)
+    preserve_missing_nodes(data, existing)
 
 
 def build_data(readme_text: str) -> Dict[str, object]:

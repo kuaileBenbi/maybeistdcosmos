@@ -59,6 +59,7 @@ In short: curated awesome list + arXiv watch + benchmark repo -> local structure
 - Benchmark workflow: `.github/workflows/sync-benchmark-data.yml`
 - Benchmark trigger mode: weekly schedule plus manual dispatch
 - The README sync preserves the `自动追踪 Auto Watch` subtree, so a failed arXiv fetch does not wipe the previous watch results.
+- The README sync also preserves extra nodes that already exist in `infrared-mindmap-data.json`, and marks them as manual additions on merge.
 
 This setup is stable for routine upstream updates. If the upstream README changes its section structure significantly, the parser rules may need to be adjusted.
 
