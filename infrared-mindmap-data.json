@@ -737,19 +737,19 @@
               "venue": "arXiv",
               "link": "https://arxiv.org/abs/2604.09991",
               "code": "https://anonymous.4open.science/r/Revisiting_the_Scale_Loss_Function_ and_Gaussian_Shape_Convolution-7572"
-            },
-            {
-              "name":"GST-Det:A Global Spatial–Temporal Detection Framework for Infrared Small Targets in Complex Ground Scenes",
-              "type":"paper",
-              "year":"2025",
-              "venue":"TGRS",
-              "link":"https://github.com/elvintanhust/GST-Det"
             }
           ]
         },
         {
           "name": "多帧 Multi-Frame",
           "children": [
+            {
+              "name":"GST-Det:A Global Spatial–Temporal Detection Framework for Infrared Small Targets in Complex Ground Scenes",
+              "type":"paper",
+              "year":"2025",
+              "venue":"TGRS",
+              "link":"https://github.com/elvintanhust/GST-Det"
+            },
             {
               "name": "A Spatial-Temporal Feature-Based Detection Framework for Infrared Dim Small Target (TGRS 2022)",
               "type": "paper",
