@@ -17,7 +17,7 @@ from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-ARXIV_API_URL = "http://export.arxiv.org/api/query"
+ARXIV_API_URL = "https://export.arxiv.org/api/query"
 DEFAULT_JSON_PATH = Path("infrared-mindmap-data.json")
 DEFAULT_FALLBACK_PATH = Path("assets/fallback-data.js")
 RESOURCE_SECTION_NAME = "资源 Resources"
@@ -40,6 +40,11 @@ ARXIV_QUERY_TERMS = [
     "infrared small target tracking",
     "infrared target tracking",
     "thermal small target detection",
+    "IRSTD",
+    "SIRST",
+    "infrared point target",
+    "infrared tiny object detection",
+    "thermal infrared detection small",
 ]
 
 NS = {
@@ -163,10 +168,13 @@ STRONG_PHRASES = [
     (r"\binfrared small target tracking\b", 4, "infrared small target tracking"),
     (r"\binfrared target tracking\b", 4, "infrared target tracking"),
     (r"\bthermal small target detection\b", 4, "thermal small target detection"),
+    (r"\binfrared point target\b", 4, "infrared point target"),
+    (r"\binfrared tiny (target|object)\b", 4, "infrared tiny target/object"),
     (r"\bdim[-\s]?small target\b", 3, "dim-small target"),
     (r"\birstd\b", 4, "IRSTD"),
     (r"\bsirst\b", 4, "SIRST"),
     (r"\bmirst\b", 4, "MIRST"),
+    (r"\binfrared target detection\b", 3, "infrared target detection"),
 ]
 
 DOMAIN_PATTERNS = [
@@ -176,6 +184,8 @@ DOMAIN_PATTERNS = [
     (r"\birstd\b", "IRSTD"),
     (r"\bsirst\b", "SIRST"),
     (r"\bmirst\b", "MIRST"),
+    (r"\birst\b", "IRST"),
+    (r"\binfra-red\b", "infra-red"),
 ]
 
 TARGET_PATTERNS = [
@@ -187,6 +197,8 @@ TARGET_PATTERNS = [
     (r"\btiny target\b", "tiny target"),
     (r"\bsmall object\b", "small object"),
     (r"\btiny object\b", "tiny object"),
+    (r"\bspot target\b", "spot target"),
+    (r"\bsub[-\s]?pixel target\b", "sub-pixel target"),
 ]
 
 TASK_PATTERNS = [
@@ -264,9 +276,12 @@ NEGATIVE_PATTERNS = [
         r"face recognition",
         r"person re-identification",
         r"breast cancer",
-        r"thermography",
         r"infrared spectroscopy",
         r"satellite image caption",
+        r"remote sensing scene classification",
+        r"infrared face",
+        r"infrared pedestrian",
+        r"traffic sign",
     )
 ]
 
@@ -325,7 +340,7 @@ def parse_iso_datetime(value: str) -> Optional[datetime]:
 def build_submitted_date_range(lookback_days: int) -> str:
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=lookback_days)
-    return f"[{cutoff.strftime('%Y%m%d%H%M')}+TO+{now.strftime('%Y%m%d%H%M')}]"
+    return f"[{cutoff.strftime('%Y%m%d%H%M')} TO {now.strftime('%Y%m%d%H%M')}]"
 
 
 def build_search_query(category: str, lookback_days: int, term: Optional[str] = None) -> str:
@@ -649,6 +664,122 @@ def find_or_create_child(parent: Dict[str, object], name: str) -> Dict[str, obje
     return node
 
 
+def extract_auto_watch_arxiv_ids(root: Dict[str, object]) -> Set[str]:
+    ids: Set[str] = set()
+
+    def walk(node: Dict[str, object], inside_auto_watch: bool = False) -> None:
+        name = str(node.get("name", ""))
+        current = inside_auto_watch or name == AUTO_WATCH_NODE_NAME
+        if node.get("type") == "paper" and current:
+            link = str(node.get("link", ""))
+            arxiv_id = arxiv_id_from_link(link)
+            if arxiv_id:
+                ids.add(arxiv_id)
+            return
+        children = node.get("children", [])
+        if not isinstance(children, list):
+            return
+        for child in children:
+            if isinstance(child, dict):
+                walk(child, current)
+
+    walk(root)
+    return ids
+
+
+NOTIFIED_IDS_PATH = Path("notified-arxiv-ids.json")
+NEW_PAPERS_SUMMARY_PATH = Path("new-papers-summary.md")
+
+
+def load_notified_ids() -> Set[str]:
+    try:
+        data = json.loads(NOTIFIED_IDS_PATH.read_text(encoding="utf-8"))
+        return set(data.get("ids", []))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return set()
+
+
+def save_notified_ids(ids: Set[str]) -> None:
+    NOTIFIED_IDS_PATH.write_text(
+        json.dumps({"ids": sorted(ids)}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
+
+def write_notification_summary(new_papers: Sequence[Dict[str, object]], notified_ids: Set[str]) -> None:
+    if not new_papers:
+        for p in (NEW_PAPERS_SUMMARY_PATH, Path("new-papers-summary.html")):
+            if p.exists():
+                p.unlink()
+        return
+
+    lines = [f"# 红外小目标检测 - 新论文通知 ({datetime.now(timezone.utc).strftime('%Y-%m-%d')})\n"]
+    lines.append(f"本次新追踪到 **{len(new_papers)}** 篇论文。\n")
+
+    for i, paper in enumerate(new_papers, 1):
+        title = str(paper.get("name", "无标题"))
+        link = str(paper.get("link", ""))
+        authors = str(paper.get("authors", ""))
+        venue = str(paper.get("venue", "arXiv"))
+        year = str(paper.get("year", ""))
+        group = str(paper.get("classification_group", ""))
+        pdf = str(paper.get("pdf", ""))
+        abstract = str(paper.get("abstract", ""))
+
+        lines.append(f"## {i}. {title}\n")
+        if link:
+            lines.append(f"- **链接**: [{link}]({link})")
+        if pdf:
+            lines.append(f"- **PDF**: [{pdf}]({pdf})")
+        lines.append(f"- **作者**: {authors}")
+        lines.append(f"- **发表**: {venue} {year}")
+        lines.append(f"- **分类**: {group}")
+        if abstract:
+            short = abstract[:300] + ("..." if len(abstract) > 300 else "")
+            lines.append(f"- **摘要**: {short}")
+        lines.append("")
+
+    NEW_PAPERS_SUMMARY_PATH.write_text("\n".join(lines), encoding="utf-8")
+
+    new_ids = {str(p.get("arxiv_id", "")) for p in new_papers if p.get("arxiv_id")}
+    save_notified_ids(notified_ids | new_ids)
+
+    html_path = Path("new-papers-summary.html")
+    html_parts = [
+        '<html><head><meta charset="utf-8">',
+        '<style>body{font-family:sans-serif;max-width:800px;margin:0 auto;padding:20px}'
+        '.paper{border-left:3px solid #4a90d9;padding:8px 12px;margin:12px 0;background:#f8f9fa}'
+        'h1{color:#2c3e50}h2{font-size:16px;margin:4px 0}a{color:#4a90d9}'
+        '.meta{color:#666;font-size:13px}.abstract{color:#444;font-size:13px;margin-top:4px}</style>',
+        '</head><body>',
+        f'<h1>红外小目标检测 - 新论文通知 ({datetime.now(timezone.utc).strftime("%Y-%m-%d")})</h1>',
+        f'<p>本次新追踪到 <strong>{len(new_papers)}</strong> 篇论文。</p>',
+    ]
+    for i, paper in enumerate(new_papers, 1):
+        title = str(paper.get("name", "无标题"))
+        link = str(paper.get("link", ""))
+        authors = str(paper.get("authors", ""))
+        venue = str(paper.get("venue", "arXiv"))
+        year = str(paper.get("year", ""))
+        group = str(paper.get("classification_group", ""))
+        pdf = str(paper.get("pdf", ""))
+        abstract = str(paper.get("abstract", ""))
+        link_html = f'<a href="{link}">{title}</a>' if link else title
+        pdf_html = f' | <a href="{pdf}">PDF</a>' if pdf else ""
+        short = abstract[:300] + ("..." if len(abstract) > 300 else "")
+        html_parts.append(
+            f'<div class="paper"><h2>{i}. {link_html}{pdf_html}</h2>'
+            f'<div class="meta">{authors} · {venue} {year} · {group}</div>'
+            f'<div class="abstract">{short}</div></div>'
+        )
+    html_parts.append("</body></html>")
+    html_path.write_text("\n".join(html_parts), encoding="utf-8")
+
+    print(f"Notification summary: {len(new_papers)} new papers")
+    print(f"Wrote {NEW_PAPERS_SUMMARY_PATH}")
+    print(f"Wrote {html_path}")
+
+
 def remove_auto_watch_node(root: Dict[str, object]) -> None:
     resources = find_or_create_child(root, RESOURCE_SECTION_NAME)
     children = resources.setdefault("children", [])
@@ -841,6 +972,7 @@ def main() -> int:
     try:
         raw_entries, source_ref, failed_terms = load_entries(args.feed_path, args.category, args.max_results, args.lookback_days)
         existing_title_keys, existing_arxiv_ids = collect_existing_papers(data, skip_auto_watch=True)
+        old_auto_watch_ids = extract_auto_watch_arxiv_ids(data)
         matches = select_candidates(
             raw_entries,
             existing_title_keys,
@@ -852,6 +984,13 @@ def main() -> int:
     except Exception as exc:  # noqa: BLE001
         print(f"arxiv sync failed: {exc}", file=sys.stderr)
         return 1
+
+    notified_ids = load_notified_ids()
+    new_papers = [
+        p for p in matches
+        if str(p.get("arxiv_id", "")) not in old_auto_watch_ids
+        and str(p.get("arxiv_id", "")) not in notified_ids
+    ]
 
     source_meta: Dict[str, object] = {
         "category": args.category,
@@ -870,6 +1009,7 @@ def main() -> int:
         return 0
 
     write_outputs(data, args.json_path, args.fallback_path)
+    write_notification_summary(new_papers, notified_ids)
     print(f"Synced arXiv watch from {source_ref}")
     print(f"Matched {len(matches)} papers")
     print(f"Wrote {args.json_path}")

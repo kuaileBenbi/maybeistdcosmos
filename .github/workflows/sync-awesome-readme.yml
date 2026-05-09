@@ -41,3 +41,16 @@ jobs:
           git add infrared-mindmap-data.json assets/fallback-data.js
           git commit -m "chore: sync infrared research data"
           git push
+
+      - name: Send email notification
+        if: ${{ hashFiles('new-papers-summary.html') != '' }}
+        uses: dawidd6/action-send-mail@v4
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "[IRSTD Watch] 发现新的红外小目标检测论文"
+          to: lovelyleeyahoo@gmail.com
+          from: IRSTD Paper Watcher
+          html_body: file://new-papers-summary.html
