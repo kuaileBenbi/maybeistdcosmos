@@ -29,7 +29,7 @@ DEFAULT_MAX_RESULTS = 100
 DEFAULT_LOOKBACK_DAYS = 120
 DEFAULT_MAX_ITEMS = 40
 DEFAULT_MAX_PER_GROUP = 8
-ARXIV_REQUEST_DELAY_SECONDS = 3
+ARXIV_REQUEST_DELAY_SECONDS = 5
 # Keep the live arXiv prefetch query narrower than the classifier rules.
 # This reduces API load while the downstream classifier still enforces the
 # broader keyword boundary used by the project.
@@ -40,11 +40,6 @@ ARXIV_QUERY_TERMS = [
     "infrared small target tracking",
     "infrared target tracking",
     "thermal small target detection",
-    "IRSTD",
-    "SIRST",
-    "infrared point target",
-    "infrared tiny object detection",
-    "thermal infrared detection small",
 ]
 
 NS = {
