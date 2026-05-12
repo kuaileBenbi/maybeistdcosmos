@@ -52,5 +52,5 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "[IRSTD Watch] 发现新的红外小目标检测论文"
           to: lovelyleeyahoo@gmail.com
-          from: IRSTD Paper Watcher
+          from: IRSTD Paper Watcher <${{ secrets.MAIL_USERNAME }}>
           html_body: file://new-papers-summary.html
