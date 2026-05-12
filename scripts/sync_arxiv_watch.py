@@ -68,6 +68,14 @@ GROUP_LABELS = {
     "resource": "数据集/综述/基准候选",
 }
 
+GROUP_TO_SECTION = {
+    "single_frame": "深度学习方法",
+    "multi_frame": "深度学习方法",
+    "optimization": "优化方法",
+    "traditional": "传统方法",
+    "resource": RESOURCE_SECTION_NAME,
+}
+
 VENUE_RULES = [
     {
         "venue": "CVPR",
@@ -781,12 +789,19 @@ def write_notification_summary(new_papers: Sequence[Dict[str, object]], notified
 
 
 def remove_auto_watch_node(root: Dict[str, object]) -> None:
-    resources = find_or_create_child(root, RESOURCE_SECTION_NAME)
-    children = resources.setdefault("children", [])
-    resources["children"] = [
-        child for child in children
-        if not isinstance(child, dict) or child.get("name") != AUTO_WATCH_NODE_NAME
-    ]
+    children = root.get("children", [])
+    if not isinstance(children, list):
+        return
+    for section_node in children:
+        if not isinstance(section_node, dict):
+            continue
+        section_children = section_node.get("children")
+        if not isinstance(section_children, list):
+            continue
+        section_node["children"] = [
+            child for child in section_children
+            if not isinstance(child, dict) or child.get("name") != AUTO_WATCH_NODE_NAME
+        ]
 
 
 def sort_key(entry: Dict[str, object]) -> Tuple[int, float, float]:
@@ -855,12 +870,14 @@ def select_candidates(
             "source_kind": "arxiv-watch",
             "source_label": "arXiv Auto Watch",
             "classification_group": GROUP_LABELS[group_key],
+            "classification_group_key": group_key,
             "classification_tags": dedupe(list(relevance["tags"]) + group_reasons),
             "classification_score": relevance["score"],
             "venue_tier": venue_meta["tier"],
             "venue_status": venue_meta["status"],
             "venue_signal": venue_meta["source"],
             "bucket": bucket,
+            "_bucket": bucket,
             "score": relevance["score"],
             "sort_timestamp": (
                 (entry.get("updated") or entry.get("published")).timestamp()
@@ -884,42 +901,65 @@ def select_candidates(
     return selected
 
 
-def build_auto_watch_node(items: Sequence[Dict[str, object]]) -> Dict[str, object]:
-    grouped: Dict[str, Dict[str, List[Dict[str, object]]]] = {
-        PRIORITY_BUCKET_NAME: defaultdict(list),
-        REGULAR_BUCKET_NAME: defaultdict(list),
-    }
+def build_section_watch_nodes(items: Sequence[Dict[str, object]]) -> Dict[str, Dict[str, object]]:
+    section_papers: Dict[str, List[Dict[str, object]]] = defaultdict(list)
     for item in items:
-        bucket = str(item["bucket"])
-        group = str(item["classification_group"])
+        group_key = str(item.get("classification_group_key", ""))
+        section_name = GROUP_TO_SECTION.get(group_key, RESOURCE_SECTION_NAME)
         payload = dict(item)
         payload.pop("bucket", None)
         payload.pop("score", None)
         payload.pop("sort_timestamp", None)
-        grouped[bucket][group].append(payload)
+        payload.pop("classification_group_key", None)
+        section_papers[section_name].append(payload)
 
-    watch_node: Dict[str, object] = {
-        "name": AUTO_WATCH_NODE_NAME,
-        "children": [],
-    }
+    result: Dict[str, Dict[str, object]] = {}
+    for section_name, papers in section_papers.items():
+        grouped: Dict[str, Dict[str, List[Dict[str, object]]]] = {
+            PRIORITY_BUCKET_NAME: defaultdict(list),
+            REGULAR_BUCKET_NAME: defaultdict(list),
+        }
+        for paper in papers:
+            bucket = str(paper.get("_bucket", REGULAR_BUCKET_NAME))
+            group_label = str(paper.get("classification_group", ""))
+            grouped[bucket][group_label].append(paper)
 
-    for bucket_name in (PRIORITY_BUCKET_NAME, REGULAR_BUCKET_NAME):
-        bucket_groups = grouped[bucket_name]
-        children = []
-        for group_name in GROUP_ORDER:
-            papers = bucket_groups.get(group_name, [])
-            if papers:
-                children.append({"name": group_name, "children": papers})
-        if children:
-            watch_node["children"].append({"name": bucket_name, "children": children})
+        watch_node: Dict[str, object] = {
+            "name": AUTO_WATCH_NODE_NAME,
+            "children": [],
+        }
+        for bucket_name in (PRIORITY_BUCKET_NAME, REGULAR_BUCKET_NAME):
+            bucket_groups = grouped[bucket_name]
+            children = []
+            for group_name in GROUP_ORDER:
+                group_papers = bucket_groups.get(group_name, [])
+                if group_papers:
+                    children.append({"name": group_name, "children": group_papers})
+            if children:
+                watch_node["children"].append({"name": bucket_name, "children": children})
 
-    return watch_node
+        result[section_name] = watch_node
+    return result
 
 
-def update_data_tree(data: Dict[str, object], watch_node: Dict[str, object], source_meta: Dict[str, object]) -> None:
+def update_data_tree(data: Dict[str, object], section_nodes: Dict[str, Dict[str, object]], source_meta: Dict[str, object]) -> None:
     remove_auto_watch_node(data)
-    resources = find_or_create_child(data, RESOURCE_SECTION_NAME)
-    resources.setdefault("children", []).append(watch_node)
+    children = data.get("children", [])
+    if not isinstance(children, list):
+        return
+    for section_node in children:
+        if not isinstance(section_node, dict):
+            continue
+        section_name = str(section_node.get("name", ""))
+        if section_name in section_nodes:
+            section_node.setdefault("children", []).append(section_nodes[section_name])
+    for section_name, node in section_nodes.items():
+        if not any(
+            isinstance(c, dict) and c.get("name") == section_name
+            for c in children
+        ):
+            section_obj = {"name": section_name, "children": [node]}
+            children.append(section_obj)
     source = data.setdefault("source", {})
     source["arxivWatch"] = source_meta
 
@@ -1001,8 +1041,8 @@ def main() -> int:
         "matchedPapers": len(matches),
         "failedTerms": failed_terms,
     }
-    watch_node = build_auto_watch_node(matches)
-    update_data_tree(data, watch_node, source_meta)
+    section_nodes = build_section_watch_nodes(matches)
+    update_data_tree(data, section_nodes, source_meta)
 
     if args.check:
         print(json.dumps(build_summary(matches, source_ref, args.category, args.lookback_days), ensure_ascii=False, indent=2))
