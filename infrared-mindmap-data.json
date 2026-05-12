@@ -7,7 +7,7 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-05-12T08:12:35Z",
+      "fetchedAt": "2026-05-12T10:18:27Z",
       "lookbackDays": 120,
       "maxResults": 100,
       "matchedPapers": 15,
@@ -187,6 +187,57 @@
               "year": "2022",
               "venue": "Remote Sensing",
               "link": "https://www.mdpi.com/2072-4292/14/22/5636"
+            }
+          ]
+        },
+        {
+          "name": "自动追踪 Auto Watch",
+          "children": [
+            {
+              "name": "常规候选",
+              "children": [
+                {
+                  "name": "传统先验候选",
+                  "children": [
+                    {
+                      "name": "DCCS-Det: Directional Context and Cross-Scale-Aware Detector for Infrared Small Target",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2601.16428v1",
+                      "pdf": "https://arxiv.org/pdf/2601.16428v1",
+                      "authors": "Shuying Li, Qiang Ma, San Zhang, Chuang Yang",
+                      "abstract": "Infrared small target detection (IRSTD) is critical for applications like remote sensing and surveillance, which aims to identify small, low-contrast targets against complex backgrounds. However, existing methods often struggle with inadequate joint modeling of local-global features (harming target-background discrimination) or feature redundancy and semantic dilution (degrading target representation quality). To tackle these issues, we propose DCCS-Det (Directional Context and Cross-Scale Aware Detector for Infrared Small Target), a novel detector that incorporates a Dual-stream Saliency Enhancement (DSE) block and a Latent-aware Semantic Extraction and Aggregation (LaSEA) module. The DSE block integrates localized perception with direction-aware context aggregation to help capture long-range spatial dependencies and local details. On this basis, the LaSEA module mitigates feature degradation via cross-scale feature extraction and random pooling sampling strategies, enhancing discriminative features and suppressing noise. Extensive experiments show that DCCS-Det achieves state-of-the-art detection accuracy with competitive efficiency across multiple datasets. Ablation studies further validate the contributions of DSE and LaSEA in improving target perception and feature representation under complex scenarios. \\href{https://huggingface.co/InPeerReview/InfraredSmallTargetDetection-IRSTD.DCCS}{DCCS-Det Official Code is Available Here!}",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "10.1109/TGRS.2025.3646345",
+                      "arxiv_id": "2601.16428v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-01-23T03:53:59Z",
+                      "updated": "2026-01-23T03:53:59Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "传统先验候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "saliency"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -454,6 +505,96 @@
                   "venue": "PR",
                   "link": "https://www.sciencedirect.com/science/article/pii/S0031320326000336",
                   "code": "https://github.com/Yiniaie/DNN-aided-LRSD"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "自动追踪 Auto Watch",
+          "children": [
+            {
+              "name": "常规候选",
+              "children": [
+                {
+                  "name": "优化建模/深度展开候选",
+                  "children": [
+                    {
+                      "name": "Rethinking IRSTD: Single-Point Supervision Guided Encoder-only Framework is Enough for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2604.05363v1",
+                      "pdf": "https://arxiv.org/pdf/2604.05363v1",
+                      "authors": "Rixiang Ni, Boyang Li, Jun Chen, Yonghao Li, Feiyu Ren, Yuji Wang, Haoyang Yuan, Wujiao He, Wei An",
+                      "abstract": "Infrared small target detection (IRSTD) aims to separate small targets from clutter backgrounds. Extensive research is dedicated to the pixel-level supervision-guided \"encoder-decoder\" segmentation paradigm. Although having achieved promising performance, they neglect the fact that small targets only occupy a few pixels and are usually accompanied with blurred boundary caused by clutter backgrounds. Based on this observation, we argue that the first principle of IRSTD should be target localization instead of separating all target region accompanied with indistinguishable background noise. In this paper, we reformulate IRSTD as a centroid regression task and propose a novel Single-Point Supervision guided Infrared Probabilistic Response Encoding method (namely, SPIRE), which is indeed challenging due to the mismatch between reduced supervision network and equivalent output. Specifically, we first design a Point-Response Prior Supervision (PRPS), which transforms single-point annotations into probabilistic response map consistent with infrared point-target response characteristics, with a High-Resolution Probabilistic Encoder (HRPE) that enables encoder-only, end-to-end regression without decoder reconstruction. By preserving high-resolution features and increasing effective supervision density, SPIRE alleviates optimization instability under sparse target distributions. Finally, extensive experiments on various IRSTD benchmarks, including SIRST-UAVB and SIRST4 demonstrate that SPIRE achieves competitive target-level detection performance with consistently low false alarm rate (Fa) and significantly reduced computational cost. Code is publicly available at: https://github.com/NIRIXIANG/SPIRE-IRSTD.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2604.05363v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-04-07T03:01:51Z",
+                      "updated": "2026-04-07T03:01:51Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "优化建模/深度展开候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "segmentation",
+                        "localization",
+                        "sparse"
+                      ],
+                      "classification_score": 20,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "MDAFNet: Multiscale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2601.16434v2",
+                      "pdf": "https://arxiv.org/pdf/2601.16434v2",
+                      "authors": "Shuying Li, Qiang Ma, San Zhang, Wuwei Wang, Chuang Yang",
+                      "abstract": "Infrared small target detection (IRSTD) plays a crucial role in numerous military and civilian applications. However, existing methods often face the gradual degradation of target edge pixels as the number of network layers increases, and traditional convolution struggles to differentiate between frequency components during feature extraction, leading to low-frequency backgrounds interfering with high-frequency targets and high-frequency noise triggering false detections. To address these limitations, we propose MDAFNet (Multi-scale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection), which integrates the Multi-Scale Differential Edge (MSDE) module and Dual-Domain Adaptive Feature Enhancement (DAFE) module. The MSDE module, through a multi-scale edge extraction and enhancement mechanism, effectively compensates for the cumulative loss of target edge information during downsampling. The DAFE module combines frequency domain processing mechanisms with simulated frequency decomposition and fusion mechanisms in the spatial domain to effectively improve the network's capability to adaptively enhance high-frequency targets and selectively suppress high-frequency noise. Experimental results on multiple datasets demonstrate the superior detection performance of MDAFNet.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "10.1109/LGRS.2025.3645669",
+                      "arxiv_id": "2601.16434v2",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-01-23T04:16:16Z",
+                      "updated": "2026-02-13T11:17:27Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "优化建模/深度展开候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "decomposition"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    }
+                  ]
                 }
               ]
             }
@@ -904,6 +1045,322 @@
               "source_label": "Manual addition"
             }
           ]
+        },
+        {
+          "name": "自动追踪 Auto Watch",
+          "children": [
+            {
+              "name": "常规候选",
+              "children": [
+                {
+                  "name": "单帧深度学习候选",
+                  "children": [
+                    {
+                      "name": "CCDNet: Learning to Detect Camouflage against Distractors in Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2603.29228v1",
+                      "pdf": "https://arxiv.org/pdf/2603.29228v1",
+                      "authors": "Zikai Liao, Zhaozheng Yin",
+                      "abstract": "Infrared target detection (IRSTD) tasks have critical applications in areas like wilderness rescue and maritime search. However, detecting infrared targets is challenging due to their low contrast and tendency to blend into complex backgrounds, effectively camouflaging themselves. Additionally, other objects with similar features (distractors) can cause false alarms, further degrading detection performance. To address these issues, we propose a novel \\textbf{C}amouflage-aware \\textbf{C}ounter-\\textbf{D}istraction \\textbf{Net}work (CCDNet) in this paper. We design a backbone with Weighted Multi-branch Perceptrons (WMPs), which aggregates self-conditioned multi-level features to accurately represent the target and background. Based on these rich features, we then propose a novel Aggregation-and-Refinement Fusion Neck (ARFN) to refine structures/semantics from shallow/deep features maps, and bidirectionally reconstruct the relations between the targets and the backgrounds, highlighting the targets while suppressing the complex backgrounds to improve detection accuracy. Furthermore, we present a new Contrastive-aided Distractor Discriminator (CaDD), enforcing adaptive similarity computation both locally and globally between the real targets and the backgrounds to more precisely discriminate distractors, so as to reduce the false alarm rate. Extensive experiments on infrared image datasets confirm that CCDNet outperforms other state-of-the-art methods.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2603.29228v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-03-31T03:51:51Z",
+                      "updated": "2026-03-31T03:51:51Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "generic neural detector"
+                      ],
+                      "classification_score": 16,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2603.25389v1",
+                      "pdf": "https://arxiv.org/pdf/2603.25389v1",
+                      "authors": "Yingmei Zhang, Wangtao Bao, Yong Yang, Weiguo Wan, Qin Xiao, Xueting Zou",
+                      "abstract": "Infrared small target detection (IRSTD) aims to identify and distinguish small targets from complex backgrounds. Leveraging the powerful multi-scale feature fusion capability of the U-Net architecture, IRSTD has achieved significant progress. However, U-Net suffers from semantic degradation when transferring high-level features from deep to shallow layers, limiting the precise localization of small targets. To address this issue, this paper proposes FSGNet, a lightweight and effective detection framework incorporating frequency-aware and semantic guidance mechanisms. Specifically, a multi-directional interactive attention module is proposed throughout the encoder to capture fine-grained and directional features, enhancing the network's sensitivity to small, low-contrast targets. To suppress background interference propagated through skip connections, a multi-scale frequency-aware module leverages Fast Fourier transform to filter out target-similar clutter while preserving salient target structures. At the deepest layer, a global pooling module captures high-level semantic information, which is subsequently upsampled and propagated to each decoder stage through the global semantic guidance flows, ensuring semantic consistency and precise localization across scales. Extensive experiments on four public IRSTD datasets demonstrate that FSGNet achieves superior detection performance and maintains high efficiency, highlighting its practical applicability and robustness. The codes will be released on https://github.com/Wangtao-Bao/FSGNet.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2603.25389v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-03-26T12:38:29Z",
+                      "updated": "2026-03-26T12:38:29Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "localization",
+                        "network"
+                      ],
+                      "classification_score": 14,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2605.07213v1",
+                      "pdf": "https://arxiv.org/pdf/2605.07213v1",
+                      "authors": "Qianwen Ma, Yang Xu, Shangwei Deng, Xiaobo Li, Haofeng Hu",
+                      "abstract": "Infrared small target detection (IRSTD) remains challenging due to the scarcity of useful target cues and the presence of severe background clutter. Most current methods rely on conventional feature learning and local interaction modeling, where features are represented in Euclidean space. However, such designs may still be limited in describing the subtle differences of weak targets and the contextual relations between targets and backgrounds. To address these limitations, we propose LoHGNet, an IRSTD network that integrates Lorentz geometric encoding with high-order relation learning. By introducing Lorentz manifold based feature learning, LoHGNet offers a different feature representation from conventional IRSTD methods and provides new discriminative cues for IRSTD. Specifically, a Lorentz encoding branch is constructed with the Geometric Attention Guided Lorentz Residual Convolution Module (GA-LRCM) to perform feature modeling under hyperbolic geometric constraints and enhance the hierarchical geometric representation capability of weak targets. Subsequently, the hyperbolic features are mapped into the Euclidean tangent space through logarithmic mapping, and a High-Order Relation Learning Module (HORL) is designed to model the high-order contextual dependencies between targets and backgrounds via hypergraph construction, thereby improving target discrimination in complex backgrounds. Experimental results on three datasets demonstrate that the proposed LoHGNet achieves competitive performance in both detection accuracy and adaptability to complex scenes. The code will be available at https://github.com/Kingwin97.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2605.07213v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-05-08T04:00:34Z",
+                      "updated": "2026-05-08T04:00:34Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2605.00886v1",
+                      "pdf": "https://arxiv.org/pdf/2605.00886v1",
+                      "authors": "Yingming Zhang, Wuqi Su, Qing Xiao, Yonggang Yang",
+                      "abstract": "Infrared small target detection (IRSTD) plays a pivotal role in a broad spectrum of mission-critical applications, including maritime surveillance, military search and rescue, early warning systems, and precision-guided strikes, all of which demand the precise identification of dim, sub-pixel targets amid highly cluttered infrared backgrounds. Despite significant progress driven by deep learning methods, fundamental challenges persist: infrared small targets occupy extremely limited spatial extents (often only a few pixels), exhibit low signal-to-clutter ratios, and are easily confused with structurally complex backgrounds that frequently induce false alarms. Existing encoder-decoder architectures suffer from two key limitations - an information bottleneck in early convolutional stages that undermines fine-grained target perception, and static skip connections that lack the dynamic adaptability required to discriminate between genuine targets and pseudo-target regions. To address these challenges, we propose SANet, a Selective Attention-based Network built upon the classical U-Net framework and augmented with two novel components: (1) a \\emph{Dual-path Semantic-aware Module} (DSM) that integrates standard convolutions for local spatial detail preservation with pinwheel-shaped convolutions for expanded, direction-sensitive receptive fields, followed by a Convolutional Block Attention Module (CBAM) for fine-grained spatial-channel feature recalibration; and (2) a \\emph{Selective Attention Fusion Module} (SAFM) that replaces conventional static skip connections with a spatially adaptive, learnable weighting mechanism to perform context-aware, cross-scale feature fusion.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2605.00886v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-04-27T09:17:23Z",
+                      "updated": "2026-04-27T09:17:23Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network",
+                        "deep learning"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Dynamic High-frequency Convolution for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2602.02969v1",
+                      "pdf": "https://arxiv.org/pdf/2602.02969v1",
+                      "authors": "Ruojing Li, Chao Xiao, Qian Yin, Wei An, Nuo Chen, Xinyi Ying, Miao Li, Yingqian Wang",
+                      "abstract": "Infrared small targets are typically tiny and locally salient, which belong to high-frequency components (HFCs) in images. Single-frame infrared small target (SIRST) detection is challenging, since there are many HFCs along with targets, such as bright corners, broken clouds, and other clutters. Current learning-based methods rely on the powerful capabilities of deep networks, but neglect explicit modeling and discriminative representation learning of various HFCs, which is important to distinguish targets from other HFCs. To address the aforementioned issues, we propose a dynamic high-frequency convolution (DHiF) to translate the discriminative modeling process into the generation of a dynamic local filter bank. Especially, DHiF is sensitive to HFCs, owing to the dynamic parameters of its generated filters being symmetrically adjusted within a zero-centered range according to Fourier transformation properties. Combining with standard convolution operations, DHiF can adaptively and dynamically process different HFC regions and capture their distinctive grayscale variation characteristics for discriminative representation learning. DHiF functions as a drop-in replacement for standard convolution and can be used in arbitrary SIRST detection networks without significant decrease in computational efficiency. To validate the effectiveness of our DHiF, we conducted extensive experiments across different SIRST detection networks on real-scene datasets. Compared to other state-of-the-art convolution operations, DHiF exhibits superior detection performance with promising improvement. Codes are available at https://github.com/TinaLRJ/DHiF.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "10.1109/TCSVT.2026.3661285",
+                      "arxiv_id": "2602.02969v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-02-03T01:07:55Z",
+                      "updated": "2026-02-03T01:07:55Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "generic neural detector"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    }
+                  ]
+                },
+                {
+                  "name": "多帧与跟踪候选",
+                  "children": [
+                    {
+                      "name": "SPIRIT: Adapting Vision Foundation Models for Unified Single- and Multi-Frame Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2602.01843v1",
+                      "pdf": "https://arxiv.org/pdf/2602.01843v1",
+                      "authors": "Qian Xu, Xi Li, Fei Gao, Jie Guo, Haojuan Yuan, Shuaipeng Fan, Mingjin Zhang",
+                      "abstract": "Infrared small target detection (IRSTD) is crucial for surveillance and early-warning, with deployments spanning both single-frame analysis and video-mode tracking. A practical solution should leverage vision foundation models (VFMs) to mitigate infrared data scarcity, while adopting a memory-attention-based temporal propagation framework that unifies single- and multi-frame inference. However, infrared small targets exhibit weak radiometric signals and limited semantic cues, which differ markedly from visible-spectrum imagery. This modality gap makes direct use of semantics-oriented VFMs and appearance-driven cross-frame association unreliable for IRSTD: hierarchical feature aggregation can submerge localized target peaks, and appearance-only memory attention becomes ambiguous, leading to spurious clutter associations. To address these challenges, we propose SPIRIT, a unified and VFM-compatible framework that adapts VFMs to IRSTD via lightweight physics-informed plug-ins. Spatially, PIFR refines features by approximating rank-sparsity decomposition to suppress structured background components and enhance sparse target-like signals. Temporally, PGMA injects history-derived soft spatial priors into memory cross-attention to constrain cross-frame association, enabling robust video detection while naturally reverting to single-frame inference when temporal context is absent. Experiments on multiple IRSTD benchmarks show consistent gains over VFM-based baselines and SOTA performance.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2602.01843v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-02-02T09:15:29Z",
+                      "updated": "2026-02-02T09:15:29Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "tracking",
+                        "multi-frame",
+                        "video",
+                        "temporal"
+                      ],
+                      "classification_score": 14,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "FeedbackSTS-Det: Sparse Frames-Based Spatio-Temporal Semantic Feedback Network for Moving Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2601.14690v2",
+                      "pdf": "https://arxiv.org/pdf/2601.14690v2",
+                      "authors": "Yian Huang, Qing Qin, Aji Mao, Xiangyu Qiu, Liang Xu, Xian Zhang, Zhenming Peng",
+                      "abstract": "Infrared small target detection (ISTD) has been a critical technology in defense and civilian applications over the past several decades, such as missile warning, maritime surveillance, and disaster monitoring. Nevertheless, moving infrared small target detection still faces considerable challenges: existing models suffer from insufficient spatio-temporal semantic correlation and are not lightweight-friendly, while algorithms with strong scene generalization capability are in great demand for real-world applications. To address these issues, we propose FeedbackSTS-Det, a sparse frames-based spatio-temporal semantic feedback network. Our approach introduces a closed-loop spatio-temporal semantic feedback strategy with paired forward and backward refinement modules that work cooperatively across the encoder and decoder to enhance information exchange between consecutive frames, effectively improving detection accuracy and reducing false alarms. Moreover, we introduce an embedded sparse semantic module (SSM), which operates by strategically grouping frames by interval, propagating semantics within each group, and reassembling the sequence to efficiently capture long-range temporal dependencies with low computational overhead. Extensive experiments on many widely adopted multi-frame infrared small target datasets demonstrate the generalization ability and scene adaptability of our proposed network. Code and models are available at: https://github.com/IDIP-Lab/FeedbackSTS-Det.",
+                      "comment": "Submitted to Journal IEEE Transactions on Circuits and Systems for Video Technology",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2601.14690v2",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-01-21T06:06:36Z",
+                      "updated": "2026-04-07T15:27:42Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "multi-frame",
+                        "video",
+                        "sequence",
+                        "temporal",
+                        "spatio-temporal"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2603.05071v1",
+                      "pdf": "https://arxiv.org/pdf/2603.05071v1",
+                      "authors": "Nian Liu, Jin Gao, Shubo Lin, Yutong Kou, Sikui Zhang, Fudong Ge, Zhiqiang Pu, Liang Li, Gang Wang, Yizheng Wang, Weiming Hu",
+                      "abstract": "Infrared small target detection (ISTD) is challenging because tiny, low-contrast targets are easily obscured by complex and dynamic backgrounds. Conventional multi-frame approaches typically learn motion implicitly through deep neural networks, often requiring additional motion supervision or explicit alignment modules. We propose Motion Integration DETR (MI-DETR), a bio-inspired dual-pathway detector that processes one infrared frame per time step while explicitly modeling motion. First, a retina-inspired cellular automaton (RCA) converts raw frame sequences into a motion map defined on the same pixel grid as the appearance image, enabling parvocellular-like appearance and magnocellular-like motion pathways to be supervised by a single set of bounding boxes without extra motion labels or alignment operations. Second, a Parvocellular-Magnocellular Interconnection (PMI) Block facilitates bidirectional feature interaction between the two pathways, providing a biologically motivated intermediate interconnection mechanism. Finally, a RT-DETR decoder operates on features from the two pathways to produce detection results. Surprisingly, our proposed simple yet effective approach yields strong performance on three commonly used ISTD benchmarks. MI-DETR achieves 70.3% mAP@50 and 72.7% F1 on IRDST-H (+26.35 mAP@50 over the best multi-frame baseline), 98.0% mAP@50 on DAUB-R, and 88.3% mAP@50 on ITSDT-15K, demonstrating the effectiveness of biologically inspired motion-appearance integration. Code is available at https://github.com/nliu-25/MI-DETR.",
+                      "comment": "18 pages, 6 figures",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2603.05071v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-03-05T11:39:31Z",
+                      "updated": "2026-03-05T11:39:31Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "multi-frame"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -1142,437 +1599,6 @@
               "name": "常规候选",
               "children": [
                 {
-                  "name": "单帧深度学习候选",
-                  "children": [
-                    {
-                      "name": "CCDNet: Learning to Detect Camouflage against Distractors in Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.29228v1",
-                      "pdf": "https://arxiv.org/pdf/2603.29228v1",
-                      "authors": "Zikai Liao, Zhaozheng Yin",
-                      "abstract": "Infrared target detection (IRSTD) tasks have critical applications in areas like wilderness rescue and maritime search. However, detecting infrared targets is challenging due to their low contrast and tendency to blend into complex backgrounds, effectively camouflaging themselves. Additionally, other objects with similar features (distractors) can cause false alarms, further degrading detection performance. To address these issues, we propose a novel \\textbf{C}amouflage-aware \\textbf{C}ounter-\\textbf{D}istraction \\textbf{Net}work (CCDNet) in this paper. We design a backbone with Weighted Multi-branch Perceptrons (WMPs), which aggregates self-conditioned multi-level features to accurately represent the target and background. Based on these rich features, we then propose a novel Aggregation-and-Refinement Fusion Neck (ARFN) to refine structures/semantics from shallow/deep features maps, and bidirectionally reconstruct the relations between the targets and the backgrounds, highlighting the targets while suppressing the complex backgrounds to improve detection accuracy. Furthermore, we present a new Contrastive-aided Distractor Discriminator (CaDD), enforcing adaptive similarity computation both locally and globally between the real targets and the backgrounds to more precisely discriminate distractors, so as to reduce the false alarm rate. Extensive experiments on infrared image datasets confirm that CCDNet outperforms other state-of-the-art methods.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.29228v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-31T03:51:51Z",
-                      "updated": "2026-03-31T03:51:51Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "generic neural detector"
-                      ],
-                      "classification_score": 16,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.25389v1",
-                      "pdf": "https://arxiv.org/pdf/2603.25389v1",
-                      "authors": "Yingmei Zhang, Wangtao Bao, Yong Yang, Weiguo Wan, Qin Xiao, Xueting Zou",
-                      "abstract": "Infrared small target detection (IRSTD) aims to identify and distinguish small targets from complex backgrounds. Leveraging the powerful multi-scale feature fusion capability of the U-Net architecture, IRSTD has achieved significant progress. However, U-Net suffers from semantic degradation when transferring high-level features from deep to shallow layers, limiting the precise localization of small targets. To address this issue, this paper proposes FSGNet, a lightweight and effective detection framework incorporating frequency-aware and semantic guidance mechanisms. Specifically, a multi-directional interactive attention module is proposed throughout the encoder to capture fine-grained and directional features, enhancing the network's sensitivity to small, low-contrast targets. To suppress background interference propagated through skip connections, a multi-scale frequency-aware module leverages Fast Fourier transform to filter out target-similar clutter while preserving salient target structures. At the deepest layer, a global pooling module captures high-level semantic information, which is subsequently upsampled and propagated to each decoder stage through the global semantic guidance flows, ensuring semantic consistency and precise localization across scales. Extensive experiments on four public IRSTD datasets demonstrate that FSGNet achieves superior detection performance and maintains high efficiency, highlighting its practical applicability and robustness. The codes will be released on https://github.com/Wangtao-Bao/FSGNet.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.25389v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-26T12:38:29Z",
-                      "updated": "2026-03-26T12:38:29Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "localization",
-                        "network"
-                      ],
-                      "classification_score": 14,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.07213v1",
-                      "pdf": "https://arxiv.org/pdf/2605.07213v1",
-                      "authors": "Qianwen Ma, Yang Xu, Shangwei Deng, Xiaobo Li, Haofeng Hu",
-                      "abstract": "Infrared small target detection (IRSTD) remains challenging due to the scarcity of useful target cues and the presence of severe background clutter. Most current methods rely on conventional feature learning and local interaction modeling, where features are represented in Euclidean space. However, such designs may still be limited in describing the subtle differences of weak targets and the contextual relations between targets and backgrounds. To address these limitations, we propose LoHGNet, an IRSTD network that integrates Lorentz geometric encoding with high-order relation learning. By introducing Lorentz manifold based feature learning, LoHGNet offers a different feature representation from conventional IRSTD methods and provides new discriminative cues for IRSTD. Specifically, a Lorentz encoding branch is constructed with the Geometric Attention Guided Lorentz Residual Convolution Module (GA-LRCM) to perform feature modeling under hyperbolic geometric constraints and enhance the hierarchical geometric representation capability of weak targets. Subsequently, the hyperbolic features are mapped into the Euclidean tangent space through logarithmic mapping, and a High-Order Relation Learning Module (HORL) is designed to model the high-order contextual dependencies between targets and backgrounds via hypergraph construction, thereby improving target discrimination in complex backgrounds. Experimental results on three datasets demonstrate that the proposed LoHGNet achieves competitive performance in both detection accuracy and adaptability to complex scenes. The code will be available at https://github.com/Kingwin97.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.07213v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-05-08T04:00:34Z",
-                      "updated": "2026-05-08T04:00:34Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "network"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.00886v1",
-                      "pdf": "https://arxiv.org/pdf/2605.00886v1",
-                      "authors": "Yingming Zhang, Wuqi Su, Qing Xiao, Yonggang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) plays a pivotal role in a broad spectrum of mission-critical applications, including maritime surveillance, military search and rescue, early warning systems, and precision-guided strikes, all of which demand the precise identification of dim, sub-pixel targets amid highly cluttered infrared backgrounds. Despite significant progress driven by deep learning methods, fundamental challenges persist: infrared small targets occupy extremely limited spatial extents (often only a few pixels), exhibit low signal-to-clutter ratios, and are easily confused with structurally complex backgrounds that frequently induce false alarms. Existing encoder-decoder architectures suffer from two key limitations - an information bottleneck in early convolutional stages that undermines fine-grained target perception, and static skip connections that lack the dynamic adaptability required to discriminate between genuine targets and pseudo-target regions. To address these challenges, we propose SANet, a Selective Attention-based Network built upon the classical U-Net framework and augmented with two novel components: (1) a \\emph{Dual-path Semantic-aware Module} (DSM) that integrates standard convolutions for local spatial detail preservation with pinwheel-shaped convolutions for expanded, direction-sensitive receptive fields, followed by a Convolutional Block Attention Module (CBAM) for fine-grained spatial-channel feature recalibration; and (2) a \\emph{Selective Attention Fusion Module} (SAFM) that replaces conventional static skip connections with a spatially adaptive, learnable weighting mechanism to perform context-aware, cross-scale feature fusion.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.00886v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-04-27T09:17:23Z",
-                      "updated": "2026-04-27T09:17:23Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "network",
-                        "deep learning"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "Dynamic High-frequency Convolution for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2602.02969v1",
-                      "pdf": "https://arxiv.org/pdf/2602.02969v1",
-                      "authors": "Ruojing Li, Chao Xiao, Qian Yin, Wei An, Nuo Chen, Xinyi Ying, Miao Li, Yingqian Wang",
-                      "abstract": "Infrared small targets are typically tiny and locally salient, which belong to high-frequency components (HFCs) in images. Single-frame infrared small target (SIRST) detection is challenging, since there are many HFCs along with targets, such as bright corners, broken clouds, and other clutters. Current learning-based methods rely on the powerful capabilities of deep networks, but neglect explicit modeling and discriminative representation learning of various HFCs, which is important to distinguish targets from other HFCs. To address the aforementioned issues, we propose a dynamic high-frequency convolution (DHiF) to translate the discriminative modeling process into the generation of a dynamic local filter bank. Especially, DHiF is sensitive to HFCs, owing to the dynamic parameters of its generated filters being symmetrically adjusted within a zero-centered range according to Fourier transformation properties. Combining with standard convolution operations, DHiF can adaptively and dynamically process different HFC regions and capture their distinctive grayscale variation characteristics for discriminative representation learning. DHiF functions as a drop-in replacement for standard convolution and can be used in arbitrary SIRST detection networks without significant decrease in computational efficiency. To validate the effectiveness of our DHiF, we conducted extensive experiments across different SIRST detection networks on real-scene datasets. Compared to other state-of-the-art convolution operations, DHiF exhibits superior detection performance with promising improvement. Codes are available at https://github.com/TinaLRJ/DHiF.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/TCSVT.2026.3661285",
-                      "arxiv_id": "2602.02969v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-02-03T01:07:55Z",
-                      "updated": "2026-02-03T01:07:55Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "SIRST",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "generic neural detector"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    }
-                  ],
-                  "manual": true
-                },
-                {
-                  "name": "多帧与跟踪候选",
-                  "children": [
-                    {
-                      "name": "SPIRIT: Adapting Vision Foundation Models for Unified Single- and Multi-Frame Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2602.01843v1",
-                      "pdf": "https://arxiv.org/pdf/2602.01843v1",
-                      "authors": "Qian Xu, Xi Li, Fei Gao, Jie Guo, Haojuan Yuan, Shuaipeng Fan, Mingjin Zhang",
-                      "abstract": "Infrared small target detection (IRSTD) is crucial for surveillance and early-warning, with deployments spanning both single-frame analysis and video-mode tracking. A practical solution should leverage vision foundation models (VFMs) to mitigate infrared data scarcity, while adopting a memory-attention-based temporal propagation framework that unifies single- and multi-frame inference. However, infrared small targets exhibit weak radiometric signals and limited semantic cues, which differ markedly from visible-spectrum imagery. This modality gap makes direct use of semantics-oriented VFMs and appearance-driven cross-frame association unreliable for IRSTD: hierarchical feature aggregation can submerge localized target peaks, and appearance-only memory attention becomes ambiguous, leading to spurious clutter associations. To address these challenges, we propose SPIRIT, a unified and VFM-compatible framework that adapts VFMs to IRSTD via lightweight physics-informed plug-ins. Spatially, PIFR refines features by approximating rank-sparsity decomposition to suppress structured background components and enhance sparse target-like signals. Temporally, PGMA injects history-derived soft spatial priors into memory cross-attention to constrain cross-frame association, enabling robust video detection while naturally reverting to single-frame inference when temporal context is absent. Experiments on multiple IRSTD benchmarks show consistent gains over VFM-based baselines and SOTA performance.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2602.01843v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-02-02T09:15:29Z",
-                      "updated": "2026-02-02T09:15:29Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "tracking",
-                        "multi-frame",
-                        "video",
-                        "temporal"
-                      ],
-                      "classification_score": 14,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "FeedbackSTS-Det: Sparse Frames-Based Spatio-Temporal Semantic Feedback Network for Moving Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.14690v2",
-                      "pdf": "https://arxiv.org/pdf/2601.14690v2",
-                      "authors": "Yian Huang, Qing Qin, Aji Mao, Xiangyu Qiu, Liang Xu, Xian Zhang, Zhenming Peng",
-                      "abstract": "Infrared small target detection (ISTD) has been a critical technology in defense and civilian applications over the past several decades, such as missile warning, maritime surveillance, and disaster monitoring. Nevertheless, moving infrared small target detection still faces considerable challenges: existing models suffer from insufficient spatio-temporal semantic correlation and are not lightweight-friendly, while algorithms with strong scene generalization capability are in great demand for real-world applications. To address these issues, we propose FeedbackSTS-Det, a sparse frames-based spatio-temporal semantic feedback network. Our approach introduces a closed-loop spatio-temporal semantic feedback strategy with paired forward and backward refinement modules that work cooperatively across the encoder and decoder to enhance information exchange between consecutive frames, effectively improving detection accuracy and reducing false alarms. Moreover, we introduce an embedded sparse semantic module (SSM), which operates by strategically grouping frames by interval, propagating semantics within each group, and reassembling the sequence to efficiently capture long-range temporal dependencies with low computational overhead. Extensive experiments on many widely adopted multi-frame infrared small target datasets demonstrate the generalization ability and scene adaptability of our proposed network. Code and models are available at: https://github.com/IDIP-Lab/FeedbackSTS-Det.",
-                      "comment": "Submitted to Journal IEEE Transactions on Circuits and Systems for Video Technology",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2601.14690v2",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-21T06:06:36Z",
-                      "updated": "2026-04-07T15:27:42Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "multi-frame",
-                        "video",
-                        "sequence",
-                        "temporal",
-                        "spatio-temporal"
-                      ],
-                      "classification_score": 8,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.05071v1",
-                      "pdf": "https://arxiv.org/pdf/2603.05071v1",
-                      "authors": "Nian Liu, Jin Gao, Shubo Lin, Yutong Kou, Sikui Zhang, Fudong Ge, Zhiqiang Pu, Liang Li, Gang Wang, Yizheng Wang, Weiming Hu",
-                      "abstract": "Infrared small target detection (ISTD) is challenging because tiny, low-contrast targets are easily obscured by complex and dynamic backgrounds. Conventional multi-frame approaches typically learn motion implicitly through deep neural networks, often requiring additional motion supervision or explicit alignment modules. We propose Motion Integration DETR (MI-DETR), a bio-inspired dual-pathway detector that processes one infrared frame per time step while explicitly modeling motion. First, a retina-inspired cellular automaton (RCA) converts raw frame sequences into a motion map defined on the same pixel grid as the appearance image, enabling parvocellular-like appearance and magnocellular-like motion pathways to be supervised by a single set of bounding boxes without extra motion labels or alignment operations. Second, a Parvocellular-Magnocellular Interconnection (PMI) Block facilitates bidirectional feature interaction between the two pathways, providing a biologically motivated intermediate interconnection mechanism. Finally, a RT-DETR decoder operates on features from the two pathways to produce detection results. Surprisingly, our proposed simple yet effective approach yields strong performance on three commonly used ISTD benchmarks. MI-DETR achieves 70.3% mAP@50 and 72.7% F1 on IRDST-H (+26.35 mAP@50 over the best multi-frame baseline), 98.0% mAP@50 on DAUB-R, and 88.3% mAP@50 on ITSDT-15K, demonstrating the effectiveness of biologically inspired motion-appearance integration. Code is available at https://github.com/nliu-25/MI-DETR.",
-                      "comment": "18 pages, 6 figures",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.05071v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-05T11:39:31Z",
-                      "updated": "2026-03-05T11:39:31Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "multi-frame"
-                      ],
-                      "classification_score": 8,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    }
-                  ],
-                  "manual": true
-                },
-                {
-                  "name": "优化建模/深度展开候选",
-                  "children": [
-                    {
-                      "name": "Rethinking IRSTD: Single-Point Supervision Guided Encoder-only Framework is Enough for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2604.05363v1",
-                      "pdf": "https://arxiv.org/pdf/2604.05363v1",
-                      "authors": "Rixiang Ni, Boyang Li, Jun Chen, Yonghao Li, Feiyu Ren, Yuji Wang, Haoyang Yuan, Wujiao He, Wei An",
-                      "abstract": "Infrared small target detection (IRSTD) aims to separate small targets from clutter backgrounds. Extensive research is dedicated to the pixel-level supervision-guided \"encoder-decoder\" segmentation paradigm. Although having achieved promising performance, they neglect the fact that small targets only occupy a few pixels and are usually accompanied with blurred boundary caused by clutter backgrounds. Based on this observation, we argue that the first principle of IRSTD should be target localization instead of separating all target region accompanied with indistinguishable background noise. In this paper, we reformulate IRSTD as a centroid regression task and propose a novel Single-Point Supervision guided Infrared Probabilistic Response Encoding method (namely, SPIRE), which is indeed challenging due to the mismatch between reduced supervision network and equivalent output. Specifically, we first design a Point-Response Prior Supervision (PRPS), which transforms single-point annotations into probabilistic response map consistent with infrared point-target response characteristics, with a High-Resolution Probabilistic Encoder (HRPE) that enables encoder-only, end-to-end regression without decoder reconstruction. By preserving high-resolution features and increasing effective supervision density, SPIRE alleviates optimization instability under sparse target distributions. Finally, extensive experiments on various IRSTD benchmarks, including SIRST-UAVB and SIRST4 demonstrate that SPIRE achieves competitive target-level detection performance with consistently low false alarm rate (Fa) and significantly reduced computational cost. Code is publicly available at: https://github.com/NIRIXIANG/SPIRE-IRSTD.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2604.05363v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-04-07T03:01:51Z",
-                      "updated": "2026-04-07T03:01:51Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "优化建模/深度展开候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "SIRST",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "segmentation",
-                        "localization",
-                        "sparse"
-                      ],
-                      "classification_score": 20,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    },
-                    {
-                      "name": "MDAFNet: Multiscale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.16434v2",
-                      "pdf": "https://arxiv.org/pdf/2601.16434v2",
-                      "authors": "Shuying Li, Qiang Ma, San Zhang, Wuwei Wang, Chuang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) plays a crucial role in numerous military and civilian applications. However, existing methods often face the gradual degradation of target edge pixels as the number of network layers increases, and traditional convolution struggles to differentiate between frequency components during feature extraction, leading to low-frequency backgrounds interfering with high-frequency targets and high-frequency noise triggering false detections. To address these limitations, we propose MDAFNet (Multi-scale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection), which integrates the Multi-Scale Differential Edge (MSDE) module and Dual-Domain Adaptive Feature Enhancement (DAFE) module. The MSDE module, through a multi-scale edge extraction and enhancement mechanism, effectively compensates for the cumulative loss of target edge information during downsampling. The DAFE module combines frequency domain processing mechanisms with simulated frequency decomposition and fusion mechanisms in the spatial domain to effectively improve the network's capability to adaptively enhance high-frequency targets and selectively suppress high-frequency noise. Experimental results on multiple datasets demonstrate the superior detection performance of MDAFNet.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/LGRS.2025.3645669",
-                      "arxiv_id": "2601.16434v2",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-23T04:16:16Z",
-                      "updated": "2026-02-13T11:17:27Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "优化建模/深度展开候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "decomposition"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    }
-                  ],
-                  "manual": true
-                },
-                {
-                  "name": "传统先验候选",
-                  "children": [
-                    {
-                      "name": "DCCS-Det: Directional Context and Cross-Scale-Aware Detector for Infrared Small Target",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.16428v1",
-                      "pdf": "https://arxiv.org/pdf/2601.16428v1",
-                      "authors": "Shuying Li, Qiang Ma, San Zhang, Chuang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) is critical for applications like remote sensing and surveillance, which aims to identify small, low-contrast targets against complex backgrounds. However, existing methods often struggle with inadequate joint modeling of local-global features (harming target-background discrimination) or feature redundancy and semantic dilution (degrading target representation quality). To tackle these issues, we propose DCCS-Det (Directional Context and Cross-Scale Aware Detector for Infrared Small Target), a novel detector that incorporates a Dual-stream Saliency Enhancement (DSE) block and a Latent-aware Semantic Extraction and Aggregation (LaSEA) module. The DSE block integrates localized perception with direction-aware context aggregation to help capture long-range spatial dependencies and local details. On this basis, the LaSEA module mitigates feature degradation via cross-scale feature extraction and random pooling sampling strategies, enhancing discriminative features and suppressing noise. Extensive experiments show that DCCS-Det achieves state-of-the-art detection accuracy with competitive efficiency across multiple datasets. Ablation studies further validate the contributions of DSE and LaSEA in improving target perception and feature representation under complex scenarios. \\href{https://huggingface.co/InPeerReview/InfraredSmallTargetDetection-IRSTD.DCCS}{DCCS-Det Official Code is Available Here!}",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/TGRS.2025.3646345",
-                      "arxiv_id": "2601.16428v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-23T03:53:59Z",
-                      "updated": "2026-01-23T03:53:59Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "传统先验候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "saliency"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "manual": true
-                    }
-                  ],
-                  "manual": true
-                },
-                {
                   "name": "数据集/综述/基准候选",
                   "children": [
                     {
@@ -1611,7 +1637,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1647,7 +1673,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1683,7 +1709,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -1719,16 +1745,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
