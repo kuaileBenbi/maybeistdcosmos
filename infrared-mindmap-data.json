@@ -7,7 +7,7 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-05-19T06:58:08Z",
+      "fetchedAt": "2026-05-22T06:58:54Z",
       "lookbackDays": 120,
       "maxResults": 100,
       "matchedPapers": 16,
@@ -233,17 +233,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -560,8 +556,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "MDAFNet: Multiscale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection",
@@ -597,17 +592,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1099,8 +1090,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
@@ -1137,8 +1127,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1174,8 +1163,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1212,8 +1200,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Dynamic High-frequency Convolution for Infrared Small Target Detection",
@@ -1249,8 +1236,43 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2605.20766v1",
+                      "pdf": "https://arxiv.org/pdf/2605.20766v1",
+                      "authors": "Zhu Liu, Yuanhang Yao, Ping Qian, Zihang Chen, Risheng Liu",
+                      "abstract": "Point supervision has become a scalable solution to address dense annotation for infrared small target detection, but its performance is limited by two coupled bottlenecks: unstable pseudo-label evolution in cluttered, low-contrast infrared imagery and severe sample-distribution imbalance. In this paper, we present a more adaptive and stable framework to address these issues. Leveraging the intrinsic consistency between thermal radiation patterns and heat diffusion, we propose a physics-induced annotation strategy that expands single-point labels into reliable pseudo-masks. To further enhance supervision and alleviate sample imbalance, we develop a bi-level dual-update framework that jointly optimizes detector weights, sample weights, and diffusion parameters. A meta-classifier dynamically predicts sample-wise loss weights, while a differentiable diffusion module refines pseudo-labels with detection feedback, enabling adaptive interaction between training and hyperparameter optimization. Extensive experiments across multiple datasets demonstrate five-fold annotation acceleration, superior detection accuracy, and comparable performance with 30% of the training data, validating the efficiency and practicality of our approach. Our code is available at https://github.com/yuanhang-yao/diffuse-to-detect.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2605.20766v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-05-20T06:08:11Z",
+                      "updated": "2026-05-20T06:08:11Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "thermal",
+                        "small target",
+                        "detection",
+                        "diffusion"
+                      ],
+                      "classification_score": 9,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1286,11 +1308,9 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1332,48 +1352,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "FeedbackSTS-Det: Sparse Frames-Based Spatio-Temporal Semantic Feedback Network for Moving Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.14690v2",
-                      "pdf": "https://arxiv.org/pdf/2601.14690v2",
-                      "authors": "Yian Huang, Qing Qin, Aji Mao, Xiangyu Qiu, Liang Xu, Xian Zhang, Zhenming Peng",
-                      "abstract": "Infrared small target detection (ISTD) has been a critical technology in defense and civilian applications over the past several decades, such as missile warning, maritime surveillance, and disaster monitoring. Nevertheless, moving infrared small target detection still faces considerable challenges: existing models suffer from insufficient spatio-temporal semantic correlation and are not lightweight-friendly, while algorithms with strong scene generalization capability are in great demand for real-world applications. To address these issues, we propose FeedbackSTS-Det, a sparse frames-based spatio-temporal semantic feedback network. Our approach introduces a closed-loop spatio-temporal semantic feedback strategy with paired forward and backward refinement modules that work cooperatively across the encoder and decoder to enhance information exchange between consecutive frames, effectively improving detection accuracy and reducing false alarms. Moreover, we introduce an embedded sparse semantic module (SSM), which operates by strategically grouping frames by interval, propagating semantics within each group, and reassembling the sequence to efficiently capture long-range temporal dependencies with low computational overhead. Extensive experiments on many widely adopted multi-frame infrared small target datasets demonstrate the generalization ability and scene adaptability of our proposed network. Code and models are available at: https://github.com/IDIP-Lab/FeedbackSTS-Det.",
-                      "comment": "Submitted to Journal IEEE Transactions on Circuits and Systems for Video Technology",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2601.14690v2",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-21T06:06:36Z",
-                      "updated": "2026-04-07T15:27:42Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "multi-frame",
-                        "video",
-                        "sequence",
-                        "temporal",
-                        "spatio-temporal"
-                      ],
-                      "classification_score": 8,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
@@ -1408,17 +1387,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1695,8 +1670,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1732,8 +1706,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1769,8 +1742,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -1806,17 +1778,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
