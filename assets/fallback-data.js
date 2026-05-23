@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-05-22T06:58:54Z",
+      "fetchedAt": "2026-05-23T06:20:33Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 16,
+      "matchedPapers": 14,
       "failedTerms": []
     }
   },
@@ -187,57 +187,6 @@ window.fallbackMindMapData = {
               "year": "2022",
               "venue": "Remote Sensing",
               "link": "https://www.mdpi.com/2072-4292/14/22/5636"
-            }
-          ]
-        },
-        {
-          "name": "自动追踪 Auto Watch",
-          "children": [
-            {
-              "name": "常规候选",
-              "children": [
-                {
-                  "name": "传统先验候选",
-                  "children": [
-                    {
-                      "name": "DCCS-Det: Directional Context and Cross-Scale-Aware Detector for Infrared Small Target",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.16428v1",
-                      "pdf": "https://arxiv.org/pdf/2601.16428v1",
-                      "authors": "Shuying Li, Qiang Ma, San Zhang, Chuang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) is critical for applications like remote sensing and surveillance, which aims to identify small, low-contrast targets against complex backgrounds. However, existing methods often struggle with inadequate joint modeling of local-global features (harming target-background discrimination) or feature redundancy and semantic dilution (degrading target representation quality). To tackle these issues, we propose DCCS-Det (Directional Context and Cross-Scale Aware Detector for Infrared Small Target), a novel detector that incorporates a Dual-stream Saliency Enhancement (DSE) block and a Latent-aware Semantic Extraction and Aggregation (LaSEA) module. The DSE block integrates localized perception with direction-aware context aggregation to help capture long-range spatial dependencies and local details. On this basis, the LaSEA module mitigates feature degradation via cross-scale feature extraction and random pooling sampling strategies, enhancing discriminative features and suppressing noise. Extensive experiments show that DCCS-Det achieves state-of-the-art detection accuracy with competitive efficiency across multiple datasets. Ablation studies further validate the contributions of DSE and LaSEA in improving target perception and feature representation under complex scenarios. \\href{https://huggingface.co/InPeerReview/InfraredSmallTargetDetection-IRSTD.DCCS}{DCCS-Det Official Code is Available Here!}",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/TGRS.2025.3646345",
-                      "arxiv_id": "2601.16428v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-23T03:53:59Z",
-                      "updated": "2026-01-23T03:53:59Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "传统先验候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "saliency"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    }
-                  ]
-                }
-              ]
             }
           ]
         }
@@ -553,42 +502,6 @@ window.fallbackMindMapData = {
                         "sparse"
                       ],
                       "classification_score": 20,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "MDAFNet: Multiscale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2601.16434v2",
-                      "pdf": "https://arxiv.org/pdf/2601.16434v2",
-                      "authors": "Shuying Li, Qiang Ma, San Zhang, Wuwei Wang, Chuang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) plays a crucial role in numerous military and civilian applications. However, existing methods often face the gradual degradation of target edge pixels as the number of network layers increases, and traditional convolution struggles to differentiate between frequency components during feature extraction, leading to low-frequency backgrounds interfering with high-frequency targets and high-frequency noise triggering false detections. To address these limitations, we propose MDAFNet (Multi-scale Differential Edge and Adaptive Frequency Guided Network for Infrared Small Target Detection), which integrates the Multi-Scale Differential Edge (MSDE) module and Dual-Domain Adaptive Feature Enhancement (DAFE) module. The MSDE module, through a multi-scale edge extraction and enhancement mechanism, effectively compensates for the cumulative loss of target edge information during downsampling. The DAFE module combines frequency domain processing mechanisms with simulated frequency decomposition and fusion mechanisms in the spatial domain to effectively improve the network's capability to adaptively enhance high-frequency targets and selectively suppress high-frequency noise. Experimental results on multiple datasets demonstrate the superior detection performance of MDAFNet.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/LGRS.2025.3645669",
-                      "arxiv_id": "2601.16434v2",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-01-23T04:16:16Z",
-                      "updated": "2026-02-13T11:17:27Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "优化建模/深度展开候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "decomposition"
-                      ],
-                      "classification_score": 13,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
