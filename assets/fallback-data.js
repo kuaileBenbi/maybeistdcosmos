@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-05-26T06:57:06Z",
+      "fetchedAt": "2026-06-08T03:55:28Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 14,
+      "matchedPapers": 13,
       "failedTerms": []
     }
   },
@@ -505,17 +505,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -696,14 +692,6 @@ window.fallbackMindMapData = {
               "code": "https://github.com/txchen-USTC/MiM-ISTD"
             },
             {
-              "name": "IRSAM (ECCV 2024)",
-              "type": "paper",
-              "year": "2024",
-              "venue": "ECCV",
-              "link": "https://arxiv.org/pdf/2407.07520",
-              "code": "https://github.com/IPIC-Lab/IRSAM"
-            },
-            {
               "name": "SeRankDet (TGRS 2024)",
               "type": "paper",
               "year": "2024",
@@ -726,13 +714,6 @@ window.fallbackMindMapData = {
               "venue": "AAAI",
               "link": "https://arxiv.org/abs/2412.16986",
               "code": "https://github.com/JN-Yang/PConv-SDloss-Data"
-            },
-            {
-              "name": "SAIST (CVPR 2025)",
-              "type": "paper",
-              "year": "2025",
-              "venue": "CVPR",
-              "link": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_SAIST_Segment_Any_Infrared_Small_Target_Model_Guided_by_Contrastive_CVPR_2025_paper.pdf"
             },
             {
               "name": "From Easy to Hard: Progressive Active Learning Framework for Infrared Small Target Detection with Single Point Supervision (ICCV 2025)",
@@ -767,14 +748,6 @@ window.fallbackMindMapData = {
               "code": "https://github.com/ZhihaoMa123/BGM"
             },
             {
-              "name": "A Unified SAM-Guided Self-Prompt Learning Framework for Infrared Small Target Detection (TGRS 2025)",
-              "type": "paper",
-              "year": "2025",
-              "venue": "TGRS",
-              "link": "https://ieeexplore.ieee.org/abstract/document/11172325",
-              "code": "https://github.com/fuyimin96/SAM-SPL"
-            },
-            {
               "name": "HDNet: A Hybrid Domain Network With Multiscale High-Frequency Information Enhancement for Infrared Small-Target Detection (TGRS 2025)",
               "type": "paper",
               "year": "2025",
@@ -789,6 +762,62 @@ window.fallbackMindMapData = {
               "venue": "KBS",
               "link": "https://www.sciencedirect.com/science/article/pii/S0950705125017083",
               "code": "https://github.com/liboeryuan/PGNet"
+            },
+            {
+              "name": "Seeing Through the Noise: Improving Infrared Small Target Detection and Segmentation from Noise Suppression Perspective (CVPR 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "CVPR",
+              "link": "https://openaccess.thecvf.com/content/CVPR2026/papers/Yuan_Seeing_Through_the_Noise_Improving_Infrared_Small_Target_Detection_and_CVPR_2026_paper.pdf",
+              "code": "https://github.com/mengduann/NS-FPN"
+            },
+            {
+              "name": "Dynamic High-frequency Convolution for Infrared Small Target Detection (TCSVT 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "TCSVT",
+              "link": "https://ieeexplore.ieee.org/document/11373245",
+              "code": "https://github.com/TinaLRJ/DHiF"
+            },
+            {
+              "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection (ICML 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "ICML",
+              "link": "https://arxiv.org/pdf/2605.20766",
+              "code": "https://github.com/yuanhang-yao/diffuse-to-detect"
+            },
+            {
+              "name": "IRSAM (ECCV 2024)",
+              "type": "paper",
+              "year": "2024",
+              "venue": "ECCV",
+              "link": "https://arxiv.org/pdf/2407.07520",
+              "code": "https://github.com/IPIC-Lab/IRSAM",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "SAIST (CVPR 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "CVPR",
+              "link": "https://openaccess.thecvf.com/content/CVPR2025/papers/Zhang_SAIST_Segment_Any_Infrared_Small_Target_Model_Guided_by_Contrastive_CVPR_2025_paper.pdf",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "A Unified SAM-Guided Self-Prompt Learning Framework for Infrared Small Target Detection (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/abstract/document/11172325",
+              "code": "https://github.com/fuyimin96/SAM-SPL",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
             },
             {
               "name": "SPIRE:Rethinking IRSTD: Single-Point Supervision Guided Encoder-only Framework is Enough for Infrared Small Target Detection",
@@ -872,28 +901,12 @@ window.fallbackMindMapData = {
               "code": "https://github.com/lifier/LMAFormer"
             },
             {
-              "name": "One Shot is Enough for Sequential Infrared Small Target Segmentation (ICASSP 2025)",
-              "type": "paper",
-              "year": "2025",
-              "venue": "ICASSP",
-              "link": "https://ieeexplore.ieee.org/abstract/document/10888009",
-              "code": "https://github.com/D-IceIce/one-shot-IRSTS"
-            },
-            {
               "name": "S2MVP (TGRS 2025)",
               "type": "paper",
               "year": "2025",
               "venue": "TGRS",
               "link": "https://ieeexplore.ieee.org/document/10824834",
               "code": "https://github.com/UESTC-nnLab/S2MVP"
-            },
-            {
-              "name": "MoPKL (AAAI 2025)",
-              "type": "paper",
-              "year": "2025",
-              "venue": "AAAI",
-              "link": "https://ojs.aaai.org/index.php/AAAI/article/view/32217",
-              "code": "https://github.com/UESTC-nnLab/MoPKL"
             },
             {
               "name": "MOCID (AAAI 2025)",
@@ -910,14 +923,6 @@ window.fallbackMindMapData = {
               "venue": "PR",
               "link": "https://www.sciencedirect.com/science/article/abs/pii/S0031320325005898",
               "code": "https://github.com/fengyiwu98/NeurSTT"
-            },
-            {
-              "name": "SeqCSIST (TGRS 2025)",
-              "type": "paper",
-              "year": "2025",
-              "venue": "TGRS",
-              "link": "https://ieeexplore.ieee.org/document/11080063",
-              "code": "https://github.com/GrokCV/SeqCSIST"
             },
             {
               "name": "OSFormer (TIP 2025)",
@@ -950,6 +955,87 @@ window.fallbackMindMapData = {
               "venue": "TGRS",
               "link": "https://ieeexplore.ieee.org/abstract/document/11363482",
               "code": "https://github.com/dengfa02/DQAligner_MIRSTD"
+            },
+            {
+              "name": "ADSUNet (PR 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "PR",
+              "link": "https://www.sciencedirect.com/science/article/abs/pii/S0031320325006028",
+              "code": "https://github.com/zhanglw882/ADSUNet"
+            },
+            {
+              "name": "Spatio-Temporal Context Learning with Temporal Difference Convolution for Moving Infrared Small Target Detection (AAAI 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "AAAI",
+              "link": "https://arxiv.org/pdf/2511.09352",
+              "code": "https://github.com/IVPLabs/TDCNet"
+            },
+            {
+              "name": "Domain-Auxiliary Infrared Moving Small Target Detection by Learning to Overlook Domain Discrepancy (AAAI 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "AAAI",
+              "link": "https://ojs.aaai.org/index.php/AAAI/article/view/37293",
+              "code": "https://github.com/UESTC-nnLab/Loddis"
+            },
+            {
+              "name": "CHAL (CVPR 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "CVPR",
+              "link": "https://openaccess.thecvf.com/content/CVPR2026/papers/Duan_CHAL_Causal-guided_Hierarchical_Anomaly-aware_Learning_for_Moving_Infrared_Small_Target_CVPR_2026_paper.pdf",
+              "code": "https://github.com/UESTC-nnLab/CHAL"
+            },
+            {
+              "name": "MIST (TIP 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "TIP",
+              "link": "https://ieeexplore.ieee.org/abstract/document/11511399",
+              "code": "https://github.com/GR-ray/MIST"
+            },
+            {
+              "name": "Probing Deep into Temporal Profile Makes the Infrared Small Target Detector Much Better (TPAMI 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "TPAMI",
+              "link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11479915",
+              "code": "https://tinalrj.github.io/DeepPro/"
+            },
+            {
+              "name": "One Shot is Enough for Sequential Infrared Small Target Segmentation (ICASSP 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "ICASSP",
+              "link": "https://ieeexplore.ieee.org/abstract/document/10888009",
+              "code": "https://github.com/D-IceIce/one-shot-IRSTS",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "MoPKL (AAAI 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "AAAI",
+              "link": "https://ojs.aaai.org/index.php/AAAI/article/view/32217",
+              "code": "https://github.com/UESTC-nnLab/MoPKL",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "SeqCSIST (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/document/11080063",
+              "code": "https://github.com/GrokCV/SeqCSIST",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
             },
             {
               "name": "GST-Det:A Global Spatial–Temporal Detection Framework for Infrared Small Targets in Complex Ground Scenes",
@@ -1007,8 +1093,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
@@ -1045,8 +1130,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1082,8 +1166,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1120,45 +1203,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "Dynamic High-frequency Convolution for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2602.02969v1",
-                      "pdf": "https://arxiv.org/pdf/2602.02969v1",
-                      "authors": "Ruojing Li, Chao Xiao, Qian Yin, Wei An, Nuo Chen, Xinyi Ying, Miao Li, Yingqian Wang",
-                      "abstract": "Infrared small targets are typically tiny and locally salient, which belong to high-frequency components (HFCs) in images. Single-frame infrared small target (SIRST) detection is challenging, since there are many HFCs along with targets, such as bright corners, broken clouds, and other clutters. Current learning-based methods rely on the powerful capabilities of deep networks, but neglect explicit modeling and discriminative representation learning of various HFCs, which is important to distinguish targets from other HFCs. To address the aforementioned issues, we propose a dynamic high-frequency convolution (DHiF) to translate the discriminative modeling process into the generation of a dynamic local filter bank. Especially, DHiF is sensitive to HFCs, owing to the dynamic parameters of its generated filters being symmetrically adjusted within a zero-centered range according to Fourier transformation properties. Combining with standard convolution operations, DHiF can adaptively and dynamically process different HFC regions and capture their distinctive grayscale variation characteristics for discriminative representation learning. DHiF functions as a drop-in replacement for standard convolution and can be used in arbitrary SIRST detection networks without significant decrease in computational efficiency. To validate the effectiveness of our DHiF, we conducted extensive experiments across different SIRST detection networks on real-scene datasets. Compared to other state-of-the-art convolution operations, DHiF exhibits superior detection performance with promising improvement. Codes are available at https://github.com/TinaLRJ/DHiF.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "10.1109/TCSVT.2026.3661285",
-                      "arxiv_id": "2602.02969v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-02-03T01:07:55Z",
-                      "updated": "2026-02-03T01:07:55Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "SIRST",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "generic neural detector"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
@@ -1194,8 +1239,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1231,55 +1275,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
                   "children": [
-                    {
-                      "name": "SPIRIT: Adapting Vision Foundation Models for Unified Single- and Multi-Frame Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2602.01843v1",
-                      "pdf": "https://arxiv.org/pdf/2602.01843v1",
-                      "authors": "Qian Xu, Xi Li, Fei Gao, Jie Guo, Haojuan Yuan, Shuaipeng Fan, Mingjin Zhang",
-                      "abstract": "Infrared small target detection (IRSTD) is crucial for surveillance and early-warning, with deployments spanning both single-frame analysis and video-mode tracking. A practical solution should leverage vision foundation models (VFMs) to mitigate infrared data scarcity, while adopting a memory-attention-based temporal propagation framework that unifies single- and multi-frame inference. However, infrared small targets exhibit weak radiometric signals and limited semantic cues, which differ markedly from visible-spectrum imagery. This modality gap makes direct use of semantics-oriented VFMs and appearance-driven cross-frame association unreliable for IRSTD: hierarchical feature aggregation can submerge localized target peaks, and appearance-only memory attention becomes ambiguous, leading to spurious clutter associations. To address these challenges, we propose SPIRIT, a unified and VFM-compatible framework that adapts VFMs to IRSTD via lightweight physics-informed plug-ins. Spatially, PIFR refines features by approximating rank-sparsity decomposition to suppress structured background components and enhance sparse target-like signals. Temporally, PGMA injects history-derived soft spatial priors into memory cross-attention to constrain cross-frame association, enabling robust video detection while naturally reverting to single-frame inference when temporal context is absent. Experiments on multiple IRSTD benchmarks show consistent gains over VFM-based baselines and SOTA performance.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2602.01843v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-02-02T09:15:29Z",
-                      "updated": "2026-02-02T09:15:29Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "tracking",
-                        "multi-frame",
-                        "video",
-                        "temporal"
-                      ],
-                      "classification_score": 14,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
                     {
                       "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
                       "type": "paper",
@@ -1313,17 +1315,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1332,7 +1330,7 @@ window.fallbackMindMapData = {
       "icon": "🔄",
       "children": [
         {
-          "name": "代表方法",
+          "name": "基于分割 Segmentation-Based",
           "children": [
             {
               "name": "RPCANet (WACV 2024)",
@@ -1351,6 +1349,35 @@ window.fallbackMindMapData = {
               "code": "https://github.com/GrokCV/DRPCA-Net"
             },
             {
+              "name": "CTVNet (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/abstract/document/11265800",
+              "code": "https://github.com/AuroraPei/CTVNet"
+            },
+            {
+              "name": "Deep Unfolding Residual Decomposition for Infrared Small Target Detection (TGRS 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/abstract/document/11523120",
+              "code": "https://github.com/haofan72/DURD"
+            },
+            {
+              "name": "RPCANet++ (TPAMI 2026)",
+              "type": "paper",
+              "year": "2026",
+              "venue": "TPAMI",
+              "link": "https://arxiv.org/pdf/2508.04190",
+              "code": "https://github.com/fengyiwu98/RPCANet"
+            }
+          ]
+        },
+        {
+          "name": "基于解混 Unmixing-Based",
+          "children": [
+            {
               "name": "DISTA-Net (ICCV 2025)",
               "type": "paper",
               "year": "2025",
@@ -1359,14 +1386,64 @@ window.fallbackMindMapData = {
               "code": "https://github.com/GrokCV/GrokCSO"
             },
             {
+              "name": "SeqCSIST (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/document/11080063",
+              "code": "https://github.com/GrokCV/SeqCSIST"
+            }
+          ]
+        },
+        {
+          "name": "代表方法",
+          "children": [
+            {
+              "name": "RPCANet (WACV 2024)",
+              "type": "paper",
+              "year": "2024",
+              "venue": "WACV",
+              "link": "https://openaccess.thecvf.com/content/WACV2024/html/Wu_RPCANet_Deep_Unfolding_RPCA_Based_Infrared_Small_Target_Detection_WACV_2024_paper.html",
+              "code": "https://github.com/fengyiwu98/RPCANet",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "DRPCA-Net (TGRS 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "TGRS",
+              "link": "https://ieeexplore.ieee.org/abstract/document/11079687",
+              "code": "https://github.com/GrokCV/DRPCA-Net",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
+              "name": "DISTA-Net (ICCV 2025)",
+              "type": "paper",
+              "year": "2025",
+              "venue": "ICCV",
+              "link": "https://arxiv.org/pdf/2505.19148",
+              "code": "https://github.com/GrokCV/GrokCSO",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
+            },
+            {
               "name": "CTVNet (TGRS 2025)",
               "type": "paper",
               "year": "2025",
               "venue": "TGRS",
               "link": "https://ieeexplore.ieee.org/abstract/document/11265800",
-              "code": "https://github.com/AuroraPei/CTVNet"
+              "code": "https://github.com/AuroraPei/CTVNet",
+              "manual": true,
+              "source_kind": "manual",
+              "source_label": "Manual addition"
             }
-          ]
+          ],
+          "manual": true
         }
       ]
     },
@@ -1600,8 +1677,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1637,8 +1713,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1674,8 +1749,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -1711,17 +1785,50 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2606.01689v1",
+                      "pdf": "https://arxiv.org/pdf/2606.01689v1",
+                      "authors": "Pingping Liu, Aohua Li, Yubing Lu, Jin Kuang, Tongshun Zhang, Qiuzhan Zhou",
+                      "abstract": "The detection and segmentation of infrared small targets have important application significance in the fields of surveillance and security, maritime rescue and so on. Due to the low occupancy of these targets in long-distance imaging, the mainstream visual state space model is inefficient and difficult to accurately model the target edge. The existing infrared state space models do not deviate from the mainstream visual state space structure framework from the structural properties of infrared small targets. In order to solve this problem, this paper proposes the RPCASSM network based on the model paradigm of robust principal component analysis(RPCA), which aims to design the background state space module(BSSM) and the target state space module(TSSM) by the nature of the infrared small target in the spatial domain. The BSSM aims to use the saliency of spatial heterogeneous signals to design a spatial probe scanning mechanism(SPCM) to model background information. The TSSM designs a deformable prompt scanning mechanism(DPCM) by using the sparsity and local highlight of the target to focus on the deformable space of the target for state space modeling. According to the above design, we effectively solve the problem that the existing mainstream vision state space model is difficult to accurately model the edge structure of infrared small target. Experimental results on the existing benchmark data sets prove the effectiveness of the RPCASSM design. Our code will be made public at \\href{https://github.com/PepperCS/RPCASSM}{RPCASSM}.",
+                      "comment": "12 pages, 8 figures, under review",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2606.01689v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-06-01T04:55:37Z",
+                      "updated": "2026-06-01T04:55:37Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "segmentation",
+                        "benchmark"
+                      ],
+                      "classification_score": 9,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
