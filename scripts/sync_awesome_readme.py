@@ -78,6 +78,17 @@ HEADING_CONFIG = {
         "path": ["深度展开方法", "代表方法"],
         "type": "paper",
         "kind": "generic",
+        "allow_empty": True,
+    },
+    ("Deep Unfolding-Based Methods", "Segmentation-Based"): {
+        "path": ["深度展开方法", "基于分割 Segmentation-Based"],
+        "type": "paper",
+        "kind": "generic",
+    },
+    ("Deep Unfolding-Based Methods", "Unmixing-Based"): {
+        "path": ["深度展开方法", "基于解混 Unmixing-Based"],
+        "type": "paper",
+        "kind": "generic",
     },
     ("Datasets: Single-Frame",): {
         "path": ["资源 Resources", "数据集 Datasets", "单帧 Datasets: Single-Frame"],
@@ -122,8 +133,8 @@ def load_text(readme_path: Optional[Path], url: str) -> str:
 def normalize_source(text: str) -> str:
     text = text.replace("\r\n", "\n").replace("\r", "\n")
     text = re.sub(r"\(\[(https?://[^\]]+)\]\((https?://[^)]+)\)\)", r"(\2)", text)
-    text = re.sub(r"(?<!\n)(##\s+\[)", r"\n\1", text)
     text = re.sub(r"(?<!\n)(###\s+\[)", r"\n\1", text)
+    text = re.sub(r"(?<![\n#])(##\s+\[)", r"\n\1", text)
     return text
 
 
@@ -454,10 +465,13 @@ def build_data(readme_text: str) -> Dict[str, object]:
         data["children"].append({"name": top_name, "icon": meta["icon"], "children": []})
 
     for heading_key, config in HEADING_CONFIG.items():
+        if heading_key not in sections:
+            continue
         items = parse_section_entries(sections[heading_key], config)
-        if not items:
+        if not items and not config.get("allow_empty"):
             raise RuntimeError(f"No entries parsed for heading {' / '.join(heading_key)}")
-        add_items(data, list(config["path"]), items)
+        if items:
+            add_items(data, list(config["path"]), items)
 
     return data
 
