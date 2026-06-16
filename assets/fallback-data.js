@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-06-15T09:37:23Z",
+      "fetchedAt": "2026-06-16T09:04:59Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 13,
+      "matchedPapers": 14,
       "failedTerms": []
     }
   },
@@ -1282,6 +1282,42 @@ window.fallbackMindMapData = {
                 {
                   "name": "多帧与跟踪候选",
                   "children": [
+                    {
+                      "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2606.15286v1",
+                      "pdf": "https://arxiv.org/pdf/2606.15286v1",
+                      "authors": "Guoyi Zhang, Peiwen Wu, Han Wang, Xiangpeng Xu, Xiaohu Zhang",
+                      "abstract": "Infrared small target detection in dynamic scenes remains challenging due to the highly coupled motions among targets, imaging platforms, and dynamic backgrounds. Existing multi-frame methods usually perform implicit temporal modeling, where coherent background dynamics dominate motion correspondence learning, leading to an inherent trade-off between detection and false alarms. In this work, we observe that background motions exhibit strong global coherence, whereas small targets mainly correspond to sparse local motion anomalies. Moreover, many false-alarm responses maintain high consistency with globally coherent motion patterns, indicating that they mainly originate from coherent background dynamics rather than genuine target motions. Based on these observations, we propose a decoupled motion representation learning framework for moving infrared small target detection. Specifically, an explicit motion branch is introduced to model globally coherent motion dynamics using pretrained optical flow priors, together with a structure-preserving self-supervised adaptation strategy for infrared motion correspondence learning. Meanwhile, an implicit motion branch based on deformable feature alignment is designed to capture target-sensitive local motion anomalies under coherent motion guidance. Furthermore, a coherent-motion-guided local anomaly reasoning module is proposed to identify and suppress coherent-motion-induced false responses during localized motion modeling. Extensive experiments on two challenging infrared small target detection benchmarks demonstrate that the proposed method consistently outperforms existing state-of-the-art approaches, particularly in dynamic scenes with complex motions, while maintaining favorable inference efficiency.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2606.15286v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-06-13T12:50:32Z",
+                      "updated": "2026-06-13T12:50:32Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "multi-frame",
+                        "temporal"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
                     {
                       "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
                       "type": "paper",
