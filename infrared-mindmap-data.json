@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-06-17T08:37:49Z",
+      "fetchedAt": "2026-06-18T08:20:40Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 14,
+      "matchedPapers": 15,
       "failedTerms": []
     }
   },
@@ -1052,6 +1052,51 @@
         {
           "name": "自动追踪 Auto Watch",
           "children": [
+            {
+              "name": "顶会/顶刊优先",
+              "children": [
+                {
+                  "name": "单帧深度学习候选",
+                  "children": [
+                    {
+                      "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "CVPR",
+                      "link": "https://arxiv.org/abs/2606.18783v1",
+                      "pdf": "https://arxiv.org/pdf/2606.18783v1",
+                      "authors": "Yunus Sevim, Behçet Uğur Töreyin",
+                      "abstract": "Infrared small target detection remains challenging due to severe background clutter, low contrast, and weak spatial responses where geometric overlap alone is insufficient to characterize detection quality. In this work, we propose REEM (Reweighted Explicit-visibility Enhanced Modulation), a lightweight SCR-guided difficulty-aware optimization framework that incorporates Signal-to-Clutter Ratio (SCR) as a physically meaningful visibility prior during training. Instead of modifying the network architecture or directly optimizing SCR, REEM computes a ground-truth local SCR from the input image and applies a differentiable modulation to the soft-IoU learning signal, emphasizing low-visibility targets while preserving stable optimization and identical inference behavior. REEM is integrated into a U-Net-based MSHNet without introducing additional parameters, architectural modifications, or inference-time overhead. Extensive experiments demonstrate consistent improvements over the baseline, achieving higher IoU and detection probability (Pd) together with substantially reduced false alarms (FA), particularly under challenging low-visibility conditions. These results suggest that SCR-guided difficulty-aware optimization provides an effective and physically grounded complement to conventional overlap-based objectives for infrared small target detection. The code is available at https://github. com/yall-in-one/Reemm.",
+                      "comment": "Accepted at CVPR 2026 Workshops (PBVS). Published version: https://openaccess.thecvf.com/content/CVPR2026W/PBVS/html/Sevim_SCR-Guided_Difficulty-Aware_Optimization_for_Infrared_Small_Target_Detection_CVPRW_2026_paper.html",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2606.18783v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-06-17T07:53:56Z",
+                      "updated": "2026-06-17T07:53:56Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "top-conference",
+                      "venue_status": "accepted",
+                      "venue_signal": "comment",
+                      "_bucket": "顶会/顶刊优先"
+                    }
+                  ]
+                }
+              ]
+            },
             {
               "name": "常规候选",
               "children": [
