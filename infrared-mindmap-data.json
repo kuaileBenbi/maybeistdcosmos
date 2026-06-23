@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-06-22T09:23:32Z",
+      "fetchedAt": "2026-06-23T07:00:20Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 15,
+      "matchedPapers": 16,
       "failedTerms": []
     }
   },
@@ -1058,6 +1058,42 @@
                 {
                   "name": "单帧深度学习候选",
                   "children": [
+                    {
+                      "name": "Denoising-Enhanced Coarse-to-Fine Infrared Small Target Detection with Attention Prior-Guided Knowledge Distillation",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "ECCV",
+                      "link": "https://arxiv.org/abs/2606.21956v1",
+                      "pdf": "https://arxiv.org/pdf/2606.21956v1",
+                      "authors": "Houzhang Fang, Ruixuan Huang, Qiuhuan Chen, Xiaolin Wang, Yi Chang, Luxin Yan",
+                      "abstract": "Infrared small target detection (IRSTD) in high-resolution images is crucial for many practical applications, such as surveillance of unmanned aerial vehicles (UAVs) and UAV-based ground monitoring. However, IRSTD remains challenging due to the small size and weak features of targets, as well as significant interference from complex dynamic backgrounds. Existing detection methods often suffer from redundant computations on non-target background regions and insufficient exploitation of target context information, which limits their performance in complex backgrounds. To address these issues, we propose an efficient coarse-to-fine infrared small target detection framework with attention prior-guided knowledge distillation, termed ECFNet. In the coarse stage, we design a region binary classification network (RBCN) on grid-based multi-scale feature maps to efficiently recognize target-containing context region proposals while suppressing complex backgrounds. Moreover, we introduce a novel denoising-assisted training strategy that incorporates noisy ground-truth (GT) masks into the feature maps of RBCN and trains the network to reconstruct the GT masks through a denoising task, thereby enhancing its ability to distinguish target proposals from background regions and accelerating convergence. In the fine stage, we customize a lightweight target detector to the coarse stage's region proposals for balancing accuracy and efficiency. Furthermore, we propose a knowledge distillation strategy guided by the teacher-student cross-attention prior. This mechanism directs the student to focus on critical target regions, thereby enhancing the discriminative feature representation for infrared small targets. Extensive experiments on three real infrared datasets demonstrate that our method outperforms both existing single-stage and two-stage approaches while maintaining high real-time processing efficiency.",
+                      "comment": "Accepted by ECCV 2026",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2606.21956v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-06-20T09:06:38Z",
+                      "updated": "2026-06-20T09:06:38Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "top-conference",
+                      "venue_status": "accepted",
+                      "venue_signal": "comment",
+                      "_bucket": "顶会/顶刊优先"
+                    },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
                       "type": "paper",
