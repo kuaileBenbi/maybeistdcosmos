@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-06-28T07:11:12Z",
+      "fetchedAt": "2026-06-29T08:27:01Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 16,
+      "matchedPapers": 17,
       "failedTerms": []
     }
   },
@@ -1363,6 +1363,43 @@ window.fallbackMindMapData = {
                 {
                   "name": "多帧与跟踪候选",
                   "children": [
+                    {
+                      "name": "Temporal-Emerged Prompting for Segment Anything in Multiframe Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2606.27655v1",
+                      "pdf": "https://arxiv.org/pdf/2606.27655v1",
+                      "authors": "Yinghui Xing, Donghao Chu, Shizhou Zhang, Di Xu",
+                      "abstract": "Accurately localizing and segmenting small targets in low signal-to-noise ratio (SNR) infrared sequences remains a challenging task. Since targets are often indistinguishable from the background in individual frames, existing methods, even when equipped with advanced foundation model and powerful inter-frame association mechanisms, still fail to detect them. Motivated by the observation that targets tend to emerge gradually from the background over time and become distinguishable, we propose Temporal-Emerged Prompting for Segment Anything Model (TEP-SAM), a principled framework designed to explicitly exploit such temporal-emerged cues to modulate and prompt SAM. TEP-SAM operates by jointly modeling global motion patterns and local motion deviations to locate potential targets. It further enhances target region features by leveraging motion discrepancy, thereby generating temporal-emerged cues for SAM and enabling non-interactive segmentation. By bridging large-scale semantic pretraining with task-specific temporal modeling, TEP-SAM effectively adapts SAM to the challenging multiframe infrared small target detection task. Extensive experiments demonstrate the effectiveness of our approach, particularly under severely low-SNR conditions and in complex dynamic background.",
+                      "comment": "Accepted to the 43rd International Conference on Machine Learning (ICML 2026)",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2606.27655v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-06-26T02:18:43Z",
+                      "updated": "2026-06-26T02:18:43Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "segmentation",
+                        "multi-frame",
+                        "temporal"
+                      ],
+                      "classification_score": 9,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
                       "type": "paper",
