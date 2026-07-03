@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-02T06:51:22Z",
+      "fetchedAt": "2026-07-03T06:43:52Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 17,
+      "matchedPapers": 18,
       "failedTerms": []
     }
   },
@@ -1171,6 +1171,44 @@ window.fallbackMindMapData = {
                         "generic neural detector"
                       ],
                       "classification_score": 16,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2607.01555v1",
+                      "pdf": "https://arxiv.org/pdf/2607.01555v1",
+                      "authors": "Handong Zeng, Zhengeng Yang, Shuai Zhang, Shikai Chen, Hongshan Yu",
+                      "abstract": "Infrared small target detection (IRSTD) remains challenging due to tiny target size, low signal-to-noise ratio, severe foreground-background imbalance, and blurred boundaries in complex scenes. Existing methods usually rely on post-activation probability-domain supervision for discrimination, where weak targets and strong clutter may produce saturated and close probabilities, limiting weak-target discrimination. Meanwhile, blurred boundaries and halo-like predictions mainly stem from thermal diffusion, tiny target scale, boundary uncertainty, and insufficient explicit contour constraints. To address these issues, we propose Adaptive-Contrastive SLSIoU (AC-SLSIoU), a plug-and-play discriminative and shape-aware loss for IRSTD. Specifically, a Logit-Domain Margin Constraint (LDMC) is introduced to enlarge the response gap between targets and informative hard negatives in the logit space, thereby enhancing weak-target discrimination. Adaptive Boundary Suppression (ABS) applies scale-aware annular penalties to refine target contours and suppress halo-like overflow responses. In addition, False-Alarm Focal Loss assigns larger weights to high-probability negative samples, further penalizing persistent high-confidence false alarms. Without introducing extra inference overhead, the proposed method can be seamlessly integrated into existing detectors and consistently improves both detection accuracy and shape quality. Extensive experiments and cross-backbone evaluations demonstrate the effectiveness, robustness, and generalization ability of the proposed method for infrared small target detection.",
+                      "comment": "This work has been submitted to the IEEE for possible publication",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2607.01555v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-07-02T00:23:15Z",
+                      "updated": "2026-07-02T00:23:15Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "thermal",
+                        "small target",
+                        "tiny target",
+                        "detection",
+                        "diffusion"
+                      ],
+                      "classification_score": 15,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
