@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-03T06:43:52Z",
+      "fetchedAt": "2026-07-05T06:51:37Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 18,
+      "matchedPapers": 17,
       "failedTerms": []
     }
   },
@@ -505,17 +505,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1096,8 +1092,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
@@ -1132,14 +1127,11 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             },
             {
               "name": "常规候选",
@@ -1182,8 +1174,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
@@ -1221,8 +1212,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
@@ -1259,8 +1249,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1296,8 +1285,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1334,8 +1322,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
@@ -1371,8 +1358,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1408,11 +1394,9 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1452,8 +1436,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
@@ -1489,53 +1472,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "MI-DETR: A Strong Baseline for Moving Infrared Small Target Detection with Bio-Inspired Motion Integration",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.05071v1",
-                      "pdf": "https://arxiv.org/pdf/2603.05071v1",
-                      "authors": "Nian Liu, Jin Gao, Shubo Lin, Yutong Kou, Sikui Zhang, Fudong Ge, Zhiqiang Pu, Liang Li, Gang Wang, Yizheng Wang, Weiming Hu",
-                      "abstract": "Infrared small target detection (ISTD) is challenging because tiny, low-contrast targets are easily obscured by complex and dynamic backgrounds. Conventional multi-frame approaches typically learn motion implicitly through deep neural networks, often requiring additional motion supervision or explicit alignment modules. We propose Motion Integration DETR (MI-DETR), a bio-inspired dual-pathway detector that processes one infrared frame per time step while explicitly modeling motion. First, a retina-inspired cellular automaton (RCA) converts raw frame sequences into a motion map defined on the same pixel grid as the appearance image, enabling parvocellular-like appearance and magnocellular-like motion pathways to be supervised by a single set of bounding boxes without extra motion labels or alignment operations. Second, a Parvocellular-Magnocellular Interconnection (PMI) Block facilitates bidirectional feature interaction between the two pathways, providing a biologically motivated intermediate interconnection mechanism. Finally, a RT-DETR decoder operates on features from the two pathways to produce detection results. Surprisingly, our proposed simple yet effective approach yields strong performance on three commonly used ISTD benchmarks. MI-DETR achieves 70.3% mAP@50 and 72.7% F1 on IRDST-H (+26.35 mAP@50 over the best multi-frame baseline), 98.0% mAP@50 on DAUB-R, and 88.3% mAP@50 on ITSDT-15K, demonstrating the effectiveness of biologically inspired motion-appearance integration. Code is available at https://github.com/nliu-25/MI-DETR.",
-                      "comment": "18 pages, 6 figures",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.05071v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-05T11:39:31Z",
-                      "updated": "2026-03-05T11:39:31Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "多帧与跟踪候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "multi-frame"
-                      ],
-                      "classification_score": 8,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1891,8 +1834,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1928,8 +1870,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1965,8 +1906,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -2002,8 +1942,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
@@ -2040,17 +1979,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
