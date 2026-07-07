@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-06T07:56:35Z",
+      "fetchedAt": "2026-07-07T06:57:08Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 17,
+      "matchedPapers": 18,
       "failedTerms": []
     }
   },
@@ -502,6 +502,47 @@ window.fallbackMindMapData = {
                         "sparse"
                       ],
                       "classification_score": 20,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "LCPNet: Latent Consistent Proximal Unfolding Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2607.04603v1",
+                      "pdf": "https://arxiv.org/pdf/2607.04603v1",
+                      "authors": "Tianfang Zhang, Fengyi Wu, Lei Li, Chang Liu, Zhenming Peng, Huaping Zhang, Xiangyang Ji",
+                      "abstract": "Infrared small target detection (IRSTD) aims to identify long distance small targets from complex infrared backgrounds, and is a fundamental task in remote sensing. Deep learning methods have improved IRSTD by learning discriminative image-to-mask mappings, but such feed-forward designs often underuse physical decomposition structure between targets and backgrounds. Deep unfolding methods partially address this issue by embedding model-driven iterations into neural networks, yet existing designs still operate mainly in image domain and use updates and memory mechanisms that are not fully coupled with underlying optimization process. To address these limitations, we propose Latent Consistent Proximal unfolding network (LCPNet). First, we verify that low-rank prior remains valid in latent representations and perform unfolding in this space, preserving physical constraint while avoiding repeated compression of intermediate states. Second, we derive a Latent Consistent Proximal (LCP) solver that evolves each latent variable from its previous state rather than reconstructing through an indirect residual, and stabilizes small target updates through task-adaptive normalization and gain control. Third, we introduce Shared Optimization Memory (SOM), a common historical state shared by all decomposition variables to provide coordinated guidance across unfolding stages. Extensive experiments on four public benchmarks demonstrate that LCPNet outperforms state-of-the-art methods while achieving accurate and robust detection with low false alarms and competitive efficiency. Model and code are available at https://github.com/Tianfang-Zhang/LCPNet.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2607.04603v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-07-06T02:15:09Z",
+                      "updated": "2026-07-06T02:15:09Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "优化建模/深度展开候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "low-rank",
+                        "decomposition",
+                        "model-driven",
+                        "unfolding",
+                        "proximal"
+                      ],
+                      "classification_score": 13,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
