@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-15T05:42:34Z",
+      "fetchedAt": "2026-07-16T05:56:13Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 18,
+      "matchedPapers": 17,
       "failedTerms": []
     }
   },
@@ -1839,44 +1839,6 @@
                 {
                   "name": "数据集/综述/基准候选",
                   "children": [
-                    {
-                      "name": "Point-to-Mask: From Arbitrary Point Annotations to Mask-Level Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.16257v1",
-                      "pdf": "https://arxiv.org/pdf/2603.16257v1",
-                      "authors": "Weihua Gao, Wenlong Niu, Jie Tang, Man Yang, Jiafeng Zhang, Xiaodong Peng",
-                      "abstract": "Infrared small target detection (IRSTD) methods predominantly formulate the task as pixel-level segmentation, which requires costly dense annotations and is not well suited to tiny targets with weak texture and ambiguous boundaries. To address this issue, we propose Point-to-Mask, a framework that bridges low-cost point supervision and mask-level detection through two components: a Physics-driven Adaptive Mask Generation (PAMG) module that converts point annotations into compact target masks and geometric cues, and a lightweight Radius-aware Point Regression Network (RPR-Net) that reformulates IRSTD as target center localization and effective radius regression using spatiotemporal motion cues. The two modules form a closed loop: PAMG generates pseudo masks and geometric supervision during training, while the geometric predictions of RPR-Net are fed back to PAMG for pixel-level mask recovery during inference. To facilitate systematic evaluation, we further construct SIRSTD-Pixel, a sequential dataset with refined pixel-level annotations. Experiments show that the proposed framework achieves strong pseudo-label quality, high detection accuracy, and efficient inference, approaching full-supervision performance under point-supervised settings with substantially lower annotation cost. Code and datasets will be available at: https://github.com/GaoScience/point-to-mask.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.16257v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-17T08:44:05Z",
-                      "updated": "2026-03-17T08:44:05Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "数据集/综述/基准候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "segmentation",
-                        "localization",
-                        "dataset"
-                      ],
-                      "classification_score": 15,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
                       "type": "paper",
