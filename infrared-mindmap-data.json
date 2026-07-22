@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-20T06:27:28Z",
+      "fetchedAt": "2026-07-22T06:05:57Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 17,
+      "matchedPapers": 19,
       "failedTerms": []
     }
   },
@@ -505,8 +505,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LCPNet: Latent Consistent Proximal Unfolding Network for Infrared Small Target Detection",
@@ -547,17 +546,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1138,8 +1133,7 @@
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
@@ -1174,14 +1168,11 @@
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             },
             {
               "name": "常规候选",
@@ -1224,8 +1215,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
@@ -1263,8 +1253,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
@@ -1301,8 +1290,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1338,8 +1326,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1376,8 +1363,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
@@ -1413,8 +1399,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1450,15 +1435,50 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
                   "children": [
+                    {
+                      "name": "Gaze-DETR: Top-Down Guidance Through Priority Maps for Infrared Weak-Small UAV Detection with DETR",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2607.19040v1",
+                      "pdf": "https://arxiv.org/pdf/2607.19040v1",
+                      "authors": "Nian Liu, Yuxin Yang, Shubo Lin, Sikui Zhang, Liang Li, Boyu Cai, Yizheng Wang, Weiming Hu, Jin Gao",
+                      "abstract": "Infrared small target detection (ISTD) remains challenging because tiny, low-contrast targets are easily overwhelmed by clutter, noise, or occlusion. Conventional single-frame and multi-frame detectors rely on bounding-box supervision, which specifies final target locations but offers little explicit guidance for prioritizing candidate regions or preserving weak-target evidence before localization. Task-driven visual search offers such guidance: top-down goals and visual evidence jointly form a spatial priority map that ranks candidate locations. Building on this principle, we propose Gaze-DETR, a bio-inspired detector that learns an internal priority map before localization. First, a priority head predicts a normalized priority map from image features. Second, Residual Priority-Guided Feature Modulation (RPFM) enhances high-priority responses while retaining multi-scale features. Finally, Priority-Guided Anchor Query Injection (PAQI) converts high-priority locations into decoder anchor queries. We train the priority head using three supervision schemes: box-derived Gaussian maps; real-gaze maps constructed from fixation-density maps; and transferred pseudo-gaze maps learned from gaze--box relations in paired annotations and applied to Anti-UAV410 training boxes. To support the latter two schemes, we construct TIR-UAV120-Gaze with paired detection and task-driven eye-tracking annotations. On TIR-UAV120-Gaze, Gaze-DETR achieves 85.76 mAP$_{50}$ and 88.77 F1 with box-derived supervision, and 86.18 mAP$_{50}$ and 89.00 F1 with real-gaze supervision. On Anti-UAV410, it achieves 87.06 mAP$_{50}$ and 90.90 F1 with box-derived supervision, and 87.08 mAP$_{50}$ and 90.43 F1 with transferred pseudo-gaze supervision. These results show that explicit spatial-priority learning provides pre-localization guidance complementary to bounding-box supervision across annotation settings and costs.",
+                      "comment": "Code: https://github.com/nliu-25/Gaze-DETR-Top-Down-Guidance-Through-Priority-Maps-for-Infrared-Weak-Small-UAV-Detection-with-DETR",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2607.19040v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-07-21T12:29:58Z",
+                      "updated": "2026-07-21T12:29:58Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "tracking",
+                        "localization",
+                        "multi-frame"
+                      ],
+                      "classification_score": 10,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
                     {
                       "name": "Temporal-Emerged Prompting for Segment Anything in Multiframe Infrared Small Target Detection",
                       "type": "paper",
@@ -1494,8 +1514,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
@@ -1531,17 +1550,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1862,6 +1877,44 @@
                   "name": "数据集/综述/基准候选",
                   "children": [
                     {
+                      "name": "Noise-Robust Box-Supervised Infrared Small Target Detection via Physics-Inspired Soft Label Optimization",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2607.17148v1",
+                      "pdf": "https://arxiv.org/pdf/2607.17148v1",
+                      "authors": "Xizhe Zhang, Fan Shi, Mianzhao Wang, Jiangpeng Zheng, Xu Cheng, Shengyong Chen",
+                      "abstract": "Infrared small target detection (IRSTD) commonly relies on pixel-level mask supervision. Such annotations, however, are costly and inherently uncertain because infrared targets have blurred boundaries and weak textures. We formulate box-supervised IRSTD as a problem distinct from generic box-to-mask segmentation and point-supervised IRSTD. Its central challenge is to construct stable pixel-level soft supervision from highly contaminated boxes. To this end, we propose Hotspot-Anchored Label Optimization (HALO). HALO localizes a radiometric anchor inside each box under local background-statistics constraints, then synthesizes a Physically Anchored Gaussian (PAG) soft label around the anchor. This turns noisy box supervision into continuous, pixel-level soft labels. The entire process is performed offline before training, remains decoupled from the detector backbone, and requires no online label updates. Experiments on public datasets show that HALO is competitive with representative box-supervised methods under standard tight boxes. Under looser or shifted box annotations that better approximate real scenarios, HALO is substantially more robust while remaining consistent across backbones. We further introduce a contamination-aware operating-regime analysis to characterize the effective boundary of this class of methods and reveal how intrinsic signal-to-clutter ratio relates to performance.",
+                      "comment": "24 pages, 8 figures",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2607.17148v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-07-19T09:13:25Z",
+                      "updated": "2026-07-19T09:13:25Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "segmentation",
+                        "challenge"
+                      ],
+                      "classification_score": 14,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
                       "type": "paper",
                       "year": "2026",
@@ -1895,8 +1948,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1932,8 +1984,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -1969,8 +2020,7 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
@@ -2007,17 +2057,13 @@
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
