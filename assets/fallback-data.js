@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-24T06:05:26Z",
+      "fetchedAt": "2026-07-25T05:59:47Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 19,
+      "matchedPapers": 18,
       "failedTerms": []
     }
   },
@@ -1250,43 +1250,6 @@ window.fallbackMindMapData = {
                         "diffusion"
                       ],
                       "classification_score": 15,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "FSGNet: A Frequency-Aware and Semantic Guidance Network for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.25389v1",
-                      "pdf": "https://arxiv.org/pdf/2603.25389v1",
-                      "authors": "Yingmei Zhang, Wangtao Bao, Yong Yang, Weiguo Wan, Qin Xiao, Xueting Zou",
-                      "abstract": "Infrared small target detection (IRSTD) aims to identify and distinguish small targets from complex backgrounds. Leveraging the powerful multi-scale feature fusion capability of the U-Net architecture, IRSTD has achieved significant progress. However, U-Net suffers from semantic degradation when transferring high-level features from deep to shallow layers, limiting the precise localization of small targets. To address this issue, this paper proposes FSGNet, a lightweight and effective detection framework incorporating frequency-aware and semantic guidance mechanisms. Specifically, a multi-directional interactive attention module is proposed throughout the encoder to capture fine-grained and directional features, enhancing the network's sensitivity to small, low-contrast targets. To suppress background interference propagated through skip connections, a multi-scale frequency-aware module leverages Fast Fourier transform to filter out target-similar clutter while preserving salient target structures. At the deepest layer, a global pooling module captures high-level semantic information, which is subsequently upsampled and propagated to each decoder stage through the global semantic guidance flows, ensuring semantic consistency and precise localization across scales. Extensive experiments on four public IRSTD datasets demonstrate that FSGNet achieves superior detection performance and maintains high efficiency, highlighting its practical applicability and robustness. The codes will be released on https://github.com/Wangtao-Bao/FSGNet.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.25389v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-26T12:38:29Z",
-                      "updated": "2026-03-26T12:38:29Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "localization",
-                        "network"
-                      ],
-                      "classification_score": 14,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
