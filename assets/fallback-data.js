@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-28T06:04:34Z",
+      "fetchedAt": "2026-07-30T06:01:06Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 20,
+      "matchedPapers": 19,
       "failedTerms": []
     }
   },
@@ -505,8 +505,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LCPNet: Latent Consistent Proximal Unfolding Network for Infrared Small Target Detection",
@@ -547,17 +546,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1138,8 +1133,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
@@ -1174,14 +1168,11 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             },
             {
               "name": "常规候选",
@@ -1225,46 +1216,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "CCDNet: Learning to Detect Camouflage against Distractors in Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2603.29228v1",
-                      "pdf": "https://arxiv.org/pdf/2603.29228v1",
-                      "authors": "Zikai Liao, Zhaozheng Yin",
-                      "abstract": "Infrared target detection (IRSTD) tasks have critical applications in areas like wilderness rescue and maritime search. However, detecting infrared targets is challenging due to their low contrast and tendency to blend into complex backgrounds, effectively camouflaging themselves. Additionally, other objects with similar features (distractors) can cause false alarms, further degrading detection performance. To address these issues, we propose a novel \\textbf{C}amouflage-aware \\textbf{C}ounter-\\textbf{D}istraction \\textbf{Net}work (CCDNet) in this paper. We design a backbone with Weighted Multi-branch Perceptrons (WMPs), which aggregates self-conditioned multi-level features to accurately represent the target and background. Based on these rich features, we then propose a novel Aggregation-and-Refinement Fusion Neck (ARFN) to refine structures/semantics from shallow/deep features maps, and bidirectionally reconstruct the relations between the targets and the backgrounds, highlighting the targets while suppressing the complex backgrounds to improve detection accuracy. Furthermore, we present a new Contrastive-aided Distractor Discriminator (CaDD), enforcing adaptive similarity computation both locally and globally between the real targets and the backgrounds to more precisely discriminate distractors, so as to reduce the false alarm rate. Extensive experiments on infrared image datasets confirm that CCDNet outperforms other state-of-the-art methods.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2603.29228v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-03-31T03:51:51Z",
-                      "updated": "2026-03-31T03:51:51Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "generic neural detector"
-                      ],
-                      "classification_score": 16,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
@@ -1302,8 +1254,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1339,8 +1290,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1377,8 +1327,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
@@ -1414,8 +1363,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1451,11 +1399,9 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1495,8 +1441,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Temporal-Emerged Prompting for Segment Anything in Multiframe Infrared Small Target Detection",
@@ -1533,8 +1478,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
@@ -1570,17 +1514,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1936,8 +1876,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1973,8 +1912,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -2010,8 +1948,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Rethinking Representations for Cross-Domain Infrared Small Target Detection: A Generalizable Perspective from the Frequency Domain",
@@ -2047,8 +1984,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
@@ -2085,28 +2021,27 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Effective Receptive Field Ordering Matters for Infrared Small Target Detection",
                       "type": "paper",
                       "year": "2026",
                       "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2607.23994v1",
-                      "pdf": "https://arxiv.org/pdf/2607.23994v1",
+                      "link": "https://arxiv.org/abs/2607.23994v2",
+                      "pdf": "https://arxiv.org/pdf/2607.23994v2",
                       "authors": "Guoyi Zhang, Yanjin Du, Zhengyao Zhao, Tongsu Zhang, Guangsheng Xu, Siyang Chen, Xiangpeng Xu, Han Wang, Xiaohu Zhang",
                       "abstract": "In this work, we investigate a previously unexplored architectural dimension for infrared small target detection: the organization of effective receptive fields (ERFs) during feature refinement. Unlike existing approaches that primarily improve individual feature operators, we argue that ERF organization constitutes an architectural dimension independent of receptive field design itself, and formulate deep feature transformation as a progressive residual correction process, from which a theoretical framework for ERF scheduling is established. Specifically, we reveal that ERF refinement is governed by two fundamental properties: scale-frequency correspondence, which aligns different ERF scales with distinct residual frequency characteristics, and nonlinear non-commutativity, which makes different ERF orderings produce fundamentally different refinement trajectories. Together, these properties show that ERF organization, rather than ERF scale alone, governs refinement dynamics. Guided by these principles, we propose Receptive Field Ordering Network (RFONet), which realizes hierarchical ERF scheduling through a multigrid-inspired V-cycle strategy using only standard $3\\times3$ convolutions. RFONet achieves state-of-the-art performance on multiple benchmarks with only 1.16M parameters and over 157 FPS inference speed. Beyond empirical performance, our theoretical analysis provides theoretical guarantees for stable residual refinement under perturbations, frequency shifts, and partial occlusions, which are consistently reflected in superior noise robustness and cross-dataset generalization. Finally, our framework reformulates ERF organization as a task-dependent optimization objective, providing a principled foundation for future adaptive receptive field scheduling.",
                       "comment": "",
                       "journal_ref": "",
                       "doi": "",
-                      "arxiv_id": "2607.23994v1",
+                      "arxiv_id": "2607.23994v2",
                       "primary_category": "cs.CV",
                       "categories": [
                         "cs.CV"
                       ],
                       "published": "2026-07-27T04:40:57Z",
-                      "updated": "2026-07-27T04:40:57Z",
+                      "updated": "2026-07-28T03:28:50Z",
                       "source_kind": "arxiv-watch",
                       "source_label": "arXiv Auto Watch",
                       "classification_group": "数据集/综述/基准候选",
@@ -2121,17 +2056,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
