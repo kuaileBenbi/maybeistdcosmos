@@ -7,7 +7,7 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-07-30T06:01:06Z",
+      "fetchedAt": "2026-07-31T06:25:21Z",
       "lookbackDays": 120,
       "maxResults": 100,
       "matchedPapers": 19,
