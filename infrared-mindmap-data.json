@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-08-04T06:05:54Z",
+      "fetchedAt": "2026-08-05T06:02:41Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 18,
+      "matchedPapers": 17,
       "failedTerms": []
     }
   },
@@ -468,45 +468,6 @@
                 {
                   "name": "优化建模/深度展开候选",
                   "children": [
-                    {
-                      "name": "Rethinking IRSTD: Single-Point Supervision Guided Encoder-only Framework is Enough for Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2604.05363v2",
-                      "pdf": "https://arxiv.org/pdf/2604.05363v2",
-                      "authors": "Rixiang Ni, Boyang Li, Jun Chen, Yonghao Li, Feiyu Ren, Yuji Wang, Haoyang Yuan, Wujiao He, Wei An",
-                      "abstract": "Infrared small target detection (IRSTD) aims to separate small targets from clutter backgrounds. Extensive research is dedicated to the pixel-level supervision-guided \"encoder-decoder\" segmentation paradigm. Although having achieved promising performance, they neglect the fact that small targets only occupy a few pixels and are usually accompanied with blurred boundary caused by clutter backgrounds. Based on this observation, we argue that the first principle of IRSTD should be target localization instead of separating all target region accompanied with indistinguishable background noise. In this paper, we reformulate IRSTD as a centroid regression task and propose a novel Single-Point Supervision guided Infrared Probabilistic Response Encoding method (namely, SPIRE), which is indeed challenging due to the mismatch between reduced supervision network and equivalent output. Specifically, we first design a Point-Response Prior Supervision (PRPS), which transforms single-point annotations into probabilistic response map consistent with infrared point-target response characteristics, with a High-Resolution Probabilistic Encoder (HRPE) that enables encoder-only, end-to-end regression without decoder reconstruction. By preserving high-resolution features and increasing effective supervision density, SPIRE alleviates optimization instability under sparse target distributions. Finally, extensive experiments on various IRSTD benchmarks, including SIRST-UAVB and SIRST4 demonstrate that SPIRE achieves competitive target-level detection performance with consistently low false alarm rate (Fa) and significantly reduced computational cost. Code is publicly available at: https://github.com/NIRIXIANG/SPIRE-IRSTD.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2604.05363v2",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-04-07T03:01:51Z",
-                      "updated": "2026-08-01T03:45:20Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "优化建模/深度展开候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "SIRST",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "segmentation",
-                        "localization",
-                        "sparse"
-                      ],
-                      "classification_score": 20,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
                     {
                       "name": "LCPNet: Latent Consistent Proximal Unfolding Network for Infrared Small Target Detection",
                       "type": "paper",
