@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-08-05T06:02:41Z",
+      "fetchedAt": "2026-08-07T05:04:11Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 17,
+      "matchedPapers": 18,
       "failedTerms": []
     }
   },
@@ -507,17 +507,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1098,8 +1094,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
@@ -1134,14 +1129,11 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             },
             {
               "name": "常规候选",
@@ -1185,8 +1177,45 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "HyTBE: Hyperbolic Target-Background Expert Model for Cross-Domain Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2608.05771v1",
+                      "pdf": "https://arxiv.org/pdf/2608.05771v1",
+                      "authors": "Aohua Li, Jin Kuang, Yubing Lu, Pingping Liu",
+                      "abstract": "Infrared small target detection (IRSTD) has achieved substantial progress under domain-consistent evaluation, yet detector performance often degrades markedly when generalizing to unseen infrared domains. Existing methods primarily improve detection by enhancing target responses and suppressing background interference. However, when trained on only a limited set of source domains, their learned decision rules are inevitably established from a restricted range of source-domain target-background relation patterns. We formulate this cross-domain failure as target-background relation shift: unseen domains may exhibit relation patterns that are not observed during training, thereby weakening the discriminative capability learned from the source domains. To address this problem, we propose HyTBE, a Hyperbolic Target-Background Expert model that expands source-domain relation patterns and adaptively adjusts visual representations using explicit relation cues. The Target-Background Relation Intervention selectively perturbs either targets or backgrounds, broadening the observable relation patterns during training while maintaining valid supervision. Subsequently, the Hyperbolic Relation Modeling maps multi-scale visual cues into a Poincaré ball and characterizes the target-background relation of each feature token according to its relative distances to the target and background anchors. The Hyperbolic-guided MoE Adapter further uses these hyperbolic relation representations to calibrate multi-scale visual features and aggregate expert-specific feature corrections for different relation patterns. Leave-one-domain-out experiments on NUAA-SIRST, NUDT-SIRST, and IRSTD-1K demonstrate that HyTBE achieves stronger cross-domain generalization than competitive baselines.",
+                      "comment": "15 pages, 9 figures, 9 tables. Code: https://github.com/PepperCS/HyTBE",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2608.05771v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-08-06T09:02:09Z",
+                      "updated": "2026-08-06T09:02:09Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "generic neural detector"
+                      ],
+                      "classification_score": 18,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
@@ -1224,8 +1253,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "LoHGNet: Infrared Small Target Detection through Lorentz Geometric Encoding with High-Order Relation Learning",
@@ -1261,8 +1289,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
@@ -1299,8 +1326,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
@@ -1336,8 +1362,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
@@ -1373,11 +1398,9 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1417,8 +1440,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Temporal-Emerged Prompting for Segment Anything in Multiframe Infrared Small Target Detection",
@@ -1455,8 +1477,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
@@ -1492,17 +1513,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1858,8 +1875,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
@@ -1895,8 +1911,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
@@ -1932,8 +1947,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
@@ -1970,8 +1984,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Effective Receptive Field Ordering Matters for Infrared Small Target Detection",
@@ -2006,17 +2019,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
