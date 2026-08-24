@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-08-23T04:03:44Z",
+      "fetchedAt": "2026-08-24T04:08:09Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 20,
+      "matchedPapers": 21,
       "failedTerms": []
     }
   },
@@ -1093,6 +1093,41 @@
                       "classification_score": 13,
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
+                      "venue_signal": "comment",
+                      "_bucket": "顶会/顶刊优先"
+                    },
+                    {
+                      "name": "RDANet: Relative Degradation Aware Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "TGRS",
+                      "link": "https://arxiv.org/abs/2608.20870v1",
+                      "pdf": "https://arxiv.org/pdf/2608.20870v1",
+                      "authors": "Rui Liu, Jing Nie, Ying Fu",
+                      "abstract": "Infrared small target detection is still challenging in remote sensing imagery, because the targets are extremely small, exhibit weak local contrast, and are often embedded in complex and highly variable backgrounds. In addition to these inherent difficulties, we observe that existing detectors often show unstable performance when the target scale changes or when the scene background varies. This scale- and scene-sensitive degradation indicates that current methods are insufficient in simultaneously preserving target structure during feature downsampling and maintaining discriminative local contrast under background shifts, which finally results in unbalanced detection performance across different conditions. To improve detection robustness, this paper proposes a Relative Degradation Aware Network (RDANet) for infrared small target detection. RDANet consists of two dedicated modules: Multi-Scale Anti-Alias Downsampling (MSAD) and Prototype-Guided Skip Memory (PGSM). MSAD introduces multi-scale anti-alias filtering together with pixel-fold aggregation to reduce aliasing effects during resolution reduction, so that target shape information can be better preserved while irrelevant background responses are suppressed. PGSM further enhances the skip features by retrieving patch-level prototypes from a shared memory and adaptively integrating them into the current representation, which helps maintain stable local contrast cues under diverse scene backgrounds. Experiments on three public benchmarks show that RDANet achieves the best performance on most evaluation metrics, while scale- and background-stratified evaluations indicate more stable behavior across target sizes and scene complexity. The code is available at https://github.com/BIT-RuiLiu/RDANet.",
+                      "comment": "Accept by TGRS 2026",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2608.20870v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-08-21T08:41:43Z",
+                      "updated": "2026-08-21T08:41:43Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "top-journal",
+                      "venue_status": "mentioned",
                       "venue_signal": "comment",
                       "_bucket": "顶会/顶刊优先"
                     },
