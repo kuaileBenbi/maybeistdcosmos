@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-08-25T04:02:40Z",
+      "fetchedAt": "2026-08-26T04:05:08Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 21,
+      "matchedPapers": 20,
       "failedTerms": []
     }
   },
@@ -1319,43 +1319,6 @@
                         "small target",
                         "detection",
                         "network"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "Selective Attention-Based Network for Robust Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.00886v1",
-                      "pdf": "https://arxiv.org/pdf/2605.00886v1",
-                      "authors": "Yingming Zhang, Wuqi Su, Qing Xiao, Yonggang Yang",
-                      "abstract": "Infrared small target detection (IRSTD) plays a pivotal role in a broad spectrum of mission-critical applications, including maritime surveillance, military search and rescue, early warning systems, and precision-guided strikes, all of which demand the precise identification of dim, sub-pixel targets amid highly cluttered infrared backgrounds. Despite significant progress driven by deep learning methods, fundamental challenges persist: infrared small targets occupy extremely limited spatial extents (often only a few pixels), exhibit low signal-to-clutter ratios, and are easily confused with structurally complex backgrounds that frequently induce false alarms. Existing encoder-decoder architectures suffer from two key limitations - an information bottleneck in early convolutional stages that undermines fine-grained target perception, and static skip connections that lack the dynamic adaptability required to discriminate between genuine targets and pseudo-target regions. To address these challenges, we propose SANet, a Selective Attention-based Network built upon the classical U-Net framework and augmented with two novel components: (1) a \\emph{Dual-path Semantic-aware Module} (DSM) that integrates standard convolutions for local spatial detail preservation with pinwheel-shaped convolutions for expanded, direction-sensitive receptive fields, followed by a Convolutional Block Attention Module (CBAM) for fine-grained spatial-channel feature recalibration; and (2) a \\emph{Selective Attention Fusion Module} (SAFM) that replaces conventional static skip connections with a spatially adaptive, learnable weighting mechanism to perform context-aware, cross-scale feature fusion.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.00886v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-04-27T09:17:23Z",
-                      "updated": "2026-04-27T09:17:23Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "network",
-                        "deep learning"
                       ],
                       "classification_score": 13,
                       "venue_tier": "preprint",
