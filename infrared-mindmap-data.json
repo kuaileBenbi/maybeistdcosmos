@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-08-29T10:09:39Z",
+      "fetchedAt": "2026-08-30T09:18:02Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 20,
+      "matchedPapers": 19,
       "failedTerms": []
     }
   },
@@ -1904,42 +1904,6 @@
                         "small target",
                         "detection",
                         "challenge"
-                      ],
-                      "classification_score": 13,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "Exploring the Limits of End-to-End Feature-Affinity Propagation for Single-Point Supervised Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.00722v1",
-                      "pdf": "https://arxiv.org/pdf/2605.00722v1",
-                      "authors": "Qiancheng Zhou, Wenhua Zhang",
-                      "abstract": "Single-point supervised infrared small target detection (IRSTD) drastically reduces dense annotation costs. Current state-of-the-art (SOTA) methods achieve high precision by recovering mask supervision through explicit, offline pseudo-label construction, such as multi-stage active learning and physics-driven mask generation. In this paper, we study a minimalist alternative: generating point-to-mask supervision online through in-batch, point-anchored feature-affinity propagation. We instantiate this paradigm as GSACP, an end-to-end testbed that directly supervises the detector using hard-margin feature affinity gated by local image priors, entirely eliminating external label-evolution loops. This compact design, however, exposes an optimization bottleneck. Because the affinity target is generated from the same feature representation being optimized, training forms a self-referential loop. We theoretically formalize this as \\emph{Self-Referential Propagation Drift}, a representation-supervision entanglement that can sharpen true boundaries or distort the feature space to satisfy its own targets. To systematically isolate these failure modes, we apply a protocolized single-variable ablation procedure spanning local EMA teacher decoupling, hard-background contrastive separation, and adaptive support geometry. On the SIRST3 dataset, GSACP-Final establishes a new ultra-low false-alarm operating regime, achieving a highly competitive $0.6674$ mIoU while demonstrating a $38\\% relative reduction in false-positive artifacts ($\\mathrm{Fa}$) compared with PAL. By systematically deconstructing the end-to-end paradigm, we map its performance boundaries and show that in-batch feature propagation provides a compact alternative for deployment scenarios where false-alarm suppression is paramount.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.00722v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-05-01T15:08:46Z",
-                      "updated": "2026-05-01T15:08:46Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "数据集/综述/基准候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "dataset"
                       ],
                       "classification_score": 13,
                       "venue_tier": "preprint",
