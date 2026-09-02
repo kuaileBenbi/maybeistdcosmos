@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-09-01T08:43:13Z",
+      "fetchedAt": "2026-09-02T07:58:01Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 19,
+      "matchedPapers": 21,
       "failedTerms": []
     }
   },
@@ -1404,6 +1404,42 @@ window.fallbackMindMapData = {
                   "name": "多帧与跟踪候选",
                   "children": [
                     {
+                      "name": "DGNet: Dual-knowledge Guided Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2609.00666v1",
+                      "pdf": "https://arxiv.org/pdf/2609.00666v1",
+                      "authors": "Chenglong Yu, Mingzhu Xu, Jing Wang, Tongtong Wang, Pingping Miao, Liqiang Nie",
+                      "abstract": "InfRared Small Target Detection (IRSTD) is a prominent and challenging task in computer vision. In recent years, text-guided methods have significantly improved detection performance. However, they still suffer from two key limitations. First, a single text description simultaneously modeling both background and target leads to semantic entanglement, which contradicts the objective of background suppression and target enhancement. Second, reliance on image-specific textual prompts (requiring additional external models such as CLIP during inference) results in deployment constraints. To address these issues, we propose a novel Dual-knowledge Guided Network (DGNet) based on multiple generalizable texts. Specifically, we design a Prior-knowledge Wavelet Modulation (PWM) module, which leverages dual textual priors that separately characterize large-scale backgrounds and sparse targets to effectively disentangle and modulate entangled semantics in the frequency domain. Furthermore, we introduce a Consensus-knowledge Directional Alignment (CDA) loss, which models the initial state and the ideal target across samples as `complex background' and `bright target', respectively, thereby constructing a clear and unified directional optimization trajectory for the model. Extensive experiments on three public datasets demonstrate the superior performance of DGNet and the effectiveness of each component. The source code is available at https://github.com/iLearn-Lab/MM26-DGNet.",
+                      "comment": "Accepted by ACM Multimedia 2026 (MM '26)",
+                      "journal_ref": "",
+                      "doi": "10.1145/3767308.3836149",
+                      "arxiv_id": "2609.00666v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-09-01T03:44:47Z",
+                      "updated": "2026-09-01T03:44:47Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "多帧与跟踪候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "trajectory"
+                      ],
+                      "classification_score": 13,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
                       "name": "Gaze-DETR: Top-Down Guidance Through Priority Maps for Infrared Weak-Small UAV Detection with DETR",
                       "type": "paper",
                       "year": "2026",
@@ -1837,6 +1873,44 @@ window.fallbackMindMapData = {
                 {
                   "name": "数据集/综述/基准候选",
                   "children": [
+                    {
+                      "name": "ADGNet: Asymmetric Dual-text Guided Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2609.00853v1",
+                      "pdf": "https://arxiv.org/pdf/2609.00853v1",
+                      "authors": "Tongtong Wang, Mingzhu Xu, Chenglong Yu, Jing Wang, Xiaohui Lin, Weili Guan",
+                      "abstract": "InfRared Small Target Detection (IRSTD) is a challenging task. Relying solely on pixel-level information, vision-only methods struggle to distinguish targets from clutter. Current multimodal methods typically describe both targets and backgrounds with a single textual prompt. Such an approach lacks dedicated regional guidance and ignores infrared semantic asymmetry. Consequently, it provides insufficient background suppression information and introduces severe feature optimization conflicts, overwhelming small targets with noise. To address these issues, we propose a novel Asymmetric Dual-text Guided Network (ADGNet). Specifically, accounting for the infrared semantic asymmetry, we first design the Asymmetric Dual-text Prompt (ADP), comprising an image-agnostic abstract target prompt and an image-specific detailed background prompt. To leverage these prompts, we introduce an Asymmetric Dual-Branch Interaction (ADBI) module to separately guide visual features with their respective text priors, protecting targets from noise while suppressing background clutter. Subsequently, we introduce an Adaptive Feature Aggregation (AFA) module to dynamically fuse features from the two branches. Furthermore, we construct a multimodal Asymmetric Image-Text Infrared (AITIR) dataset by providing asymmetric text annotations for three public datasets (IRSTD-1K, NUDT-SIRST, and SIRST). Extensive experiments demonstrate that ADGNet outperforms 21 state-of-the-art (SOTA) methods. Code is available at https://github.com/iLearn-Lab/MM26-ADGNet.",
+                      "comment": "10 pages, 10 figures. Accepted by the 34th ACM International Conference on Multimedia (ACM Multimedia 2026)",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2609.00853v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-09-01T07:48:22Z",
+                      "updated": "2026-09-01T07:48:22Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "dataset"
+                      ],
+                      "classification_score": 18,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
                     {
                       "name": "Noise-Robust Box-Supervised Infrared Small Target Detection via Physics-Inspired Soft Label Optimization",
                       "type": "paper",
