@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-09-03T08:06:49Z",
+      "fetchedAt": "2026-09-04T08:01:59Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 21,
+      "matchedPapers": 20,
       "failedTerms": []
     }
   },
@@ -1944,42 +1944,6 @@
                         "challenge"
                       ],
                       "classification_score": 14,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "Na-IRSTD: Enhancing Infrared Small Target Detection via Native-Resolution Feature Selection and Fusion",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.05804v1",
-                      "pdf": "https://arxiv.org/pdf/2605.05804v1",
-                      "authors": "Qian Xu, Chi Zhang, Qiming Zhang, Xi Li, Haojuan Yuan, Mingjin Zhang",
-                      "abstract": "Infrared small target detection (IRSTD) faces the inherent challenge of precisely localizing dim targets amid complex background clutter. While progress has been made, existing methods usually follow conventional strategies to downsample features and discard small targets' details, resulting in suboptimal performance. In this paper, we present Na-IRSTD, a native-resolution feature extraction and fusion framework for IRSTD. This framework elegantly incorporates native-resolution features to preserve subtle target cues, overcoming the resolution limitations of existing infrared approaches and significantly improving the model's ability to localize small targets. We also introduce an effective token reduction and selection strategy, which selects target patches with high accuracy and confidence, boosting the low-level details of the feature while effectively reducing native-resolution patch tokens compared to dense processing, thereby avoiding imposing an unbearable computational burden. Extensive experiments demonstrate the robustness and effectiveness of our token reduction and selection strategy across multiple public datasets. Ultimately, our Na-IRSTD model achieves state-of-the-art performance on four benchmarks.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.05804v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-05-07T07:42:03Z",
-                      "updated": "2026-05-07T07:42:03Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "数据集/综述/基准候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "IRSTD",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "challenge"
-                      ],
-                      "classification_score": 13,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
