@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-09-10T08:11:56Z",
+      "fetchedAt": "2026-09-11T08:07:13Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 20,
+      "matchedPapers": 19,
       "failedTerms": []
     }
   },
@@ -1354,42 +1354,6 @@ window.fallbackMindMapData = {
                         "small target",
                         "detection",
                         "network"
-                      ],
-                      "classification_score": 8,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
-                    },
-                    {
-                      "name": "Learning with Semantic Priors: Stabilizing Point-Supervised Infrared Small Target Detection via Hierarchical Knowledge Distillation",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.14346v1",
-                      "pdf": "https://arxiv.org/pdf/2605.14346v1",
-                      "authors": "Yuanhang Yao, Ping Qian, Zhu Liu, Long Ma, Weimin Wang",
-                      "abstract": "Single-frame Infrared Small Target Detection (ISTD) aims to localize weak targets under heavy background clutter, yet dense pixel-wise annotations are expensive. Point supervision with online label evolution reduces annotation cost; however, lightweight CNN detectors often lack sufficient semantics, leading to noisy pseudo-masks and unstable optimization. To address this, we propose a hierarchical VFM-driven knowledge distillation framework that uses a frozen Vision Foundation Model (VFM) during training. We formulate point-supervised learning as a bilevel optimization process: the inner loop adapts a VFM-embedded teacher on reweighted training samples, while the outer loop transfers validation-guided knowledge to a lightweight student to mitigate pseudo-label noise and training-set bias. We further introduce Semantic-Conditioned Affine Modulation (SCAM) to inject VFM semantics into CNN features at multiple layers. In addition, a dynamic collaborative learning strategy with cluster-level sample reweighting enhances robustness to imperfect pseudo-masks. Experiments on diverse challenging cases across multiple ISTD backbones demonstrate consistent improvements in detection accuracy and training stability. Our code is available at https://github.com/yuanhang-yao/semantic-prior.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.14346v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-05-14T04:12:08Z",
-                      "updated": "2026-05-14T04:12:08Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "CNN",
-                        "foundation model"
                       ],
                       "classification_score": 8,
                       "venue_tier": "preprint",
