@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-09-16T08:39:26Z",
+      "fetchedAt": "2026-09-29T09:54:49Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 19,
+      "matchedPapers": 17,
       "failedTerms": []
     }
   },
@@ -507,17 +507,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1069,20 +1065,20 @@ window.fallbackMindMapData = {
                       "type": "paper",
                       "year": "2026",
                       "venue": "ECCV",
-                      "link": "https://arxiv.org/abs/2606.21956v2",
-                      "pdf": "https://arxiv.org/pdf/2606.21956v2",
+                      "link": "https://arxiv.org/abs/2606.21956v3",
+                      "pdf": "https://arxiv.org/pdf/2606.21956v3",
                       "authors": "Houzhang Fang, Ruixuan Huang, Qiuhuan Chen, Xiaolin Wang, Yi Chang, Luxin Yan",
-                      "abstract": "Infrared small target detection (IRSTD) in high-resolution images is crucial for many practical applications, such as surveillance of unmanned aerial vehicles (UAVs) and UAV-based ground monitoring. However, IRSTD remains challenging due to the small size and weak features of targets, as well as significant interference from complex dynamic backgrounds. Existing detection methods often suffer from redundant computations on non-target background regions and insufficient exploitation of target context information, which limits their performance in complex backgrounds. To address these issues, we propose an efficient coarse-to-fine infrared small target detection framework with attention prior-guided knowledge distillation, termed ECFNet. In the coarse stage, we design a region binary classification network (RBCN) on grid-based multi-scale feature maps to efficiently recognize target-containing context region proposals. Moreover, we introduce a novel denoising-assisted training strategy that incorporates noisy ground-truth (GT) masks into RBCN feature maps and trains the network to reconstruct the original GT masks through a denoising task, thereby encouraging it to explicitly learn target-background context and thus better distinguish target proposals from background regions. In the fine stage, we customize a lightweight target detector to the coarse stage's region proposals for balancing accuracy and efficiency. Furthermore, we propose a knowledge distillation strategy guided by the teacher-student cross-attention prior. This mechanism directs the student to focus on critical target regions, thereby enhancing the discriminative feature representation for infrared small targets. Extensive experiments on three real infrared datasets demonstrate that our method outperforms both existing single-stage and two-stage approaches while maintaining high real-time processing efficiency.",
+                      "abstract": "Infrared small target detection (IRSTD) in high-resolution images is crucial for unmanned aerial vehicle (UAV) surveillance and UAV-based ground monitoring. However, small target size, weak features, and interference from complex dynamic backgrounds make IRSTD challenging. Existing methods incur redundant computation in non-target background regions and insufficiently exploit target context, limiting detection performance. To address these issues, we propose ECFNet, an efficient coarse-to-fine IRSTD framework with attention prior-guided knowledge distillation. In the coarse stage, we design a region binary classification network (RBCN) on grid-based multi-scale feature maps to efficiently identify target-containing context region proposals. A new denoising-assisted training strategy incorporates noisy ground-truth (GT) masks into RBCN feature maps and trains the network to reconstruct the original GT masks. This auxiliary task encourages explicit learning of target-background context to better distinguish target proposals from background regions. In the fine stage, we customize a lightweight target detector to the coarse-stage region proposals to balance accuracy and efficiency. Furthermore, we introduce a knowledge distillation strategy guided by a teacher-student cross-attention prior. This strategy directs the student to focus on critical target regions, enhancing discriminative feature representations for infrared small targets. Extensive experiments on three real infrared datasets demonstrate that ECFNet outperforms existing single-stage and two-stage approaches while maintaining high real-time processing efficiency. Code: https://github.com/IVPLabs/ECFNet.",
                       "comment": "Accepted by ECCV 2026",
                       "journal_ref": "",
                       "doi": "",
-                      "arxiv_id": "2606.21956v2",
+                      "arxiv_id": "2606.21956v3",
                       "primary_category": "cs.CV",
                       "categories": [
                         "cs.CV"
                       ],
                       "published": "2026-06-20T09:06:38Z",
-                      "updated": "2026-06-27T12:52:47Z",
+                      "updated": "2026-09-28T02:06:56Z",
                       "source_kind": "arxiv-watch",
                       "source_label": "arXiv Auto Watch",
                       "classification_group": "单帧深度学习候选",
@@ -1098,8 +1094,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "RDANet: Relative Degradation Aware Network for Infrared Small Target Detection",
@@ -1134,8 +1129,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-journal",
                       "venue_status": "mentioned",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     },
                     {
                       "name": "SCR-Guided Difficulty-Aware Optimization for Infrared Small Target Detection",
@@ -1170,14 +1164,11 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-conference",
                       "venue_status": "accepted",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先",
-                      "manual": true
+                      "_bucket": "顶会/顶刊优先"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             },
             {
               "name": "常规候选",
@@ -1221,8 +1212,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "HyTBE: Hyperbolic Target-Background Expert Model for Cross-Domain Infrared Small Target Detection",
@@ -1260,8 +1250,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Boosting Infrared Small Target Detection via Logit-Domain Contrast and Adaptive Shape Refinement",
@@ -1299,45 +1288,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "Diffuse to Detect: Bi-Level Sample Rebalancing with Pseudo-Label Diffusion for Point-Supervised Infrared Small-Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2605.20766v1",
-                      "pdf": "https://arxiv.org/pdf/2605.20766v1",
-                      "authors": "Zhu Liu, Yuanhang Yao, Ping Qian, Zihang Chen, Risheng Liu",
-                      "abstract": "Point supervision has become a scalable solution to address dense annotation for infrared small target detection, but its performance is limited by two coupled bottlenecks: unstable pseudo-label evolution in cluttered, low-contrast infrared imagery and severe sample-distribution imbalance. In this paper, we present a more adaptive and stable framework to address these issues. Leveraging the intrinsic consistency between thermal radiation patterns and heat diffusion, we propose a physics-induced annotation strategy that expands single-point labels into reliable pseudo-masks. To further enhance supervision and alleviate sample imbalance, we develop a bi-level dual-update framework that jointly optimizes detector weights, sample weights, and diffusion parameters. A meta-classifier dynamically predicts sample-wise loss weights, while a differentiable diffusion module refines pseudo-labels with detection feedback, enabling adaptive interaction between training and hyperparameter optimization. Extensive experiments across multiple datasets demonstrate five-fold annotation acceleration, superior detection accuracy, and comparable performance with 30% of the training data, validating the efficiency and practicality of our approach. Our code is available at https://github.com/yuanhang-yao/diffuse-to-detect.",
-                      "comment": "",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2605.20766v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV"
-                      ],
-                      "published": "2026-05-20T06:08:11Z",
-                      "updated": "2026-05-20T06:08:11Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "单帧深度学习候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "thermal",
-                        "small target",
-                        "detection",
-                        "diffusion"
-                      ],
-                      "classification_score": 9,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "PICANet: Physics-Informed Cascaded Asymmetric Network for Infrared Small Target Detection",
@@ -1372,11 +1323,9 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1415,8 +1364,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Gaze-DETR: Top-Down Guidance Through Priority Maps for Infrared Weak-Small UAV Detection with DETR",
@@ -1453,8 +1401,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Temporal-Emerged Prompting for Segment Anything in Multiframe Infrared Small Target Detection",
@@ -1491,8 +1438,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Decoupled Motion Representation Learning for Moving Infrared Small Target Detection",
@@ -1528,17 +1474,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     },
@@ -1894,8 +1836,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Noise-Robust Box-Supervised Infrared Small Target Detection via Physics-Inspired Soft Label Optimization",
@@ -1933,8 +1874,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Understand Before Detect: Vision--Language Learning for Omni-Domain Infrared Small Target Detection",
@@ -1970,46 +1910,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
-                    },
-                    {
-                      "name": "RPCASSM: Robust PCA State Space Model For Infrared Small Target Detection",
-                      "type": "paper",
-                      "year": "2026",
-                      "venue": "arXiv",
-                      "link": "https://arxiv.org/abs/2606.01689v1",
-                      "pdf": "https://arxiv.org/pdf/2606.01689v1",
-                      "authors": "Pingping Liu, Aohua Li, Yubing Lu, Jin Kuang, Tongshun Zhang, Qiuzhan Zhou",
-                      "abstract": "The detection and segmentation of infrared small targets have important application significance in the fields of surveillance and security, maritime rescue and so on. Due to the low occupancy of these targets in long-distance imaging, the mainstream visual state space model is inefficient and difficult to accurately model the target edge. The existing infrared state space models do not deviate from the mainstream visual state space structure framework from the structural properties of infrared small targets. In order to solve this problem, this paper proposes the RPCASSM network based on the model paradigm of robust principal component analysis(RPCA), which aims to design the background state space module(BSSM) and the target state space module(TSSM) by the nature of the infrared small target in the spatial domain. The BSSM aims to use the saliency of spatial heterogeneous signals to design a spatial probe scanning mechanism(SPCM) to model background information. The TSSM designs a deformable prompt scanning mechanism(DPCM) by using the sparsity and local highlight of the target to focus on the deformable space of the target for state space modeling. According to the above design, we effectively solve the problem that the existing mainstream vision state space model is difficult to accurately model the edge structure of infrared small target. Experimental results on the existing benchmark data sets prove the effectiveness of the RPCASSM design. Our code will be made public at \\href{https://github.com/PepperCS/RPCASSM}{RPCASSM}.",
-                      "comment": "12 pages, 8 figures, under review",
-                      "journal_ref": "",
-                      "doi": "",
-                      "arxiv_id": "2606.01689v1",
-                      "primary_category": "cs.CV",
-                      "categories": [
-                        "cs.CV",
-                        "cs.AI"
-                      ],
-                      "published": "2026-06-01T04:55:37Z",
-                      "updated": "2026-06-01T04:55:37Z",
-                      "source_kind": "arxiv-watch",
-                      "source_label": "arXiv Auto Watch",
-                      "classification_group": "数据集/综述/基准候选",
-                      "classification_tags": [
-                        "infrared small target detection",
-                        "infrared",
-                        "small target",
-                        "detection",
-                        "segmentation",
-                        "benchmark"
-                      ],
-                      "classification_score": 9,
-                      "venue_tier": "preprint",
-                      "venue_status": "preprint",
-                      "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Effective Receptive Field Ordering Matters for Infrared Small Target Detection",
@@ -2044,8 +1945,7 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     },
                     {
                       "name": "Degraded Infrared Small Object Detection via Degradation-Adapted Physics-Guided Restoration",
@@ -2080,17 +1980,13 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选",
-                      "manual": true
+                      "_bucket": "常规候选"
                     }
-                  ],
-                  "manual": true
+                  ]
                 }
-              ],
-              "manual": true
+              ]
             }
-          ],
-          "manual": true
+          ]
         }
       ]
     }
