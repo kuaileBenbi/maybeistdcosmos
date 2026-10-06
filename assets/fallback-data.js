@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-10-05T10:33:23Z",
+      "fetchedAt": "2026-10-06T10:25:31Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 17,
+      "matchedPapers": 19,
       "failedTerms": []
     }
   },
@@ -1291,6 +1291,44 @@ window.fallbackMindMapData = {
                       "_bucket": "常规候选"
                     },
                     {
+                      "name": "IRSTD-Agent: Agentic Infrared Small Target Detection via Zoom-Guided Interaction Learning",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2610.05342v1",
+                      "pdf": "https://arxiv.org/pdf/2610.05342v1",
+                      "authors": "Jiawen Xi, Yu Zhang, Tianyi Zhao, Zhu Liu, Maoxun Yuan, Xingxing Wei",
+                      "abstract": "Infrared small-target detection plays an important role in maritime monitoring and aerial surveillance. Although multimodal large language models (MLLMs) offer promising capabilities for visual understanding, existing MLLM-based approaches struggle to precisely localize infrared small targets. In this paper, we propose IRSTD-Agent, an agentic framework for infrared small target detection through dynamic visual search. The framework enables an MLLM to adaptively determine where and at what scale to inspect an image and progressively gather fine-grained visual evidence for precise target localization. Five complementary visual tools (PROPOSAL, ZOOM, DETECT, DROP and REFINE) support object candidate discovery, adaptive observation, target localization, hypothesis rejection, and target extent refinement, together enabling a coordinated search process over original-resolution images. To teach the MLLMs to conduct this search, we introduce Zoom-guided Interaction Learning, which uses annotation-derived interaction trajectories to supervise tool selection and the corresponding arguments. Through extensive experiments on WideIRSTD-Full and IRSTD-1k datasets, we demonstrate that IRSTD-Agent outperforms the evaluated vision-language models and enhances the precise localization capabilities of MLLMs in IRSTD tasks.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2610.05342v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-10-04T16:10:08Z",
+                      "updated": "2026-10-04T16:10:08Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "localization",
+                        "generic neural detector"
+                      ],
+                      "classification_score": 14,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
                       "name": "PICANet: Physics-Informed Cascaded Asymmetric Network for Infrared Small Target Detection",
                       "type": "paper",
                       "year": "2026",
@@ -1907,6 +1945,41 @@ window.fallbackMindMapData = {
                         "dataset"
                       ],
                       "classification_score": 9,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Prompt and Refinement: Asymmetric Mutual Learning for Infrared Small Target Detection with Noisy Labels",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2610.05918v1",
+                      "pdf": "https://arxiv.org/pdf/2610.05918v1",
+                      "authors": "Yimin Fu, Songbo Wang, Lizhuo Liu, Baicheng Pan, Zhunga Liu, Michael K. Ng",
+                      "abstract": "Existing data-driven infrared small target detection (ISTD) methods typically require large-scale datasets with accurate pixel-level annotations for model training. However, such labor-intensive requirements are difficult to satisfy in real-world applications due to the heavy reliance on expert knowledge and the inherently weak distinctiveness of infrared small targets. Consequently, the presence of noisy labels during model training is inevitable, which can severely mislead the learning of target perception toward spurious patterns. To address this challenge, we propose Prompt and Refinement (PAR), a label-noise-robust asymmetric mutual learning paradigm for ISTD. Specifically, PAR comprises a pretrained Segment Anything Model (SAM) and an ISTD-specific detector trained from scratch, which learn collaboratively through a peer-teaching scheme. Coupled with local contrast regularity, the predictions of the two asymmetric peer models are mutually exploited as rectification cues for the supervisory masks of their counterparts. The interaction between complementary inductive biases effectively prevents the label correction process from degenerating into the self-confirmation loop of a single model, enabling progressive refinement of the annotations toward intrinsic target characteristics. In addition, the detector predictions are utilized as corrective mask prompts to facilitate task-specific adaptation of the vision foundation model. Moreover, an evidential uncertainty estimation strategy is introduced into the optimization process to further alleviate the adverse effects of noisy labels. Extensive experiments under diverse noisy label scenarios on three ISTD datasets demonstrate that PAR consistently achieves state-of-the-art performance.",
+                      "comment": "The code will be released at https://github.com/fuyimin96/PAR upon acceptance",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2610.05918v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-10-05T07:34:18Z",
+                      "updated": "2026-10-05T07:34:18Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "challenge"
+                      ],
+                      "classification_score": 8,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
