@@ -7,10 +7,10 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-10-07T10:20:52Z",
+      "fetchedAt": "2026-10-08T10:40:42Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 19,
+      "matchedPapers": 20,
       "failedTerms": []
     }
   },
@@ -1209,6 +1209,43 @@ window.fallbackMindMapData = {
                         "network"
                       ],
                       "classification_score": 19,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "SANet: Selective Attention Network for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2610.09875v1",
+                      "pdf": "https://arxiv.org/pdf/2610.09875v1",
+                      "authors": "Yingmei Zhang, Wangtao Bao, Qin Xiao, Yong Yang, Weiguo Wan, Yitao Luo, Xueting Zou, Lei Zhang",
+                      "abstract": "Infrared small target detection aims to accurately identify and locate dim targets in complex backgrounds and supports applications such as maritime surveillance and military search and rescue. However, the small size and weak contrast of infrared targets make it difficult to balance detection accuracy and false alarms. This paper proposes a selective attention network (SANet) for infrared small target detection. A dual-path semantic-aware module combines standard and pinwheel-shaped convolutions to preserve local spatial consistency and capture broader contextual information. Spatial and channel attention further refine the features and improve target-background discrimination. To address the limitations of static skip connections in U-Net, a selective attention fusion module adaptively integrates features across scales using spatially varying weights. It selectively enhances salient regions and improves discrimination between true targets and false alarms. Experiments on three public benchmarks, NUAA-SIRST, IRSTD-1K, and NUDT-SIRST, show that SANet achieves competitive performance in intersection over union (IoU), normalized IoU, detection probability, and false alarm rate. Its IoU exceeds that of the second-best method by 1.93, 4.32, and 2.21 percentage points, respectively. These results support the effectiveness of SANet in dim-target perception, discriminative feature representation, and background suppression.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2610.09875v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-10-07T11:34:01Z",
+                      "updated": "2026-10-07T11:34:01Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "单帧深度学习候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "network"
+                      ],
+                      "classification_score": 18,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
