@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-10-13T10:42:20Z",
+      "fetchedAt": "2026-10-14T08:48:02Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 19,
+      "matchedPapers": 21,
       "failedTerms": []
     }
   },
@@ -1946,6 +1946,76 @@
                         "dataset"
                       ],
                       "classification_score": 9,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Unsupervised and Supervised Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 2)",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2610.18291v1",
+                      "pdf": "https://arxiv.org/pdf/2610.18291v1",
+                      "authors": "Thierry Bouwmans, Anastasia Zakharova, Belmar Garcia, Marwa Chendeb El Rai, Meghna Kapoor, Badri Narayan Subudhi",
+                      "abstract": "Since the rise of supervised deep learning modelet dets, researchers has attempt to solve infrared small targection using various models like conventional neural networks, GANS, Transformers, Mixture of Experts and recent graph/hypergraph neural networks. Moreover, these deep neural networks methods surpassed the traditional unsupervised models and the low-rank and sparse decomposition unsupervised models reviewed in \"Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 1). In this context, the aim of this paper is to provide a complete survey of the deep learning models in infrared small target detection. First, we categorize the different approaches found in the literature in terms of the modeling models of strategies. Then, we have discussed them in terms of the critical situations that they claim to handle. Furthermore, we present the specific performance evaluation. Then, we conclude with several promising directions for future research.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2610.18291v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-10-13T12:41:12Z",
+                      "updated": "2026-10-13T12:41:12Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "survey"
+                      ],
+                      "classification_score": 8,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
+                    {
+                      "name": "Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 1)",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2610.18276v1",
+                      "pdf": "https://arxiv.org/pdf/2610.18276v1",
+                      "authors": "Thierry Bouwmans, Anastasia Zakharova, Belmar Garcia, Marwa Chendeb El Rai, Meghna Kapoor, Badri Narayan Subudhi",
+                      "abstract": "Infrared small target detection is often used in different civilian and military applications to detect static or moving targets in scenes like in ground, air and sea surveillance. First valuable research has emerged since 30 years ago and the two last decades witnessed very significant publications in this field following the rise of low-rank and sparse decomposition (model-based methods) and deep learning models (data-based methods). Furthermore, several surveys can be found in the literature but none of them addresses an overall review in this field. In this context, the aim of this paper is to provide a complete survey of the traditional and recent approaches in infrared small target detection. First, we categorize the different approaches found in the literature in terms of the modeling models, i.e mathematical models, machine learning models and signal processing models. Then, we have discussed them in terms of the critical situations that they claim to handle. Furthermore, we present the available resources, datasets and libraries. Then, we conclude with several promising directions for future research. For the sake of reading, this survey is divided into two parts: 1) \"Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 1)\" about conventional and low-rank and sparse decomposition (model-based methods), and 2) \"Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 2)\" about deep learning models (data-based methods).",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2610.18276v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV"
+                      ],
+                      "published": "2026-10-13T12:31:14Z",
+                      "updated": "2026-10-13T12:31:14Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "survey"
+                      ],
+                      "classification_score": 8,
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
