@@ -7,7 +7,7 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-10-26T09:02:12Z",
+      "fetchedAt": "2026-10-27T09:05:22Z",
       "lookbackDays": 120,
       "maxResults": 100,
       "matchedPapers": 19,
