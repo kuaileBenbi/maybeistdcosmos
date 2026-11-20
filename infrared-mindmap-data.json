@@ -7,10 +7,10 @@
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-11-19T11:47:17Z",
+      "fetchedAt": "2026-11-20T11:47:45Z",
       "lookbackDays": 120,
       "maxResults": 100,
-      "matchedPapers": 15,
+      "matchedPapers": 16,
       "failedTerms": []
     }
   },
@@ -1638,6 +1638,44 @@
                 {
                   "name": "数据集/综述/基准候选",
                   "children": [
+                    {
+                      "name": "Verifying Before Enhancing: Target Evidence Chain Verification for Infrared Small Target Detection",
+                      "type": "paper",
+                      "year": "2026",
+                      "venue": "arXiv",
+                      "link": "https://arxiv.org/abs/2611.25724v1",
+                      "pdf": "https://arxiv.org/pdf/2611.25724v1",
+                      "authors": "Jiayi Zuo, Songwei Pei, Shuhuai Wang, Yifei Wu, Shangguang Wang",
+                      "abstract": "Infrared small target detection is essential for early warning, surveillance, remote sensing, and space-based target perception. However, infrared small targets are typically tiny, weakly textured, and boundary-blurred, making them difficult to distinguish from complex backgrounds. Moreover, target-like background structures can produce salient responses across multiple scales, making response strength alone insufficient for reliable target discrimination. To address this challenge, we propose VBE-UNet, a Target Evidence Chain Verification Network that assesses candidate reliability beyond response magnitude through complementary evidence cues. Specifically, counterfactual background explanation models local target evidence, while joint evidence verification integrates cross-scale support and perturbation-based contribution verification to guide feature recomposition. The resulting reliability estimates guide selective feature refinement, promoting target-relevant responses while reducing unsupported background activations. Extensive experiments on IRSTD-1K, NUDT-SIRST, and NUAA-SIRST demonstrate that VBE-UNet achieves superior detection accuracy and lower false-alarm rates compared with state-of-the-art methods. Ablation studies and evidence reliability analysis further validate the effectiveness of the proposed verification framework.",
+                      "comment": "",
+                      "journal_ref": "",
+                      "doi": "",
+                      "arxiv_id": "2611.25724v1",
+                      "primary_category": "cs.CV",
+                      "categories": [
+                        "cs.CV",
+                        "cs.AI"
+                      ],
+                      "published": "2026-11-19T08:40:16Z",
+                      "updated": "2026-11-19T08:40:16Z",
+                      "source_kind": "arxiv-watch",
+                      "source_label": "arXiv Auto Watch",
+                      "classification_group": "数据集/综述/基准候选",
+                      "classification_tags": [
+                        "infrared small target detection",
+                        "IRSTD",
+                        "SIRST",
+                        "infrared",
+                        "small target",
+                        "detection",
+                        "challenge"
+                      ],
+                      "classification_score": 18,
+                      "venue_tier": "preprint",
+                      "venue_status": "preprint",
+                      "venue_signal": "arxiv",
+                      "_bucket": "常规候选"
+                    },
                     {
                       "name": "ADGNet: Asymmetric Dual-text Guided Network for Infrared Small Target Detection",
                       "type": "paper",
