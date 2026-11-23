@@ -7,11 +7,13 @@ window.fallbackMindMapData = {
     "arxivWatch": {
       "category": "cs.CV",
       "feed": "https://export.arxiv.org/api/query (keyword-batched)",
-      "fetchedAt": "2026-11-22T11:33:03Z",
+      "fetchedAt": "2026-11-23T12:58:25Z",
       "lookbackDays": 120,
       "maxResults": 100,
       "matchedPapers": 16,
-      "failedTerms": []
+      "failedTerms": [
+        "infrared small target tracking"
+      ]
     }
   },
   "children": [
