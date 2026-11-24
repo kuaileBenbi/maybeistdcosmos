@@ -1039,11 +1039,14 @@ window.fallbackMindMapData = {
                       "venue_tier": "top-journal",
                       "venue_status": "mentioned",
                       "venue_signal": "comment",
-                      "_bucket": "顶会/顶刊优先"
+                      "_bucket": "顶会/顶刊优先",
+                      "manual": true
                     }
-                  ]
+                  ],
+                  "manual": true
                 }
-              ]
+              ],
+              "manual": true
             },
             {
               "name": "常规候选",
@@ -1087,7 +1090,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Seeing through Denoising: Frequency-guided One-step Denoising for Infrared Small Target Detection",
@@ -1125,7 +1129,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "SANet: Selective Attention Network for Infrared Small Target Detection",
@@ -1162,7 +1167,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "HyTBE: Hyperbolic Target-Background Expert Model for Cross-Domain Infrared Small Target Detection",
@@ -1200,7 +1206,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "IRSTD-Agent: Agentic Infrared Small Target Detection via Zoom-Guided Interaction Learning",
@@ -1238,7 +1245,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "PICANet: Physics-Informed Cascaded Asymmetric Network for Infrared Small Target Detection",
@@ -1273,9 +1281,11 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     }
-                  ]
+                  ],
+                  "manual": true
                 },
                 {
                   "name": "多帧与跟踪候选",
@@ -1314,13 +1324,17 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     }
-                  ]
+                  ],
+                  "manual": true
                 }
-              ]
+              ],
+              "manual": true
             }
-          ]
+          ],
+          "manual": true
         }
       ]
     },
@@ -1676,7 +1690,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "ADGNet: Asymmetric Dual-text Guided Network for Infrared Small Target Detection",
@@ -1714,7 +1729,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Understand Before Detect: Vision--Language Learning for Omni-Domain Infrared Small Target Detection",
@@ -1750,7 +1766,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 2)",
@@ -1785,7 +1802,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Traditional and Recent Approaches for Infrared Small Target Detection : Overview, Challenges and Perspectives (Part 1)",
@@ -1820,7 +1838,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Prompt and Refinement: Asymmetric Mutual Learning for Infrared Small Target Detection with Noisy Labels",
@@ -1855,7 +1874,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Effective Receptive Field Ordering Matters for Infrared Small Target Detection",
@@ -1890,7 +1910,8 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     },
                     {
                       "name": "Degraded Infrared Small Object Detection via Degradation-Adapted Physics-Guided Restoration",
@@ -1925,13 +1946,17 @@ window.fallbackMindMapData = {
                       "venue_tier": "preprint",
                       "venue_status": "preprint",
                       "venue_signal": "arxiv",
-                      "_bucket": "常规候选"
+                      "_bucket": "常规候选",
+                      "manual": true
                     }
-                  ]
+                  ],
+                  "manual": true
                 }
-              ]
+              ],
+              "manual": true
             }
-          ]
+          ],
+          "manual": true
         }
       ]
     }
